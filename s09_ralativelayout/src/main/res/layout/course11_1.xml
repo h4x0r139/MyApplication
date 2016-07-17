@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!--
+		android:layout_above 将该控件的底部至于给定ID的控件之上
+		android:layout_below 将该控件的顶部至于给定ID的控件之下
+		android:layout_toLeftOf 将该控件的右边缘和给定ID的控件的左边缘对齐
+		android:layout_toRightOf 将该控件的左边缘和给定ID的控件的右边缘对齐
+
+		android:layout_alignBaseline 该控件的baseline和给定ID的控件的baseline对齐
+		android:layout_alignBottom 将该控件的底部边缘与给定ID控件的底部边缘
+		android:layout_alignLeft 将该控件的左边缘与给定ID控件的左边缘对齐
+		android:layout_alignRight 将该控件的右边缘与给定ID控件的右边缘对齐
+		android:layout_alignTop 将给定控件的顶部边缘与给定ID控件的顶部对齐
+
+
+		android:alignParentBottom 如果该值为true，则将该控件的底部和父控件的底部对齐
+		android:layout_alignParentLeft 如果该值为true，则将该控件的左边与父控件的左边对齐
+		android:layout_alignParentRight 如果该值为true，则将该控件的右边与父控件的右边对齐
+		android:layout_alignParentTop 如果该值为true，则将空间的顶部与父控件的顶部对齐
+
+		android:layout_centerHorizontal 如果值为真，该控件将被至于水平方向的中央
+		android:layout_centerInParent 如果值为真，该控件将被至于父控件水平方向和垂直方向的中央
+		android:layout_centerVertical 如果值为真，该控件将被至于垂直方向的中央
+	-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10px" >
+
+    <TextView android:id="@+id/label" 
+              android:layout_width="fill_parent" 
+              android:layout_height="wrap_content" 
+              android:text="Type here:" />
+
+    <EditText android:id="@+id/entry" 
+              android:layout_width="fill_parent" 
+              android:layout_height="wrap_content" 
+              android:background="@android:drawable/editbox_background"
+              android:layout_below="@id/label" />
+  
+    <Button android:id="@+id/ok" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_below="@id/entry"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10px"
+            android:text="OK" />
+
+    <Button android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/ok"
+            android:layout_alignTop="@id/ok"
+            android:text="Cancel" />
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title" layout="@layout/back_title" />
+    <ScrollView android:orientation="vertical" android:background="#ffededed" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+            <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:background="@drawable/logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/gray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:text="@string/guanyuwomen" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip">
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/gray" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="北京嘉德在线拍卖有限公司" />
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/gray" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="ICP经营许可证编号京ICP证010113号" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

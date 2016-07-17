@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/startService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="StartService"
+            />
+        <Button
+            android:id="@+id/stopService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="StopService"
+            />
+        <TextView
+            android:id="@+id/tv_service_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/startOtherService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="启动其他应用的Service"
+            />
+        <Button
+            android:id="@+id/stopOtherService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="停止其他应用的Service"
+            />
+    </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnBindService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="绑定服务"
+                />
+            <Button
+                android:id="@+id/btnUnbindService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="解除绑定服务"
+                />
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnBindOtherService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绑定外部服务（AIDL）"
+            />
+        <Button
+            android:id="@+id/btnUnbindOtherService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="解除绑定外部服务（AIDL）"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etSyncData"
+            android:text="远程数据同步" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="同步数据到另一个App（AIDL通信）"
+            android:id="@+id/btSyncData" />
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

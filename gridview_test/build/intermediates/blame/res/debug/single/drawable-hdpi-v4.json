@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\speech_balloon.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\drawable-hdpi\\speech_balloon.png"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ringtone.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\drawable-hdpi\\ringtone.png"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\settings.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\drawable-hdpi\\settings.png"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\calendar.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\drawable-hdpi\\calendar.png"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\address_book.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\drawable-hdpi\\address_book.png"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\world.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\drawable-hdpi\\world.png"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\games_control.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\drawable-hdpi\\games_control.png"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\youtube.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\drawable-hdpi\\youtube.png"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\clock.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\drawable-hdpi\\clock.png"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\camera.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\drawable-hdpi\\camera.png"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\weather.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\drawable-hdpi\\weather.png"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\messenger.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\drawable-hdpi\\messenger.png"
+    }
+]

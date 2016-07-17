@@ -1,0 +1,21 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="SelectDialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowAnimationStyle">@style/Animation1</item>
+    </style>
+
+    <style name="Animation1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/top2down</item>
+        <item name="android:windowExitAnimation">@anim/bottom2top</item>
+    </style>
+
+
+</resources>

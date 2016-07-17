@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+        <ImageView android:id="@id/close" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/close" android:scaleType="fitCenter" />
+    </LinearLayout>
+    <TextView android:textColor="@color/black" android:gravity="top|left|center" android:id="@id/yuedu" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="隐私协议说明!" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/beijing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="20.0sp" android:textColor="@color/jiade_line_red" android:gravity="center" android:paddingTop="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="通知" />
+                <ImageView android:id="@id/close" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/close" android:scaleType="fitCenter" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <TextView android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="10.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/mess_del" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

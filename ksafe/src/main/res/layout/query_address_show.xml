@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/title_text_style"
+        android:text="来电归属地显示" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="270dip"
+            android:layout_height="50dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_main_below"
+                style="@style/main_below_item"
+                android:layout_marginLeft="10dip"
+                android:text="开启归属地显示功能" />
+
+            <TextView
+                android:id="@+id/tv_query_address_show1"
+                style="@style/main_below2_item"
+                android:layout_marginLeft="10dip"
+                android:text="未开启" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cb_query_address_show1"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_gravity="center_vertical|center_horizontal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="270dip"
+            android:layout_height="50dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_main_below"
+                style="@style/main_below_item"
+                android:layout_marginLeft="10dip"
+                android:text="归属地提示框显示的时长" />
+
+            <TextView
+                android:id="@+id/tv_main_below2"
+                style="@style/main_below2_item"
+                android:layout_marginLeft="10dip"
+                android:text="15秒" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/jiantou1" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="270dip"
+            android:layout_height="50dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_main_below"
+                style="@style/main_below_item"
+                android:layout_marginLeft="10dip"
+                android:text="归属地提示框的位置" />
+
+            <TextView
+                android:id="@+id/tv_main_below2"
+                style="@style/main_below2_item"
+                android:layout_marginLeft="10dip"
+                android:text="设置归属地提示框显示的位置" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/jiantou1" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="270dip"
+            android:layout_height="50dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_main_below"
+                style="@style/main_below_item"
+                android:layout_marginLeft="10dip"
+                android:text="固定归属地提示框的位置" />
+
+            <TextView
+                android:id="@+id/tv_main_below2"
+                style="@style/main_below2_item"
+                android:layout_marginLeft="10dip"
+                android:text="未开启" />
+        </LinearLayout>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_gravity="center_vertical|center_horizontal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="270dip"
+            android:layout_height="50dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_main_below"
+                style="@style/main_below_item"
+                android:layout_marginLeft="10dip"
+                android:text="归属地提示框风格" />
+
+            <TextView
+                android:id="@+id/tv_query_address_show_colour"
+                style="@style/main_below2_item"
+                android:layout_marginLeft="10dip"
+                android:text="半透明" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/jiantou1" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#000000" />
+
+</LinearLayout>

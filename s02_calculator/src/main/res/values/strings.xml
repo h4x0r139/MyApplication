@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">计算器</string>
+    <string name="action_settings">Settings</string>
+    <string name="operator">乘以</string>
+    <string name="calculate">计算</string>
+    <string name="title_activity_result">计算结果</string>
+    <string name="exit">退出</string>
+    <string name="about">关于</string>
+</resources>

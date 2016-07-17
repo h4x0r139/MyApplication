@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/beijing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textColor="@color/jiade_line_red" android:gravity="center" android:paddingLeft="40.0dip" android:paddingTop="20.0dip" android:paddingRight="40.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="嘉德在线的注册会员采用保证金制。" />
+                <ImageView android:id="@id/close" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/close" android:scaleType="fitCenter" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <TextView android:textSize="14.0sp" android:textColor="@color/jiade_line_red" android:gravity="center" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="本保证金的意义在于维护卖家的权利及利益。" />
+            <TextView android:textSize="@dimen/text12" android:textColor="@color/black" android:paddingTop="30.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="a. 未交纳保证金可申请普通会员，可参加人民币300元以内一件拍品的竞投，且拍品标的数量仅限于一件；" />
+            <TextView android:textSize="@dimen/text12" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="b.交纳人民币100元保证金，可参加总计人民币1000元以内拍品的竞投；" />
+            <TextView android:textSize="@dimen/text12" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="c.交纳人民币500元保证金，可参加总计人民币5000元以内拍品的竞投；" />
+            <TextView android:textSize="@dimen/text12" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="d.交纳人民币1,000元保证金，可参加总计人民币10,000元以内拍品的竞投；" />
+            <TextView android:textSize="@dimen/text12" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="e.交纳人民币3,000元保证金，可参加总计人民币30,000元以内拍品的竞投；" />
+            <TextView android:textSize="@dimen/text12" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="f. 交纳人民币5,000元保证金，可参加总计人民币50,000元以内拍品的竞投；" />
+            <TextView android:textSize="@dimen/text12" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="g. 交纳人民币10,000元保证金，可参加总计人民币100,000元以内拍品的竞投；" />
+            <TextView android:textSize="@dimen/text12" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="h. 交纳人民币30,000元保证金，可参加总计人民币300,000元以内拍品的竞投；" />
+            <TextView android:textSize="@dimen/text12" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="i. 交纳人民币50,000元保证金，可参加总计人民币500,000元以内拍品的竞投；" />
+            <TextView android:textSize="@dimen/text12" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="j.对特别拍品，须进行专门登记注册才具竞投权利；" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

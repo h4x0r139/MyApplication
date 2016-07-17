@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="hello"
+    />
+<Button 
+	android:id="@+id/insert"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+	android:text="插入数据"
+	/>
+<Button 
+	android:id="@+id/query"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+	android:text="查询数据"
+	/>
+</LinearLayout>

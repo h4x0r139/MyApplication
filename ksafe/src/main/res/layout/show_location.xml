@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_location"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/iv_show_location"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:background="@drawable/main_icon_36" />
+    <TextView 
+        android:id="@+id/tv_show_location"
+        android:layout_width="150dip"
+        android:layout_height="50dip"
+        android:text="xxxx"
+        android:textSize="25sp"
+        />
+</LinearLayout>

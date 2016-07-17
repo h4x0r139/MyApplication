@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/beijing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title" layout="@layout/back_title_manager" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/footbar_layout_ly" android:layout_below="@id/title">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:background="@color/beijing" android:layout_width="fill_parent" android:layout_height="160.0dip">
+                <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/personal_bgss" android:scaleType="fitXY" android:layout_above="@id/layout1" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/layout_msg" />
+                <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="40.0dip">
+                    <ImageView android:id="@id/grzx_iv_touxiang" android:layout_width="80.0dip" android:layout_height="80.0dip" android:src="@drawable/defaultpeoplepic" android:scaleType="fitXY" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/layout_msg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                    <TextView android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/text1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="您目前可用的额度：" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/jiade_line_red" android:id="@id/money" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="元" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/login_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                    <Button android:textSize="18.0sp" android:textColor="@color/jiade_line_red" android:id="@id/login" android:background="@drawable/denglu" android:padding="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  登 录/注册  " />
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/myauction_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <ImageView android:layout_width="65.0dip" android:layout_height="65.0dip" android:src="@drawable/my_jp" android:scaleType="fitXY" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/cjjl_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <ImageView android:layout_width="65.0dip" android:layout_height="65.0dip" android:src="@drawable/cjfk" android:scaleType="fitXY" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/bzj_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <ImageView android:layout_width="65.0dip" android:layout_height="65.0dip" android:src="@drawable/bzj" android:scaleType="fitXY" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip">
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/black" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="我的竞拍" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/black" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="成交付款" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/black" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="保证金" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/liuyan_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/liuyan" android:scaleType="fitXY" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="我要留言" android:drawableRight="@drawable/breturn2" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/jplx_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/jjlx" android:scaleType="fitXY" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="拍品竞价领先" android:drawableRight="@drawable/breturn2" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/jpcj_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip">
+                    <ImageView android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/jjcj" android:scaleType="fitXY" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="拍品竞价出局" android:drawableRight="@drawable/breturn2" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/mysale_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                    <ImageView android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/mysale" android:scaleType="fitXY" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="优惠券" android:drawableRight="@drawable/breturn2" />
+                    <ImageView android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/mysale" android:scaleType="fitXY" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="10.0dip" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/footbar_layout_ly" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <View android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <include layout="@layout/home_footbar_layout" />
+    </LinearLayout>
+</RelativeLayout>

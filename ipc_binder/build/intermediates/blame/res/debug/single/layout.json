@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\ipc_binder\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\ipc_binder\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\ipc_binder\\build\\intermediates\\res\\merged\\debug\\layout\\activity_messenger.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\ipc_binder\\src\\main\\res\\layout\\activity_messenger.xml"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\ipc_binder\\build\\intermediates\\res\\merged\\debug\\layout\\activity_provider.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\ipc_binder\\src\\main\\res\\layout\\activity_provider.xml"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\ipc_binder\\build\\intermediates\\res\\merged\\debug\\layout\\activity_tcpclient.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\ipc_binder\\src\\main\\res\\layout\\activity_tcpclient.xml"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\ipc_binder\\build\\intermediates\\res\\merged\\debug\\layout\\activity_book_manager.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\ipc_binder\\src\\main\\res\\layout\\activity_book_manager.xml"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\ipc_binder\\build\\intermediates\\res\\merged\\debug\\layout\\activity_third.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\ipc_binder\\src\\main\\res\\layout\\activity_third.xml"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\ipc_binder\\build\\intermediates\\res\\merged\\debug\\layout\\activity_binder_pool.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\ipc_binder\\src\\main\\res\\layout\\activity_binder_pool.xml"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\ipc_binder\\build\\intermediates\\res\\merged\\debug\\layout\\activity_second.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\ipc_binder\\src\\main\\res\\layout\\activity_second.xml"
+    }
+]

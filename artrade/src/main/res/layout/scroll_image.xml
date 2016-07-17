@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tg.jiadeonline.imagescrollview.ImageScrollView android:id="@id/myImageScrollView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.tg.jiadeonline.imagescrollview.PageControlView android:gravity="center_horizontal" android:id="@id/myPageControlView" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="26.0dip" android:layout_alignLeft="@id/myImageScrollView" android:layout_alignBottom="@id/myImageScrollView" />
+</RelativeLayout>

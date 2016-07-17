@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <com.tg.jiadeonline.imagescrollview.ScrollImageHomeTop android:id="@id/home_si_lunbo" android:layout_width="fill_parent" android:layout_height="@dimen/activity_home_ScrollImageHomeTop_height" />
+</LinearLayout>

@@ -1,0 +1,42 @@
+<android.support.v4.widget.DrawerLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/draw_layout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"  >
+
+    <include layout="@layout/toolbar2"/>
+
+    <!--第一个子视图 the main content view，用于后续选择抽屉后，动态插入Fragment-->
+    <FrameLayout
+        android:id="@+id/content_frame2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+    <!--第二个子视图，左侧导航视图-->
+<!--    <ListView
+        android:id="@+id/listView2"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#ffffcc"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        ></ListView>-->
+    <LinearLayout
+        android:id="@+id/leftMenu"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="标题1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="标题2"/>
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

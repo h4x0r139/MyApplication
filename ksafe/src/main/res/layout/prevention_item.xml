@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    android:background="@drawable/text_gradient"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:layout_marginLeft="10dip"
+        android:id="@+id/iv_pervention_item"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        />
+    <TextView 
+        android:id="@+id/tv_pervention_item"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingLeft="5dip"
+        android:layout_width="150dip"
+        android:layout_height="50dip"
+        android:text="换卡短信通知"
+        android:textSize="22sp"
+        />
+     <ImageView
+         android:id="@+id/iv_pervention_item2"
+         android:layout_marginTop="10dip"
+         android:gravity="center_horizontal|center_vertical"
+         android:layout_marginLeft="70dip"
+        android:layout_width="25dip"
+        android:layout_height="25dip"
+        />
+</LinearLayout>

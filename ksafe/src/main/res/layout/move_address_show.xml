@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background" >
+
+    <RelativeLayout
+        android:id="@+id/iv_move_address_show1"
+        android:layout_width="180dip"
+        android:layout_height="70dip"
+        android:background="@drawable/call_locate_green_9" >
+
+        <ImageView
+            android:id="@+id/iv_move_address_show2"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_alignLeft="@id/iv_move_address_show1"
+            android:layout_marginLeft="7dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/main_icon_36" />
+
+        <TextView
+            android:id="@+id/tv_move_address_show"
+            android:layout_width="110dip"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_move_address_show2"
+           
+            android:text="中国联通"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

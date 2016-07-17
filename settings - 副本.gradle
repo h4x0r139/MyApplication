@@ -1,0 +1,5 @@
+include ':testmodule', ':basebox01'
+include ':login'
+include ':s01_activity',':s02_calculator',':s03_activitytask'
+include ':s04_layout',':s05_checkbox',':s06_radio',':s07_imageview',':s08_fingerplaylayout',':s09_ralativelayout',':s10_login_relativelayout'
+include ':s11_timepicker',':s12_progressbar',':s13_listview',':s14_handler'

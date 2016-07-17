@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/labelView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="登录界面"/>
+
+    <EditText
+        android:id="@+id/usernameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:hint="username"
+        />
+
+    <EditText
+        android:id="@+id/passwordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameText"
+        android:layout_alignLeft="@id/usernameText"
+        android:layout_alignRight="@id/usernameText"
+        android:inputType="textPassword"
+        android:hint="password"
+        />
+
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordText"
+        android:layout_alignParentRight="true"
+        android:text="取消"/>
+
+    <Button
+        android:id="@+id/okBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/cancelBtn"
+        android:layout_toLeftOf="@id/cancelBtn"
+        android:text="确认"/>
+
+
+
+
+</RelativeLayout>

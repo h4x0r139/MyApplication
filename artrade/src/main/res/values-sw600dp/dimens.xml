@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="add_new__ts18">18.0dip</dimen>
+    <dimen name="add_new_view5">5.0dip</dimen>
+    <dimen name="add_new_view20">20.0dip</dimen>
+    <dimen name="add_new_view16">16.0dip</dimen>
+    <dimen name="add_new_view50">50.0dip</dimen>
+    <dimen name="add_new_view100">100.0dip</dimen>
+    <dimen name="add_new_imagew">180.0dip</dimen>
+    <dimen name="add_new_imageh">180.0dip</dimen>
+    <dimen name="add_new_imagesw">18.0dip</dimen>
+    <dimen name="add_new_imagesh">18.0dip</dimen>
+    <dimen name="add_new_but">180.0dip</dimen>
+    <dimen name="add_old_but">120.0dip</dimen>
+    <dimen name="add_old_image">45.0dip</dimen>
+    <dimen name="add_old_layoutLeft">100.0dip</dimen>
+    <dimen name="add_add_h">30.0dip</dimen>
+    <dimen name="add_view_h">16.0dip</dimen>
+    <dimen name="add_image_h">100.0dip</dimen>
+    <dimen name="add_add_text">14.0dip</dimen>
+    <dimen name="add_add_textss">16.0dip</dimen>
+    <dimen name="add_but_height">35.0dip</dimen>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:background="@color/back_title_bg" android:layout_width="fill_parent" android:layout_height="@dimen/activity_home_title_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/back_pay_back" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="15.0dip" android:src="@drawable/btn_goback" android:scaleType="fitCenter" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/black" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="成交付款" android:layout_centerHorizontal="true" />
+</RelativeLayout>

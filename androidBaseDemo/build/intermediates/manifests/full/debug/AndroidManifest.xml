@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cellcom"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.cellcom.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.cellcom.FrameLayoutActivity" />
+        <activity android:name="com.cellcom.RelativeAndLinearActivity" />
+        <activity android:name="com.cellcom.RelativeLayoutActivity" />
+        <activity android:name="com.cellcom.TableLayoutActivity" />
+        <activity android:name="com.cellcom.TabWidgetActivity" />
+        <activity android:name="com.cellcom.CheckBoxActivity" />
+        <activity android:name="com.cellcom.RadioGroupActivity" />
+        <activity android:name="com.cellcom.SpinnerActivity" />
+        <activity android:name="com.cellcom.AutoCompleteTextViewActivity" />
+        <activity android:name="com.cellcom.DatePickerActivity" />
+        <activity android:name="com.cellcom.ProgressBarHandlerActivity" />
+        <activity android:name="com.cellcom.RatingBarActivity" />
+        <activity android:name="com.cellcom.ImageShowActivity" />
+        <activity android:name="com.cellcom.GridViewActivity" />
+        <activity android:name="com.cellcom.TabDemoActivity" />
+        <activity android:name="com.cellcom.OptionsMenuActivity" />
+        <activity android:name="com.cellcom.ContextMenuActivity" />
+        <activity android:name="com.cellcom.SubMenuActivity" />
+        <activity android:name="com.cellcom.Bundle1Activity" />
+        <activity android:name="com.cellcom.Bundle2Activity" />
+        <activity android:name="com.cellcom.AlertDialogActivity" />
+        <activity android:name="com.cellcom.NotificationActivity" />
+    </application>
+
+</manifest>

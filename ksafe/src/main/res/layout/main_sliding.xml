@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView style="@style/title_text_style" 
+        android:text="金山手机卫士"/>
+    <include 
+        layout="@layout/main_sliding_drawer"
+        />
+
+</LinearLayout>

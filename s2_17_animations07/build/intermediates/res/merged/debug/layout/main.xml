@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/layoutId"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<Button android:id="@+id/addButtonId" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+		android:text="添加图片" />
+
+	<Button android:id="@+id/removeButtonId" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_above="@id/addButtonId"
+		android:text="删除图片" />
+		
+
+		<ImageView android:id="@+id/imageViewId"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_centerInParent="true" android:layout_marginTop="100dip"
+			android:src="@drawable/icon" />
+</RelativeLayout>

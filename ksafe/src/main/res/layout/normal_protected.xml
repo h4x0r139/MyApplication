@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dip"
+    android:layout_height="270dip"
+  
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical" >
+
+   <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dip"
+        android:text="设置密码"
+        android:textSize="30px" />
+
+    <LinearLayout
+        android:layout_width="290dip"
+        android:layout_height="140dip"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输入密码"
+            android:textColor="#000000"
+            android:textSize="28px" />
+
+        <EditText
+             android:password="true"
+            android:id="@+id/normal_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+       
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:layout_width="135dip"
+                android:layout_height="35dip"
+                android:id="@+id/normal_ok"
+                android:background="@drawable/button_background_selector"
+                android:text="确认" />
+
+            <Button
+                android:layout_width="135dip"
+                android:layout_height="35dip"
+                android:layout_marginLeft="10dip"
+                android:id="@+id/normal_cancel"
+                 android:background="@drawable/button_background_selector"
+                android:text="取消" />
+        </LinearLayout>
+    </LinearLayout>
+    
+</LinearLayout>

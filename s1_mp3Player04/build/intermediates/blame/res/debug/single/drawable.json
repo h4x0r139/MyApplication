@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\s1_mp3Player04\\build\\intermediates\\res\\merged\\debug\\drawable\\begin.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\s1_mp3Player04\\src\\main\\res\\drawable\\begin.png"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\s1_mp3Player04\\build\\intermediates\\res\\merged\\debug\\drawable\\stop.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\s1_mp3Player04\\src\\main\\res\\drawable\\stop.png"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\s1_mp3Player04\\build\\intermediates\\res\\merged\\debug\\drawable\\pause.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\s1_mp3Player04\\src\\main\\res\\drawable\\pause.png"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\s1_mp3Player04\\build\\intermediates\\res\\merged\\debug\\drawable\\icon.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\s1_mp3Player04\\src\\main\\res\\drawable\\icon.png"
+    }
+]

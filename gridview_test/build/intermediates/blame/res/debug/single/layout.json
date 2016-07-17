@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\layout\\test.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\layout\\test.xml"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\layout\\item.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\layout\\item.xml"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_main.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\layout\\fragment_main.xml"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\build\\intermediates\\res\\merged\\debug\\layout\\gridlayout.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\gridview_test\\src\\main\\res\\layout\\gridlayout.xml"
+    }
+]

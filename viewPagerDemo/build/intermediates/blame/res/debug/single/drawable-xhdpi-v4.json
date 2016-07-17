@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\viewPagerDemo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\viewPagerDemo\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\viewPagerDemo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_action_search.png",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\viewPagerDemo\\src\\main\\res\\drawable-xhdpi\\ic_action_search.png"
+    }
+]

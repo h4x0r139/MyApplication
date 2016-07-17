@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="19"
+    density="xhdpi"
+    format="7"
+    timestamp="613287313469627" >
+
+    <task
+        name="javac"
+        duration="256" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="171" />
+    <task
+        name="verifier"
+        duration="22" />
+
+    <artifact
+        location="D:\yinxm\Android_Workspace\MyApplication\touchEvent_01\build\outputs\apk\touchEvent_01-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="613287313469627" >
+        <artifact
+            location="D:\yinxm\Android_Workspace\MyApplication\touchEvent_01\build\outputs\apk\touchEvent_01-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

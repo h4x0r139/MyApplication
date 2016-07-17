@@ -1,0 +1,201 @@
+[
+    {
+        "outputFile": "D:\\yinxm\\Android_Workspace\\MyApplication\\circleLayoutExample\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 484,
+                    "endColumn": 57,
+                    "endOffset": 537
+                },
+                "from": {
+                    "file": "D:\\yinxm\\Android_Workspace\\MyApplication\\circleLayoutExample\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 89,
+                        "endColumn": 57,
+                        "endOffset": 142
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 542,
+                    "endColumn": 55,
+                    "endOffset": 593
+                },
+                "from": {
+                    "file": "D:\\yinxm\\Android_Workspace\\MyApplication\\circleLayoutExample\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 147,
+                        "endColumn": 55,
+                        "endOffset": 198
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 598,
+                    "endColumn": 52,
+                    "endOffset": 646
+                },
+                "from": {
+                    "file": "D:\\yinxm\\Android_Workspace\\MyApplication\\circleLayoutExample\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 113,
+                        "endColumn": 52,
+                        "endOffset": 161
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 651,
+                    "endColumn": 56,
+                    "endOffset": 703
+                },
+                "from": {
+                    "file": "D:\\yinxm\\Android_Workspace\\MyApplication\\circleLayoutExample\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 56,
+                        "endOffset": 108
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 708,
+                    "endColumn": 52,
+                    "endOffset": 756
+                },
+                "from": {
+                    "file": "D:\\yinxm\\Android_Workspace\\MyApplication\\circleLayoutExample\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 166,
+                        "endColumn": 52,
+                        "endOffset": 214
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 761,
+                    "endColumn": 56,
+                    "endOffset": 813
+                },
+                "from": {
+                    "file": "D:\\yinxm\\Android_Workspace\\MyApplication\\circleLayoutExample\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 224,
+                        "endColumn": 56,
+                        "endOffset": 276
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 818,
+                    "endColumn": 82,
+                    "endOffset": 896
+                },
+                "from": {
+                    "file": "D:\\yinxm\\Android_Workspace\\MyApplication\\circleLayoutExample\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 5,
+                        "startOffset": 333,
+                        "endColumn": 83,
+                        "endOffset": 411
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 901,
+                    "endColumn": 50,
+                    "endOffset": 947
+                },
+                "from": {
+                    "file": "D:\\yinxm\\Android_Workspace\\MyApplication\\circleLayoutExample\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 281,
+                        "endColumn": 50,
+                        "endOffset": 327
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 952,
+                    "endLine": 17,
+                    "endColumn": 12,
+                    "endOffset": 1238
+                },
+                "from": {
+                    "file": "D:\\yinxm\\Android_Workspace\\MyApplication\\circleLayoutExample\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 186,
+                        "endLine": 12,
+                        "endColumn": 12,
+                        "endOffset": 472
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1243,
+                    "endLine": 20,
+                    "endColumn": 12,
+                    "endOffset": 1398
+                },
+                "from": {
+                    "file": "D:\\yinxm\\Android_Workspace\\MyApplication\\circleLayoutExample\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 510,
+                        "endLine": 17,
+                        "endColumn": 12,
+                        "endOffset": 665
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/title_text_style"
+        android:text="开启防盗保护" />
+
+    <ImageView
+        android:layout_width="280dip"
+        android:layout_height="40dip"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dip"
+        android:background="@drawable/kn_protect_guide_second" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="10dip"
+        android:text="2 设置安全手机号"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:background="@drawable/edit_text_background"
+            android:id="@+id/et_pervention_pwd"
+            android:layout_width="250dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginTop="10dip"
+            android:hint="建议填写家人或朋友手机号"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:clickable="true"
+            android:onClick="iv_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_gravity="center"
+            android:background="@drawable/sync_register_icon" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_pervention_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="200dip"
+        android:onClick="next"
+        android:text="下一步" />
+
+</LinearLayout>

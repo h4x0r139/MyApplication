@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@*android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="wrap_content" android:layout_height="@dimen/size12" />
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:id="@id/jpzc_red" android:background="@color/jiade_line_red" android:layout_width="8.0dip" android:layout_height="fill_parent" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/jiade_line_red" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:text="精品专场" android:layout_toRightOf="@id/jpzc_red" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" />
+        <View android:background="@color/jd_biankuang" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

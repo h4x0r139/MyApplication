@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/beijing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title" layout="@layout/back_title_pay" />
+    <View android:id="@id/titless" android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/title" />
+    <RelativeLayout android:id="@id/address_msg" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/titless">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/pay_address" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/address" />
+        <LinearLayout android:orientation="vertical" android:id="@id/pay_address_msg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/pay_breturn" android:layout_toRightOf="@id/pay_address">
+            <RelativeLayout android:paddingTop="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/pay_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/black" android:gravity="right|center" android:id="@id/pay_phone" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/pay_name" />
+            </RelativeLayout>
+            <TextView android:textSize="14.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/addmes" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <ImageView android:id="@id/pay_breturn" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/breturn1" android:scaleType="fitXY" android:layout_alignParentRight="true" />
+        <View android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignBottom="@id/pay_address_msg" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/paymsg" android:layout_below="@id/address_msg">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="@dimen/size12" />
+            <ListView android:id="@id/pay_scrollListView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="@dimen/size12" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/paymsg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/titlesss">
+        <View android:id="@id/titlesss2" android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip">
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="共" />
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/red" android:id="@id/fk_sps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="件拍品" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip">
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="拍品" />
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/red" android:id="@id/fk_zj" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+佣金" />
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/red" android:id="@id/fk_yj" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+证书费" />
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/red" android:id="@id/fk_zsf" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+快递费" />
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/red" android:id="@id/fk_kd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:id="@id/titlesss1" android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/yhq_lin" android:background="@color/white" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="left|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <CheckBox android:id="@id/yhq_chekbox" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" style="@style/MyCheckBox" />
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/red" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="优惠券总价:" />
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/red" android:id="@id/fk_yjq" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/red" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="元" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textColor="@color/gray" android:gravity="right" android:id="@id/fk_yhjxq" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="详情" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <CheckBox android:id="@id/yhq_chekbox1" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" style="@style/MyCheckBox" />
+            <TextView android:textColor="@color/red" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="发票抬头" />
+            <EditText android:textSize="15.0sp" android:id="@id/ed_fapiao" android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginTop="1.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="1.0dip" android:text="" android:singleLine="true" android:maxLength="100" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/titlesss" android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_above="@id/pay_footer" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/pay_footer" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="right|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="14.0sp" android:textColor="@color/jiade_line_red" android:gravity="right|center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="总款￥ " />
+            <TextView android:textSize="14.0sp" android:textColor="@color/jiade_line_red" android:gravity="right|center" android:id="@id/pay_allMoney" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:text="0" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/jiade_line_red" android:gravity="right|center" android:id="@id/fk_yhqjg" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:text="" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="2.0">
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/text_pay" android:background="@color/jiade_line_red" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="确认付款" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

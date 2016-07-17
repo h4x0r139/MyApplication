@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.tg.jiadeonline"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile files('libs/bayeux-api-2.9.0.jar')
+    compile files('libs/cometd-java-annotations-2.9.0.jar')
+    compile files('libs/cometd-java-client-2.9.0.jar')
+    compile files('libs/cometd-java-common-2.9.0.jar')
+    compile files('libs/cometd-java-oort-2.9.0.jar')
+    compile files('libs/cometd-java-server-2.9.0.jar')
+    compile files('libs/cometd-websocket-jetty-2.9.0.jar')
+    compile files('libs/jackson-core-asl-1.9.13.jar')
+    compile files('libs/jackson-mapper-asl-1.9.13.jar')
+    compile files('libs/javax.inject-1.jar')
+    compile files('libs/jetty-client-7.6.15.v20140411.jar')
+    compile files('libs/jetty-continuation-7.6.15.v20140411.jar')
+    compile files('libs/jetty-http-7.6.15.v20140411.jar')
+    compile files('libs/jetty-io-7.6.15.v20140411.jar')
+    compile files('libs/jetty-jmx-7.6.15.v20140411.jar')
+    compile files('libs/jetty-servlets-7.6.15.v20140411.jar')
+    compile files('libs/jetty-util-7.6.15.v20140411.jar')
+    compile files('libs/jetty-websocket-7.6.15.v20140411.jar')
+    compile files('libs/jsr250-api-1.0.jar')
+    compile files('libs/log4j-1.2.17.jar')
+    compile files('libs/slf4j-api-1.7.7.jar')
+    compile files('libs/slf4j-log4j12-1.7.7.jar')
+}

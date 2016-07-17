@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/beijing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/back_title" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:id="@id/lineviewsss" android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <RelativeLayout android:gravity="center_vertical" android:background="@color/jiade_line_red" android:layout_width="fill_parent" android:layout_height="@dimen/activity_home_title_height">
+                <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/wl_tv_gs" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="物流公司:" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="120.0dip">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/item_paipin_currentend_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="0.5dip" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/text14" android:textStyle="bold" android:textColor="@color/black" android:id="@id/wl_tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:text="" />
+                    <TextView android:background="@drawable/reeee" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="3.0dip" android:layout_marginRight="2.0dip" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="@dimen/text14" android:textColor="@color/gray" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="总金额 :" />
+                        <TextView android:textSize="@dimen/text14" android:textStyle="bold" android:textColor="@color/jiade_line_red" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/wl_tv_je" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="@dimen/text14" android:textColor="@color/gray" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="物流单号:" />
+                        <TextView android:textSize="@dimen/text14" android:textStyle="bold" android:textColor="@color/jiade_line_red" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/wl_tv_wldh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView android:textSize="@dimen/text14" android:textColor="@color/gray" android:gravity="center_vertical" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="收货地址： 北京市朝阳区美丽胡同25号 " />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" />
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <WebView android:id="@id/wl_wb" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

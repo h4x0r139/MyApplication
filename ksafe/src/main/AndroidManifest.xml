@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.itcast.mobilesafe"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<!--
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+-->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+
+<!--    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="cn.itcast.mobilesafe" />-->
+
+    <application
+
+        android:label="@string/app_name"
+        android:name="MyApplication" >
+        <uses-library android:name="android.test.runner" />
+        <!--android:icon="@drawable/main_icon"-->
+        <activity
+            android:label="@string/app_name"
+            android:name=".ui.SplashActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.MainActivity" >
+        </activity>
+        <activity
+            android:label="@string/LostProtectedActivity"
+            android:name=".ui.LostProtectedActivity" >
+        </activity>
+        <activity android:name=".ui.Pervention1" >
+        </activity>
+        <activity android:name=".ui.Pervention2" >
+        </activity>
+        <activity android:name=".ui.Pervention3" >
+        </activity>
+        <activity android:name=".ui.SelectContactInfo" >
+        </activity>
+        <activity android:name=".ui.ProtectedSuccessActivity" >
+        </activity>
+        <activity android:name=".ui.CommunicationActivity" >
+        </activity>
+        <activity android:name=".ui.Communication2Activity" >
+        </activity>
+        <activity android:name=".ui.QueryAddressActivity" >
+        </activity>
+        <activity android:name=".ui.QueryAddressShow" >
+        </activity>
+        <activity android:name=".ui.Blacknumber" >
+        </activity>
+        <activity android:name=".ui.CallRecode" >
+        </activity>
+        <activity android:name=".ui.SafetyBackups" >
+        </activity>
+        <activity android:name=".ui.CallInterceptRecode" >
+        </activity>
+        <activity android:name=".ui.AppInfoActivity" >
+        </activity>
+        <activity android:name=".ui.AppLock" >
+        </activity>
+        <activity android:name=".ui.AppTaskProgressActivity" >
+        </activity>
+        <activity android:name=".ui.AppProgressManager" >
+        </activity>
+        <activity android:name=".ui.CleanRubbish2" >
+        </activity>
+        <activity android:name=".ui.CleanRubbish" >
+        </activity>
+        <activity android:name=".ui.CleanSDCardActivity" >
+        </activity>
+        <activity android:name=".ui.CommonNumActivity" >
+        </activity>
+        <activity android:name=".ui.T4_DemoActivity" >
+        </activity>
+        <activity android:name=".ui.BatteryState" >
+        </activity>
+        <activity android:name=".ui.PictureActivity" >
+        </activity>
+         <activity android:name=".ui.IntroActiviy" >
+        </activity>
+        <activity android:name=".ui.LockScreenActivity" android:launchMode="singleInstance">
+        </activity>
+        <activity
+            android:name=".ui.AppDetailActivity"
+            android:theme="@style/activity_float_no_title" >
+        </activity>
+        <activity
+            android:name=".ui.DragViewActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <service android:name=".service.AddressService" >
+        </service>
+        <service android:name=".service.SMSService" >
+        </service>
+        <service android:name=".service.RecoverService" >
+        </service>
+        <service android:name=".service.MonitorService" >
+        </service>
+        <service android:name=".service.WatchDogService" >
+        </service>
+        <service android:name=".service.KillPoisonService" >
+        </service>
+        <service android:name=".service.DeleteLockPackageNameService" >
+        </service>
+
+        <receiver android:name=".receiver.CallPhone" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.BootCompleteReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.SMSReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.LockScreenReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.SCREEN_OFF" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.MyBroadcastReciver" >
+            <intent-filter >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.AddedReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+                <!-- [color=red] 注意！！ 这句必须要加，否则接收不到BroadCast  [/color] -->
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.MyAdmin" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/my_admin" />
+
+            <intent-filter >
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+        <provider 
+            android:name=".provider.AppLockProvider" android:authorities="cn.itcast.applockprovider"
+            ></provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/beijing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/message_view" android:layout_width="1.0dip" android:layout_height="1.0dip" />
+    <include android:id="@id/title" layout="@layout/back_title_del" />
+    <TextView android:id="@id/line" android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_below="@id/title" />
+    <com.tg.jiadeonline.layout.MyScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/line">
+        <LinearLayout android:orientation="vertical" android:id="@id/yhq_lin" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="20.0dip" />
+    </com.tg.jiadeonline.layout.MyScrollView>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <View android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip">
+                <TextView android:textSize="@dimen/text12" android:textColor="@color/gray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/yhq_1" />
+                <TextView android:textSize="@dimen/text12" android:textColor="@color/gray" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:text="@string/yhq_2" />
+                <TextView android:textSize="@dimen/text12" android:textColor="@color/gray" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:text="@string/yhq_3" />
+                <TextView android:textSize="@dimen/text12" android:textColor="@color/gray" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:text="@string/yhq_4" />
+                <TextView android:textSize="@dimen/text12" android:textColor="@color/gray" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/yhq_5" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

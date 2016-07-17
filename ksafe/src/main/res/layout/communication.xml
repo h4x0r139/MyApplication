@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/listview_item_background_selector"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_communication"
+            android:layout_width="60dip"
+            android:layout_height="50dip" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_Communication"
+                style="@style/main_below_item"
+                android:layout_marginLeft="15dip"
+                android:text="短信管理" />
+
+            <TextView
+                android:id="@+id/tv_Communication2"
+                style="@style/main_below2_item"
+                android:layout_marginLeft="15dip"
+                android:text="快捷短信.扣费查询" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#000000" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

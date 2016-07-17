@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/cb_call_recode"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:clickable="false"
+            android:focusable="false" />
+
+        <LinearLayout
+            android:layout_width="140dip"
+            android:layout_height="60dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/main_below_item"
+                android:layout_marginTop="5dip"
+                android:text="短信管理" />
+
+            <TextView
+                android:id="@+id/tv_number"
+                style="@style/main_below2_item"
+                android:layout_marginTop="3dip"
+                android:text="xx" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="150dip"
+            android:layout_height="60dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_address"
+                style="@style/main_below_item"
+                android:layout_marginTop="5dip"
+                android:text="短信管理" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                style="@style/main_below2_item"
+                android:layout_marginTop="3dip"
+                android:text="快捷短信.扣费查询" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

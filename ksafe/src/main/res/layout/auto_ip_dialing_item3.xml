@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dip"
+    android:layout_height="355dip"
+    android:background="#ff191919"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="290dip"
+        android:layout_height="35dip"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/dialog_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="5dip"
+            android:text="选择IP拨号"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+   
+
+        <LinearLayout
+            android:layout_width="290dip"
+            android:layout_height="65dip"
+            android:layout_marginTop="10dip"
+            android:background="#D9D9D9"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_single_choice_dialog1"
+                android:layout_width="230dip"
+                android:layout_height="65dip"
+                android:layout_marginLeft="10dip"
+                android:gravity="center_vertical"
+                android:text="17951"
+                android:textColor="#ff202020"
+                android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/rb_single_choice_dialog1"
+                android:layout_width="60dip"
+                android:layout_height="65dip" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="290dip"
+            android:layout_height="1dip"
+            android:background="#ff313131" />
+
+        <LinearLayout
+            android:layout_width="290dip"
+            android:layout_height="65dip"
+            android:background="#D9D9D9"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_single_choice_dialog2"
+                android:layout_width="230dip"
+                android:layout_height="65dip"
+                android:layout_marginLeft="10dip"
+                android:gravity="center_vertical"
+                android:text="12593"
+                android:textColor="#ff202020"
+                android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/rb_single_choice_dialog2"
+                android:layout_width="60dip"
+                android:layout_height="65dip" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="290dip"
+            android:layout_height="1dip"
+            android:background="#ff313131" />
+
+        <LinearLayout
+            android:layout_width="290dip"
+            android:layout_height="65dip"
+            android:background="#D9D9D9"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_single_choice_dialog3"
+                android:layout_width="230dip"
+                android:layout_height="65dip"
+                android:layout_marginLeft="10dip"
+                android:gravity="center_vertical"
+                android:text="其他IP号码"
+                android:textColor="#ff202020"
+                android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/rb_single_choice_dialog3"
+                android:layout_width="60dip"
+                android:layout_height="65dip" />
+        </LinearLayout>
+
+      <View
+            android:layout_width="290dip"
+            android:layout_height="1dip"
+            android:background="#ff313131" />
+
+    <LinearLayout
+         android:id="@+id/ll_auto_ip_num"
+            android:layout_width="290dip"
+            android:layout_height="65dip"
+            android:background="#D9D9D9"
+            android:orientation="horizontal" 
+              android:visibility="gone">
+
+            <EditText
+              
+                android:id="@+id/et_auto_ip_num"
+                android:layout_width="270dip"
+                android:layout_height="65dip"
+                android:layout_marginLeft="10dip"
+                android:gravity="center_vertical"
+                android:hint="其他IP号码必填"
+                android:textColor="#ff202020"
+                android:textSize="24sp" />
+
+          
+        </LinearLayout>
+      
+
+      
+
+        <LinearLayout
+            android:layout_width="230dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="5dip"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt"
+                android:layout_width="200dip"
+                android:layout_height="40dip"
+                android:layout_marginLeft="40dip"
+                android:gravity="center_horizontal"
+                android:paddingTop="10dip"
+                android:text="取消" />
+        </LinearLayout>
+    
+
+</LinearLayout>

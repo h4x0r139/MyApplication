@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\s2_12_animations02\\build\\intermediates\\res\\merged\\debug\\anim\\alpha.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\s2_12_animations02\\src\\main\\res\\anim\\alpha.xml"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\s2_12_animations02\\build\\intermediates\\res\\merged\\debug\\anim\\translate.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\s2_12_animations02\\src\\main\\res\\anim\\translate.xml"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\s2_12_animations02\\build\\intermediates\\res\\merged\\debug\\anim\\sacle.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\s2_12_animations02\\src\\main\\res\\anim\\sacle.xml"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\s2_12_animations02\\build\\intermediates\\res\\merged\\debug\\anim\\rotate.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\s2_12_animations02\\src\\main\\res\\anim\\rotate.xml"
+    }
+]

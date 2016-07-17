@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="19"
+    density="xhdpi"
+    format="7"
+    timestamp="156953179264733" >
+
+    <task
+        name="javac"
+        duration="457" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="197" />
+    <task
+        name="verifier"
+        duration="45" />
+
+    <artifact
+        location="D:\yinxm\Android_Workspace\MyApplication\drawerlayout_zhy\build\outputs\apk\drawerlayout_zhy-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="156953179264733" >
+        <artifact
+            location="D:\yinxm\Android_Workspace\MyApplication\drawerlayout_zhy\build\outputs\apk\drawerlayout_zhy-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

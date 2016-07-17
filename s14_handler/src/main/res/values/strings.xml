@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">S14_Handler</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main1">Main1Activity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_handler3">Handler3Activity</string>
+    <string name="title_activity_handler_thread_demo1">HandlerThreadDemo1</string>
+</resources>
