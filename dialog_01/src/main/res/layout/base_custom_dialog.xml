@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="524px"
+    android:layout_height="310px"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50px"
+        android:text="您输入的手机号"
+        android:textColor="#333333"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15px"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:text="+8618334786948"
+        android:textColor="#333333"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15px"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:text="暂未注册,是否立即注册？"
+        android:textColor="#333333"
+        android:textSize="30px" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70px"
+        android:layout_gravity="center"
+        android:layout_marginTop="30px"
+        android:gravity="center_horizontal">
+        <RelativeLayout
+            android:id="@+id/one_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            >
+            <Button
+                android:id="@+id/centerButton"
+                android:layout_width="200px"
+                android:layout_height="match_parent"
+                android:background="@drawable/ok_button_bg"
+                android:text="确认"
+                android:textColor="#ffffff"
+                android:textSize="30px" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/two_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            >
+            <Button
+                android:id="@+id/leftButton"
+                android:layout_width="200px"
+                android:layout_height="match_parent"
+                android:background="@drawable/calcle_button_bg"
+                android:text="取消"
+                android:textColor="#786b89"
+                android:textSize="30px" />
+
+            <Button
+                android:id="@+id/rightButton"
+                android:layout_width="200px"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/leftButton"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/ok_button_bg"
+                android:text="确认"
+                android:textColor="#ffffff"
+                android:textSize="30px" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

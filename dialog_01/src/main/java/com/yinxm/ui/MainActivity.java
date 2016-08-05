@@ -1,12 +1,12 @@
-package com.xjp.androiddialog;
+package com.yinxm.ui;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +21,7 @@ import android.widget.TextView;
 /**
  * Android 对话框集合
  */
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     private ListView listView;
 
@@ -38,7 +38,8 @@ public class MainActivity extends ActionBarActivity {
 
         listView = (ListView) findViewById(R.id.list);
         String items[] = {"多按钮对话框", "单选对话框", "多选对话框", "列表对话框", "添加布局对话框",
-                "简单自定义对话框1", "简单自定义对话框2", "高级自定义对话框", "PopupWindow高级对话框"};
+                "简单自定义对话框1", "简单自定义对话框2", "高级自定义对话框", "PopupWindow高级对话框", "ecarx通话状态Dialog",
+                "ecarx base Dialog", "语音输入"};
         listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items));
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -71,10 +72,33 @@ public class MainActivity extends ActionBarActivity {
                         break;
                     case 8:
                         dialog9();
+                    case 9:
+                        dialogShowCallStatusBar();
+                    case 10:
+                       ecarxBaseDialog();
+                    case 11:
+                        speechInput();
                         break;
                 }
             }
         });
+    }
+
+    /**
+     * 语音输入
+     */
+    private void speechInput() {
+        SpeechInputDialog dialog = new SpeechInputDialog(this);
+        dialog.show();
+    }
+
+    private void ecarxBaseDialog() {
+        BaseCustomDialogManager.getDialog(this, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        },"这是我的提示信息").show();
     }
 
 
@@ -224,7 +248,7 @@ public class MainActivity extends ActionBarActivity {
         //设置对话框起点X轴
         lp.x = 0;
         //设置对话框起点Y轴
-        lp.y = getStatusBarHeight() + getActionBarHeight();
+//        lp.y = getStatusBarHeight() + getActionBarHeight();
         //设置对话框大小
         lp.width = WindowManager.LayoutParams.MATCH_PARENT;
         lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
@@ -241,7 +265,24 @@ public class MainActivity extends ActionBarActivity {
         dialog.show();
     }
 
-    /**
+    private void dialogShowCallStatusBar() {
+        Dialog dialog = new Dialog(this, R.style.BaseCustomDialog);
+        dialog.show();
+
+        Window dialogWindow = dialog.getWindow();
+        dialogWindow.setContentView(R.layout.call_status_bar_layout);
+//        dialogWindow.setGravity(Gravity.TOP);
+        WindowManager.LayoutParams layoutParams = dialogWindow.getAttributes();
+//        layoutParams.x = 0;
+//        layoutParams.y = getStatusBarHeight() + getActionBarHeight();
+        layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
+        layoutParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        dialogWindow.setAttributes(layoutParams);
+    }
+
+
+
+    /**`
      * 得到手机状态栏高度
      *
      * @return
@@ -258,9 +299,9 @@ public class MainActivity extends ActionBarActivity {
      *
      * @return
      */
-    private int getActionBarHeight() {
-        return getSupportActionBar().getHeight();
-    }
+//    private int getActionBarHeight() {
+//        return getSupportActionBar().getHeight();
+//    }
 
 
     private void dialog9() {
@@ -278,7 +319,8 @@ public class MainActivity extends ActionBarActivity {
         pw.setBackgroundDrawable(new ColorDrawable(0x00000000));
         //设置对话框的位置偏移量
         int x = 0;
-        int y = getStatusBarHeight() + getActionBarHeight();
+        int y = getStatusBarHeight();
+//        int y = getStatusBarHeight() + getActionBarHeight();
         //相对于父控件显示对话框
         pw.showAtLocation(parentView, Gravity.TOP, x, y);
 
@@ -313,5 +355,7 @@ public class MainActivity extends ActionBarActivity {
         });
 
     }
+
+
 
 }
