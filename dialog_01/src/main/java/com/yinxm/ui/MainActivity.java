@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -39,7 +40,7 @@ public class MainActivity extends Activity {
         listView = (ListView) findViewById(R.id.list);
         String items[] = {"多按钮对话框", "单选对话框", "多选对话框", "列表对话框", "添加布局对话框",
                 "简单自定义对话框1", "简单自定义对话框2", "高级自定义对话框", "PopupWindow高级对话框", "ecarx通话状态Dialog",
-                "ecarx base Dialog", "语音输入"};
+                "ecarx base Dialog", "语音输入", "语音输入PopupWindow"};
         listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items));
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -79,9 +80,16 @@ public class MainActivity extends Activity {
                     case 11:
                         speechInput();
                         break;
+                    case 12:
+                        speechInputPopupWindow();
+                        break;
                 }
             }
         });
+    }
+
+    private void speechInputPopupWindow() {
+        this.startActivity(new Intent(this, PopupWindowActivity.class));
     }
 
     /**

@@ -26,4 +26,19 @@
         android:background="@android:color/holo_red_dark">
 
     </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_speech_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/chat_send_voice" />
+    </LinearLayout>
 </RelativeLayout>

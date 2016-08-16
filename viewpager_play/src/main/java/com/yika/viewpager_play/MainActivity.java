@@ -13,8 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener{
-    ViewPager viewPager;
-    List<View> viewList;
+    private ViewPager viewPager;
+    private List<View> viewList;
     private  int position =0;
 
     @Override
@@ -118,5 +118,23 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
 //        System.out.println("[onPageScrollStateChanged]");
 //        Log.d("yika", "[onPageScrollStateChanged]，state="+state);
 
+    }
+
+    public void gotoRotateAnimationActivity(View view) {
+        startActivity(new Intent(MainActivity.this, RotateAnimationActivity.class));
+
+    }
+
+    public void gotoMain3Activity(View view) {
+        startActivity(new Intent(MainActivity.this, Main3Activity.class));
+    }
+
+    public void gotoMain2Activity(View view) {
+        startActivity(new Intent(MainActivity.this, Main2Activity.class));
+
+    }
+
+    public void back(View view) {
+        finish();
     }
 }

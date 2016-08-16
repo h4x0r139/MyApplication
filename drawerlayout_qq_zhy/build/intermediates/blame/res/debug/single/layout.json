@@ -6,5 +6,9 @@
     {
         "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\drawerlayout_qq_zhy\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
         "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\drawerlayout_qq_zhy\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\drawerlayout_qq_zhy\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_speech_input.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\drawerlayout_qq_zhy\\src\\main\\res\\layout\\dialog_speech_input.xml"
     }
 ]

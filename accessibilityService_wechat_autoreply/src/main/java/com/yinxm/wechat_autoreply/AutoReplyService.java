@@ -37,6 +37,7 @@ public class AutoReplyService extends AccessibilityService {
     private Handler handler = new Handler();
 
 
+
     /**
      * 必须重写的方法，响应各种事件。
      * @param event

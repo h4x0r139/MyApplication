@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\yinxm\Android_Workspace\MyApplication\bluetoothControl01\src\main\AndroidManifest.xml:2:1-37:12
+ADDED from D:\yinxm\Android_Workspace\MyApplication\bluetoothControl01\src\main\AndroidManifest.xml:2:1-43:12
 	package
 		ADDED from D:\yinxm\Android_Workspace\MyApplication\bluetoothControl01\src\main\AndroidManifest.xml:3:5-25
 		INJECTED from D:\yinxm\Android_Workspace\MyApplication\bluetoothControl01\src\main\AndroidManifest.xml
@@ -32,7 +32,7 @@ ADDED from D:\yinxm\Android_Workspace\MyApplication\bluetoothControl01\src\main\
 	android:name
 		ADDED from D:\yinxm\Android_Workspace\MyApplication\bluetoothControl01\src\main\AndroidManifest.xml:11:22-69
 application
-ADDED from D:\yinxm\Android_Workspace\MyApplication\bluetoothControl01\src\main\AndroidManifest.xml:14:5-35:19
+ADDED from D:\yinxm\Android_Workspace\MyApplication\bluetoothControl01\src\main\AndroidManifest.xml:14:5-41:19
 MERGED from [com.android.support:appcompat-v7:23.1.1] D:\yinxm\Android_Workspace\MyApplication\bluetoothControl01\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] D:\yinxm\Android_Workspace\MyApplication\bluetoothControl01\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 	android:label
@@ -71,3 +71,7 @@ action#android.intent.action.MEDIA_BUTTON
 ADDED from D:\yinxm\Android_Workspace\MyApplication\bluetoothControl01\src\main\AndroidManifest.xml:31:17-32:26
 	android:name
 		ADDED from D:\yinxm\Android_Workspace\MyApplication\bluetoothControl01\src\main\AndroidManifest.xml:31:25-74
+receiver#com.jph.lc.MusicCallEventReceiver
+ADDED from D:\yinxm\Android_Workspace\MyApplication\bluetoothControl01\src\main\AndroidManifest.xml:35:7-40:20
+	android:name
+		ADDED from D:\yinxm\Android_Workspace\MyApplication\bluetoothControl01\src\main\AndroidManifest.xml:35:17-55

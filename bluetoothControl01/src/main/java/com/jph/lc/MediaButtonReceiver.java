@@ -32,14 +32,16 @@ public class MediaButtonReceiver extends BroadcastReceiver{
 	@Override
 	public void onReceive(Context context, Intent intent) {
 		 String intentAction = intent.getAction() ;
-		Log.i("ksdinf", "onReceive action="+intentAction);
+		Log.i("yika", "com.jph.lc.MediaButtonReceiver.onReceive action="+intentAction);
 
 		if(Intent.ACTION_MEDIA_BUTTON.equals(intentAction)){
 	        	KeyEvent keyEvent = (KeyEvent)intent.getParcelableExtra(Intent.EXTRA_KEY_EVENT); //获得KeyEvent对象  
 	        	if(headSetListener != null){
 	        		try {
 	        			if(keyEvent.getAction() == KeyEvent.ACTION_UP){
-	        				if (clickCount==0) {//单击
+							Log.i("yika", "com.jph.lc.MediaButtonReceiver.onReceive KeyEvent.ACTION_UP");
+
+							if (clickCount==0) {//单击
 	        					clickCount++;
 	        					myTimer = new MTask();
 	        					timer.schedule(myTimer,1000);
@@ -55,7 +57,7 @@ public class MediaButtonReceiver extends BroadcastReceiver{
 					}
 	        	}	
 	        }
-	        abortBroadcast();//终止广播(不让别的程序收到此广播，免受干扰)  
+//	        abortBroadcast();//终止广播(不让别的程序收到此广播，免受干扰)
 	}
 	/**
 	 * 定时器，用于延迟1秒，判断是否会发生双击和三连击

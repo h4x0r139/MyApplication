@@ -58,14 +58,15 @@ public class PlayViewPagerAdapterRotate extends PagerAdapter {
     }
 
     @Override
-    public Object instantiateItem(ViewGroup container, int position) {
-        Log.d("yika", "instantiateItem position=" + position);
-        position = position % 3;
-        Log.d("yika", "position=" + position);
+    public Object instantiateItem(ViewGroup container, int pos) {
+        Log.d("yika", "instantiateItem position=" + pos);
 
+        int position = pos % 3;
+        Log.d("yika", "position=" + position);
+        viewCache[position].setTag(R.id.tag_animator, pos);
         ViewHolder viewHolder = (ViewHolder) viewCache[position].getTag();
         viewHolder.img_audioIcon.setImageResource(R.mipmap.number01);
-/*        switch (position) {
+        switch (position) {
             case 0:
                 viewHolder.img_audioIcon.setImageResource(R.mipmap.number01);
                 break;
@@ -85,12 +86,17 @@ public class PlayViewPagerAdapterRotate extends PagerAdapter {
                 viewHolder.img_audioIcon.setImageResource(R.mipmap.number06);
                 break;
 
-        }*/
+        }
         ViewGroup parent = (ViewGroup)viewCache[position].getParent();
         if (parent != null) {
             parent.removeView(viewCache[position]);
         }
         container.addView(viewCache[position]);
+
+        //
+        viewCache[position].setScaleX(0.6f);
+        viewCache[position].setScaleY(0.6f);
+
         return viewCache[position];
     }
 

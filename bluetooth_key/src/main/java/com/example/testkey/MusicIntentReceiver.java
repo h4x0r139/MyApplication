@@ -34,14 +34,30 @@ import android.widget.Toast;
  */
 @SuppressLint("InlinedApi")
 public class MusicIntentReceiver extends BroadcastReceiver {
-	private static final String LOG_TAG = "MusicIntentReceiver";
+	private static final String LOG_TAG = "yika";
 	private Context mContext;
 	private KeyService mKeyService;
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
+		try {
+			Log.i(LOG_TAG, "onReceive action="+intent.getAction());
+		} catch (Exception e) {
+			Log.i(LOG_TAG, "onReceive 异常");
+		}
+
 		mContext = context;
 		mKeyService = new KeyService(mContext);
+//		if (intent.hasExtra(Intent.EXTRA_KEY_EVENT)) {
+//			KeyEvent keyEvent0 = (KeyEvent) intent.getExtras().get(Intent.EXTRA_KEY_EVENT);
+//			Log.i(LOG_TAG, "onReceive keyEvent0.getAction()="+keyEvent0.getAction()+", keyEventCode="+keyEvent0.getKeyCode());
+//		}
+//		try {
+//			KeyEvent keyEvent0 = (KeyEvent) intent.getExtras().get(Intent.EXTRA_KEY_EVENT);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+
 		if (intent.getAction().equals(
 				android.media.AudioManager.ACTION_AUDIO_BECOMING_NOISY)) {
 			Toast.makeText(context, "Headphones disconnected.",
@@ -55,6 +71,7 @@ public class MusicIntentReceiver extends BroadcastReceiver {
 			Log.i(LOG_TAG, "ACTION_MEDIA_BUTTON!");
 			KeyEvent keyEvent = (KeyEvent) intent.getExtras().get(
 					Intent.EXTRA_KEY_EVENT);
+			Log.i(LOG_TAG, "action="+keyEvent.getAction()+", keyCode="+keyEvent.getKeyCode());
 			if (keyEvent.getAction() != KeyEvent.ACTION_DOWN)
 				return;
 

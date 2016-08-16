@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 
 public class LifecycleActivity extends AppCompatActivity {
+    public static int static_num = 10;
+    private int num  = 10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +82,9 @@ public class LifecycleActivity extends AppCompatActivity {
     }
 
     public void back(View view) {
+        static_num ++;
+        num++;
+        Log.i("yinxm", "static_num="+LifecycleActivity.static_num+", num="+num);
         finish();
     }
 

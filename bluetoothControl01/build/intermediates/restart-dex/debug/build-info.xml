@@ -2,31 +2,39 @@
 <instant-run
     abi="armeabi-v7a,armeabi"
     api-level="19"
-    density="xhdpi"
+    density="mdpi"
     format="7"
-    timestamp="1458609082569862" >
+    timestamp="1215411916472689"
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="2240" />
+        duration="416" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="639" />
     <task
         name="instant-run-transform"
-        duration="862" />
+        duration="110" />
     <task
         name="verifier"
-        duration="102" />
+        duration="2" />
 
     <artifact
-        location="D:\yinxm\Android_Workspace\MyApplication\bluetoohControl01\build\outputs\apk\bluetoohControl01-debug.apk"
-        type="MAIN" />
+        location="D:\yinxm\Android_Workspace\MyApplication\bluetoothControl01\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
 
-    <build timestamp="1458609082569862" >
+    <build timestamp="1215336449609701" >
         <artifact
-            location="D:\yinxm\Android_Workspace\MyApplication\bluetoohControl01\build\outputs\apk\bluetoohControl01-debug.apk"
+            location="D:\yinxm\Android_Workspace\MyApplication\bluetoothControl01\build\outputs\apk\bluetoothControl01-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="1215411916472689"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="D:\yinxm\Android_Workspace\MyApplication\bluetoothControl01\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

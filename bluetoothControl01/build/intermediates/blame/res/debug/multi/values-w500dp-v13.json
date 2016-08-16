@@ -1,29 +1,5 @@
 [
     {
-        "outputFile": "D:\\yinxm\\Android_Workspace\\MyApplication\\bluetoohControl01\\build\\intermediates\\res\\merged\\debug\\values-w500dp-v13\\values-w500dp-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 54,
-                    "endOffset": 105
-                },
-                "from": {
-                    "file": "D:\\yinxm\\Android_Workspace\\MyApplication\\bluetoohControl01\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-w500dp\\values-w500dp.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 232,
-                        "endColumn": 54,
-                        "endOffset": 282
-                    }
-                }
-            }
-        ]
-    },
-    {
         "outputFile": "D:\\yinxm\\Android_Workspace\\MyApplication\\bluetoothControl01\\build\\intermediates\\res\\merged\\debug\\values-w500dp-v13\\values-w500dp-v13.xml",
         "map": [
             {

@@ -12,12 +12,12 @@
         "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\drawerLayoutUsing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
-        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\drawerLayoutUsing\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\drawerLayoutUsing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
         "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\drawerLayoutUsing\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
         "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\drawerLayoutUsing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\drawerLayoutUsing\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\drawerLayoutUsing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\drawerLayoutUsing\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",

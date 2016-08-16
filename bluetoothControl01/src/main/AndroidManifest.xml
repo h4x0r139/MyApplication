@@ -32,6 +32,12 @@
                 </action>
             </intent-filter>
         </receiver>
+      <receiver android:name=".MusicCallEventReceiver" >
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.MEDIA_BUTTON" >
+                </action>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
