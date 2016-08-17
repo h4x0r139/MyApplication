@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "org.yinxm.data"
+        applicationId "cn.yinxm.data"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="org.yinxm.data"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.yinxm.data">
 
     <application
         android:allowBackup="true"
@@ -8,20 +8,24 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="org.yinxm.data.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <provider
-            android:name="org.yinxm.data.BookProvider"
+            android:name=".BookProvider"
             android:authorities="org.wangchenlong.book.provider"
             android:permission="org.wangchenlong.BOOK_PROVIDER"
-            android:process=":provider"/>
-
+            android:process=":provider" />
+        <provider
+            android:name=".WifiPlayerContentProvider"
+            android:authorities="cn.yinxm.data.provider.wifiplayer"
+            android:enabled="false"
+            android:exported="false"></provider>
     </application>
 
 </manifest>

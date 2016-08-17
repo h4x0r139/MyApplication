@@ -1,4 +1,4 @@
-package org.yinxm.data;
+package cn.yinxm.data;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

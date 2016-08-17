@@ -1,4 +1,4 @@
-package org.yinxm.data;
+package cn.yinxm.data;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import org.wangchenlong.contentproviderdemo.R;
+import org.yinxm.data.R;
 
 public class MainActivity extends AppCompatActivity {
 

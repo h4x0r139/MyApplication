@@ -1,4 +1,4 @@
-package org.yinxm.data;
+package cn.yinxm.data;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
