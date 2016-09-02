@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<cn.sunzn.tevent.TouchEventFather xmlns:android="http://schemas.android.com/apk/res/android"
+<cn.yinxm.tevent.TouchEventFather xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#468AD7"
     android:gravity="center"
     android:orientation="vertical" >
 
-    <cn.sunzn.tevent.TouchEventChilds
+    <cn.yinxm.tevent.TouchEventChilds
         android:id="@+id/childs"
         android:layout_width="200dp"
         android:layout_height="200dp"
@@ -14,4 +14,4 @@
         android:background="#E1110D"
         android:text="@string/hello" />
 
-</cn.sunzn.tevent.TouchEventFather>
+</cn.yinxm.tevent.TouchEventFather>
