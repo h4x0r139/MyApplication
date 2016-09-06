@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/custom_song_icon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:id="@+id/ll_custom_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btn_custom_play"
+            style="@style/btn_custom_style"
+            android:scaleType="centerInside"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/notify_btn_light_play2_normal"
+            android:layout_marginRight="30dp"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_custom_next"
+            style="@style/btn_custom_style"
+            android:scaleType="centerInside"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/notify_btn_light_next_normal"
+            android:layout_marginRight="30dp"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_custom_close"
+            style="@style/btn_custom_style"
+            android:scaleType="centerInside"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/notify_close"
+            android:layout_marginRight="16dp"
+
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/ll_custom_button"
+        android:layout_toRightOf="@id/custom_song_icon"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textColor="@android:color/white"
+            android:text="这是歌名"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="作者"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

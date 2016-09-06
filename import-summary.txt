@@ -27,10 +27,10 @@ Moved Files:
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
-* AndroidManifest.xml => threadPool_demo\src\main\AndroidManifest.xml
-* assets\ => threadPool_demo\src\main\assets
-* res\ => threadPool_demo\src\main\res\
-* src\ => threadPool_demo\src\main\java\
+* AndroidManifest.xml => notification_02\src\main\AndroidManifest.xml
+* assets\ => notification_02\src\main\assets\
+* res\ => notification_02\src\main\res\
+* src\ => notification_02\src\main\java\
 
 Missing Android Support Repository:
 -----------------------------------

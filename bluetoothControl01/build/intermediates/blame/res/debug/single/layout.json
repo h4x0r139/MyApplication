@@ -64,12 +64,12 @@
         "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\bluetoothControl01\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
-        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\bluetoothControl01\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\bluetoothControl01\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_list_menu_item_checkbox.xml"
-    },
-    {
         "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\bluetoothControl01\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
         "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\bluetoothControl01\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\bluetoothControl01\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "D:\\yinxm\\Android_Workspace\\MyApplication\\bluetoothControl01\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
         "merged": "D:\\yinxm\\Android_Workspace\\MyApplication\\bluetoothControl01\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",

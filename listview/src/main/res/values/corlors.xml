@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="app_bg">#241d2d</color>
     <color name="base_bg">#231E2D</color>      <!-- 界面背景底色-->
     <color name="white">#f5efef</color>
 
