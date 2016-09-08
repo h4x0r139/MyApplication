@@ -44,7 +44,12 @@ public class AutoScrollActivity extends AppCompatActivity {
 
                 listView.setSelection(listView.getLastVisiblePosition() + 1);//下一页
 
-                listView.smoothScrollToPosition(listView.getLastVisiblePosition() + 1);//有问题
+//                listView.post(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        listView.smoothScrollToPosition(listView.getLastVisiblePosition() + 1);//有问题
+//                    }
+//                });
             }
         });
 
