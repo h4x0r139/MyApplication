@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- From: file:/D:/yinxm/AndroidProject/MyApplication/S208_appwidget02/src/main/res/values/strings.xml -->
-    <eat-comment/>
-    <string name="app_name">appwidget02</string>
-    <string name="hello">Hello World, MainActivity!</string>
-</resources>

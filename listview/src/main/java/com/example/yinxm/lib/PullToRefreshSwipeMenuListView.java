@@ -29,7 +29,7 @@ import com.example.yinxm.lib.swipemenu.interfaces.OnSwipeListener;
 import com.example.yinxm.lib.swipemenu.interfaces.SwipeMenuCreator;
 import com.example.yinxm.lib.swipemenu.view.SwipeMenuLayout;
 import com.example.yinxm.lib.swipemenu.view.SwipeMenuView;
-import com.example.yinxm.s13_listview.R;
+import com.example.yinxm.listview.R;
 
 
 public class PullToRefreshSwipeMenuListView extends ListView implements OnScrollListener {

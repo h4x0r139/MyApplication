@@ -6,8 +6,8 @@
 
     <ImageView
         android:id="@+id/custom_song_icon"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="@dimen/height_notify"
+        android:layout_height="@dimen/height_notify"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:src="@mipmap/ic_launcher" />
@@ -15,31 +15,33 @@
     <LinearLayout
         android:id="@+id/ll_custom_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginLeft="5dip"
         android:gravity="center_vertical"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:background="@android:color/darker_gray"
+        >
 
         <ImageButton
             android:id="@+id/btn_custom_play"
             style="@style/btn_custom_style"
-            android:scaleType="centerInside"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:src="@mipmap/notify_btn_light_play2_normal"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="15dp"
             />
 
         <ImageButton
             android:id="@+id/btn_custom_next"
             style="@style/btn_custom_style"
-            android:scaleType="centerInside"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:src="@mipmap/notify_btn_light_next_normal"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="15dp"
             />
 
         <ImageButton
@@ -49,21 +51,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/notify_close"
-            android:layout_marginRight="16dp"
-
+            android:layout_marginRight="15dp"
             />
 
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
         android:layout_toLeftOf="@id/ll_custom_button"
         android:layout_toRightOf="@id/custom_song_icon"
+        android:background="@android:color/holo_red_dark"
         android:orientation="vertical" >
 
         <TextView
@@ -73,6 +75,8 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:textColor="@android:color/white"
+            android:singleLine="true"
+            android:ellipsize="end"
             android:text="这是歌名"
             android:textSize="15sp" />
 

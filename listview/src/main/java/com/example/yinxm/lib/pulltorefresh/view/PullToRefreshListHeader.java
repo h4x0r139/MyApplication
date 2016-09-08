@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.example.yinxm.s13_listview.R;
+import com.example.yinxm.listview.R;
 
 
 public class PullToRefreshListHeader extends LinearLayout {

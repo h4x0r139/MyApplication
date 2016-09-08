@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.yinxm.s13_listview.R;
+import com.example.yinxm.listview.R;
 
 
 public class PullToRefreshListFooter extends LinearLayout {
