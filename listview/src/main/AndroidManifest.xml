@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.yinxm.listview">
+    package="cn.yinxm.listview">
 
     <application
         android:allowBackup="true"
