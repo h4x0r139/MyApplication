@@ -21,7 +21,6 @@
         android:layout_marginLeft="5dip"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:background="@android:color/darker_gray"
         >
 
         <ImageButton
@@ -29,7 +28,7 @@
             style="@style/btn_custom_style"
             android:scaleType="center"
             android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:src="@mipmap/notify_btn_light_play2_normal"
             android:layout_marginRight="15dp"
             />
@@ -39,15 +38,15 @@
             style="@style/btn_custom_style"
             android:scaleType="center"
             android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:src="@mipmap/notify_btn_light_next_normal"
             android:layout_marginRight="15dp"
+
             />
 
         <ImageButton
             android:id="@+id/btn_custom_close"
             style="@style/btn_custom_style"
-            android:scaleType="centerInside"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/notify_close"
@@ -65,7 +64,6 @@
         android:paddingTop="10dp"
         android:layout_toLeftOf="@id/ll_custom_button"
         android:layout_toRightOf="@id/custom_song_icon"
-        android:background="@android:color/holo_red_dark"
         android:orientation="vertical" >
 
         <TextView
