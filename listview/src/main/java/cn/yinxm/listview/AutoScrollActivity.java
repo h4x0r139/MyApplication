@@ -36,13 +36,22 @@ public class AutoScrollActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                scrollToNextPage();
 //                int firstVisiblePosition = listView.getFirstVisiblePosition();
 //                int lastVisiblePosition = listView.getLastVisiblePosition();
 //                int pagePerNum = lastVisiblePosition - firstVisiblePosition;
 //                LogUtil.d("firstVisiblePosition=" + listView.getFirstVisiblePosition() + ", lastVisiblePosition=" + lastVisiblePosition);
 //                listView.setSelection(lastVisiblePosition + 1);
 
-                listView.setSelection(listView.getLastVisiblePosition() + 1);//下一页
+//                listView.setSelection(listView.getLastVisiblePosition() + 1);//下一页
+//                listView.setSelected(true);
+//                listView.smoothScrollByOffset(10);
+//                listView.smoothScrollToPosition(15);
+
+//                listView.scrollBy(0,50);//有问题，滚动到下面不显示，listView缓存的问题
+
+//                listView.smoothScrollBy(1,1);
+
 
 //                listView.post(new Runnable() {
 //                    @Override
@@ -72,6 +81,8 @@ public class AutoScrollActivity extends AppCompatActivity {
             }
         });
 
+
+
         listView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -87,5 +98,11 @@ public class AutoScrollActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    //滚动到下一页
+    public void scrollToNextPage() {
+        listView.setSelection(listView.getLastVisiblePosition() + 1);//下一页
+        listView.smoothScrollBy(1,1);
     }
 }
