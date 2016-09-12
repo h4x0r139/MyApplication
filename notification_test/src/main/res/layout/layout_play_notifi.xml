@@ -29,7 +29,7 @@
             android:scaleType="center"
             android:layout_width="32dp"
             android:layout_height="wrap_content"
-            android:src="@mipmap/notify_btn_light_play2_normal"
+            android:src="@mipmap/notify_btn_play"
             android:layout_marginRight="15dp"
             />
 
@@ -39,18 +39,18 @@
             android:scaleType="center"
             android:layout_width="32dp"
             android:layout_height="wrap_content"
-            android:src="@mipmap/notify_btn_light_next_normal"
-            android:layout_marginRight="15dp"
+            android:src="@mipmap/notify_btn_next"
 
             />
 
         <ImageButton
             android:id="@+id/btn_custom_close"
             style="@style/btn_custom_style"
+            android:scaleType="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="15dp"
             android:src="@mipmap/notify_close"
-            android:layout_marginRight="15dp"
             />
 
     </LinearLayout>

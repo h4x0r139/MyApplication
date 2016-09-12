@@ -11,7 +11,7 @@ public class LogUtil {
 
 
 	public static boolean DEBUG = true;
-	public static String TAG="yika";
+	public static String TAG="yinxm";
 	
 	/**
 	 * 调试

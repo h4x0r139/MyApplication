@@ -3,5 +3,5 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <dimen name="height_notify">64dp</dimen>
+    <dimen name="height_notify">60dp</dimen>
 </resources>

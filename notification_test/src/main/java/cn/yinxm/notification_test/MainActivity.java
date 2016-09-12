@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ListView listView = (ListView) findViewById(R.id.listView);
-        String[] items = {"Notification test 标题内容", "测试自定义播放通知栏"};
+        String[] items = {"Notification test 标题内容", "测试自定义播放通知栏","测试自定义Layout点击"};
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,items);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -31,7 +31,10 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, NotificationTitleContentActivity.class));
                         break;
                     case 1:
-                        showPlayNotify();
+//                        showPlayNotify();
+//                        showMusicNotifi();
+//                        sendBroadcast(new Intent(BroadcastReceiverConstant.ACTION_PLAY_BUTTON));
+                        startActivity(new Intent(MainActivity.this, PlayNotifiActivity.class));
                         break;
                     default:
                         break;
@@ -66,5 +69,11 @@ public class MainActivity extends AppCompatActivity {
         NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         manager.notify(200, notify);
 
+    }
+
+    public void showMusicNotifi() {
+        MusicNotification musicNotification = new MusicNotification(this,
+                (NotificationManager) getSystemService(NOTIFICATION_SERVICE));
+        musicNotification.onUpdataMusicNotifi("忘情水忘情水忘情水忘情水", "刘德华", "", true);
     }
 }

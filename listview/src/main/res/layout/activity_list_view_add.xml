@@ -9,17 +9,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="cn.yinxm.listview.ListViewAddActivity">
 
+<!--
     <ListView
         android:id="@+id/listViewAdd"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></ListView>
+-->
 
     <!--不适配-->
-<!--    <cn.yinxm.listview.lib.PullToRefreshSwipeMenuListView
+    <cn.yinxm.listview.lib.PullToRefreshSwipeMenuListView
         android:dividerHeight="1px"
         android:divider="@null"
         android:id="@+id/listViewAdd"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />-->
+        android:layout_height="match_parent" />
 
 </RelativeLayout>

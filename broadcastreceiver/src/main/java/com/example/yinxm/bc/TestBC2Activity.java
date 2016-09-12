@@ -1,4 +1,4 @@
-package com.example.yinxm.s19_broadcastreceiver;
+package com.example.yinxm.bc;
 
 import android.app.Activity;
 import android.content.IntentFilter;
