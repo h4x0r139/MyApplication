@@ -29,8 +29,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".NotificationTitleContentActivity" />
-        <activity android:name=".PlayNotifiActivity"
-            android:launchMode="singleTask"></activity>
+        <activity
+            android:name=".PlayNotifiActivity"
+            android:launchMode="singleTask" />
+
+        <service
+            android:name=".AudioPlayService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

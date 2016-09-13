@@ -72,19 +72,19 @@ public class MusicNotification {
         // 设置点击事件
 
         // 1.注册控制点击事件
-        PendingIntent pplay = PendingIntent.getBroadcast(context, REQUEST_CODE,playIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent pplay = PendingIntent.getBroadcast(context, REQUEST_CODE,playIntent, NOTIFICATION_ID);
         remoteViews.setOnClickPendingIntent(R.id.btn_custom_play,pplay);
 
         // 2.注册下一首点击事件
-        PendingIntent pnext = PendingIntent.getBroadcast(context, REQUEST_CODE,nextIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent pnext = PendingIntent.getBroadcast(context, REQUEST_CODE,nextIntent, NOTIFICATION_ID);
         remoteViews.setOnClickPendingIntent(R.id.btn_custom_next,pnext);
 
         // 3.注册关闭点击事件
-        PendingIntent pclose = PendingIntent.getBroadcast(context, REQUEST_CODE,closeIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent pclose = PendingIntent.getBroadcast(context, REQUEST_CODE,closeIntent, NOTIFICATION_ID);
         remoteViews.setOnClickPendingIntent(R.id.btn_custom_close,pclose);
 
         //点击Notifi打开界面
-        PendingIntent pNotifiClick = PendingIntent.getActivity(context, REQUEST_CODE, notifiLayoutIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent pNotifiClick = PendingIntent.getActivity(context, REQUEST_CODE, notifiLayoutIntent, NOTIFICATION_ID);
 
 
         musicNotifi = builder.setContent(remoteViews)
