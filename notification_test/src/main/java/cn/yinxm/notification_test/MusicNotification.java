@@ -14,7 +14,7 @@ import android.widget.RemoteViews;
 public class MusicNotification {
 
     // 通知id
-    private final int NOTIFICATION_ID = 10001;
+    public static final int NOTIFICATION_ID = 10001;
     // 通知
     private Notification musicNotifi = null;
     // 管理通知
@@ -72,19 +72,19 @@ public class MusicNotification {
         // 设置点击事件
 
         // 1.注册控制点击事件
-        PendingIntent pplay = PendingIntent.getBroadcast(context, REQUEST_CODE,playIntent, NOTIFICATION_ID);
+        PendingIntent pplay = PendingIntent.getBroadcast(context, REQUEST_CODE,playIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         remoteViews.setOnClickPendingIntent(R.id.btn_custom_play,pplay);
 
         // 2.注册下一首点击事件
-        PendingIntent pnext = PendingIntent.getBroadcast(context, REQUEST_CODE,nextIntent, NOTIFICATION_ID);
+        PendingIntent pnext = PendingIntent.getBroadcast(context, REQUEST_CODE,nextIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         remoteViews.setOnClickPendingIntent(R.id.btn_custom_next,pnext);
 
         // 3.注册关闭点击事件
-        PendingIntent pclose = PendingIntent.getBroadcast(context, REQUEST_CODE,closeIntent, NOTIFICATION_ID);
+        PendingIntent pclose = PendingIntent.getBroadcast(context, REQUEST_CODE,closeIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         remoteViews.setOnClickPendingIntent(R.id.btn_custom_close,pclose);
 
         //点击Notifi打开界面
-        PendingIntent pNotifiClick = PendingIntent.getActivity(context, REQUEST_CODE, notifiLayoutIntent, NOTIFICATION_ID);
+        PendingIntent pNotifiClick = PendingIntent.getActivity(context, REQUEST_CODE, notifiLayoutIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
 
         musicNotifi = builder.setContent(remoteViews)
@@ -93,7 +93,8 @@ public class MusicNotification {
                 // 通知产生的时间，会在通知信息里显示
 //              .setPriority(Notification.PRIORITY_DEFAULT)
                 // 设置该通知优先级
-                .setOngoing(true).setTicker("正在播放")
+                .setOngoing(true)
+//                .setTicker("正在播放")
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .build();
 
@@ -129,5 +130,7 @@ public class MusicNotification {
         }
     }
 
-
+    public Notification getMusicNotifi() {
+        return musicNotifi;
+    }
 }
