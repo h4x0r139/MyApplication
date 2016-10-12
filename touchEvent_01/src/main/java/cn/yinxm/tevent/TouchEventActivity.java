@@ -13,12 +13,12 @@ public class TouchEventActivity extends Activity {
 	}
 
 	public boolean dispatchTouchEvent(MotionEvent ev) {
-		Log.w("sunzn", "TouchEventActivity | dispatchTouchEvent --> " + TouchEventUtil.getTouchAction(ev.getAction()));
+		Log.w("yinxm", "TouchEventActivity | dispatchTouchEvent --> " + TouchEventUtil.getTouchAction(ev.getAction()));
 		return super.dispatchTouchEvent(ev);
 	}
 
 	public boolean onTouchEvent(MotionEvent event) {
-		Log.w("sunzn", "TouchEventActivity | onTouchEvent --> " + TouchEventUtil.getTouchAction(event.getAction()));
+		Log.w("yinxm", "TouchEventActivity | onTouchEvent --> " + TouchEventUtil.getTouchAction(event.getAction()));
 		return super.onTouchEvent(event);
 	}
 

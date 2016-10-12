@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     HandlerUpdateUIByService handlerUpdateUIByService = new HandlerUpdateUIByService();
 
-    class HandlerUpdateUIByService extends Handler {
+    private  class HandlerUpdateUIByService extends Handler {
         @Override
         public void handleMessage(Message msg) {
             System.out.println("HandlerUpdateUIByService");

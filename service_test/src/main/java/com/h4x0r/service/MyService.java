@@ -13,7 +13,7 @@ public class MyService extends Service {
     private  int num = 0;
     private Handler handler;
     public MyService() {
-        this.handler = MainActivity.get
+        this.handler = null;
     }
 
     @Override

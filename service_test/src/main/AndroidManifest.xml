@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.h4x0r.service" >
+    package="com.h4x0r.service">
 
     <application
+        android:name=".BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,14 +22,16 @@
 
         <activity
             android:name=".Main2Activity"
-            android:label="@string/title_activity_main2" >
-        </activity>
+            android:label="@string/title_activity_main2"></activity>
 
         <service
             android:name=".MyService2"
             android:enabled="true"
-            android:exported="true" >
-        </service>
+            android:exported="true"></service>
+        <service
+            android:name=".AudioPlayService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

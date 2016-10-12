@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "cn.com.ecarx.gradletest"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        Test{
+            applicationId "cn.com.ecarx.gradletest.test"
+//            manifestPlaceholders = [app_name:"multi_versionapk.beta" ,icon: "@mipmap/ic_launcher_beta"]
+            manifestPlaceholders = [app_name:"multi_versionapk.beta"]
+            //在java代码中具体的使用方式为：context.getResources().getString(R.string.strKey);
+            resValue("string" , "strKey","beta版本")
+        }
+        Releases{
+            applicationId "cn.com.ecarx.gradletest"
+//            manifestPlaceholders = [app_name:"multi_versionapk.release",icon: "@mipmap/ic_launcher_releases"]
+            manifestPlaceholders = [app_name:"multi_versionapk.release"]
+            resValue("string" , "strKey","release版本")
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    testCompile 'junit:junit:4.12'
+}

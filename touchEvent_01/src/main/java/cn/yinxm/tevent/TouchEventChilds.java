@@ -17,19 +17,28 @@ public class TouchEventChilds extends LinearLayout {
 	}
 
 	public boolean dispatchTouchEvent(MotionEvent ev) {
-		Log.e("sunzn", "TouchEventChilds | dispatchTouchEvent --> " + TouchEventUtil.getTouchAction(ev.getAction()));
-//		return super.dispatchTouchEvent(ev);
-		return true;
+		Log.e("yinxm", "TouchEventChilds | dispatchTouchEvent --> " + TouchEventUtil.getTouchAction(ev.getAction()));
+
+ 		boolean flag = super.dispatchTouchEvent(ev);
+		Log.d("yinxm", "TouchEventChilds | dispatchTouchEvent --> flag=" + flag);
+		flag = true;
+		Log.d("yinxm", "TouchEventChilds | dispatchTouchEvent --> flag=" + flag);
+//		return flag;
+		return flag;//默认消费了事件
 	}
 
 	public boolean onInterceptTouchEvent(MotionEvent ev) {
-		Log.i("sunzn", "TouchEventChilds | onInterceptTouchEvent --> " + TouchEventUtil.getTouchAction(ev.getAction()));
-		return super.onInterceptTouchEvent(ev);
+		Log.i("yinxm", "TouchEventChilds | onInterceptTouchEvent --> " + TouchEventUtil.getTouchAction(ev.getAction()));
+		boolean flag =  super.onInterceptTouchEvent(ev);
+		Log.i("yinxm", "TouchEventChilds | onInterceptTouchEvent --> flag=" + flag);
+		return flag;
 	}
 
 	public boolean onTouchEvent(MotionEvent ev) {
-		Log.d("sunzn", "TouchEventChilds | onTouchEvent --> " + TouchEventUtil.getTouchAction(ev.getAction()));
-		return super.onTouchEvent(ev);
+		Log.d("yinxm", "TouchEventChilds | onTouchEvent --> " + TouchEventUtil.getTouchAction(ev.getAction()));
+		boolean flag =  super.onTouchEvent(ev);
+		Log.d("yinxm", "TouchEventChilds | onTouchEvent --> flag=" + flag);
+		return flag;
 	}
 
 }

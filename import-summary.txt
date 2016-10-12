@@ -7,6 +7,7 @@ The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
+* demo.gif
 * ic_launcher-web.png
 * proguard-project.txt
 
@@ -27,10 +28,9 @@ Moved Files:
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
-* AndroidManifest.xml => notification_02\src\main\AndroidManifest.xml
-* assets\ => notification_02\src\main\assets\
-* res\ => notification_02\src\main\res\
-* src\ => notification_02\src\main\java\
+* AndroidManifest.xml => touchEvent_slidingFinish\src\main\AndroidManifest.xml
+* res\ => touchEvent_slidingFinish\src\main\res\
+* src\ => touchEvent_slidingFinish\src\main\java\
 
 Missing Android Support Repository:
 -----------------------------------
