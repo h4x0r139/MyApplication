@@ -1,6 +1,7 @@
 package cn.yinxm.notification_test;
 
 import android.app.NotificationManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -19,7 +20,8 @@ public class PlayNotifiActivity extends AppCompatActivity {
     }
 
     public void showPlayNotify(View view) {
-        musicNotification.onUpdataMusicNotifi("hello", "hehe", "", true);
+//        musicNotification.onUpdataMusicNotifi("hello", "hehe", "", true);
+        startService(new Intent(this,AudioPlayService.class));
 
     }
 

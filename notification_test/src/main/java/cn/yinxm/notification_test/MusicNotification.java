@@ -14,7 +14,7 @@ import android.widget.RemoteViews;
 public class MusicNotification {
 
     // 通知id
-    private final int NOTIFICATION_ID = 10001;
+    public static final int NOTIFICATION_ID = 10001;
     // 通知
     private Notification musicNotifi = null;
     // 管理通知
@@ -93,7 +93,8 @@ public class MusicNotification {
                 // 通知产生的时间，会在通知信息里显示
 //              .setPriority(Notification.PRIORITY_DEFAULT)
                 // 设置该通知优先级
-                .setOngoing(true).setTicker("正在播放")
+                .setOngoing(true)
+//                .setTicker("正在播放")
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .build();
 
@@ -129,5 +130,7 @@ public class MusicNotification {
         }
     }
 
-
+    public Notification getMusicNotifi() {
+        return musicNotifi;
+    }
 }
