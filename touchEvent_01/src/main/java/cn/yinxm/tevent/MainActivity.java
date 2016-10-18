@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         listView = (ListView) findViewById(R.id.listView);
-        String[] items = {"测试Activity与ViewPager滑动事件冲突", ""};
+        String[] items = {"测试Activity与ViewPager滑动事件冲突", "Main3Activity"};
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,items);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, ViewPagerEventActivity.class));
                         break;
                     case 1:
+                        startActivity(new Intent(MainActivity.this, Main3Activity.class));
                         break;
                     default:
                         break;

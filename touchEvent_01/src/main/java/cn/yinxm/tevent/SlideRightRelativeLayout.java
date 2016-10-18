@@ -31,9 +31,17 @@ public class SlideRightRelativeLayout extends RelativeLayout {
     List<OnSlideRightListener> list = new ArrayList<>();
 
     @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        LogUtil.e("[SlideRightRelativeLayout.dispatchTouchEvent] action="+event.getAction()+", x="+event.getRawX()+", x1="+event.getX()+", y="+event.getY());
+        boolean flag = super.dispatchTouchEvent(event);
+        LogUtil.d("[SlideRightRelativeLayout.dispatchTouchEvent] action="+event.getAction()+", flag="+flag);
+        return flag;
+    }
+
+    @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        LogUtil.d("[onInterceptTouchEvent] action="+ev.getAction());
-        switch (ev.getAction()) {
+        LogUtil.d("[SlideRightRelativeLayout.onInterceptTouchEvent] action="+ev.getAction());
+       /* switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 startX=  ev.getX();
                 startY= ev.getY();
@@ -67,11 +75,24 @@ public class SlideRightRelativeLayout extends RelativeLayout {
                 }
                 break;
 
-        }
+        }*/
 
-        return super.onInterceptTouchEvent(ev);
+        boolean flag = super.onInterceptTouchEvent(ev);
+        LogUtil.d("[SlideRightRelativeLayout.onInterceptTouchEvent] action="+ev.getAction()+", flag="+flag);
+        return flag;
     }
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        LogUtil.e("[SlideRightRelativeLayout.onTouchEvent] action="+event.getAction()+", x="+event.getRawX()+", x1="+event.getX()+", y="+event.getY());
+
+        if (MotionEvent.ACTION_DOWN == event.getAction()) {
+            return true;
+        }
+        boolean flag = super.onTouchEvent(event);
+        LogUtil.d("[SlideRightRelativeLayout.onTouchEvent] action="+event.getAction()+", flag="+flag);
+        return flag;
+    }
 
     public void setOnSlideRightListener(OnSlideRightListener listener) {
         if (listener != null) {
