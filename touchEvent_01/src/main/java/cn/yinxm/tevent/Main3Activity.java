@@ -31,4 +31,5 @@ public class Main3Activity extends AppCompatActivity {
         LogUtil.d("Main3Activity.onTouchEvent action="+event.getAction()+", flag="+flag);
         return flag;
     }
+    
 }
