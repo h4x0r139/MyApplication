@@ -4,8 +4,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import cn.yinxm.lib.LogUtil;
-import cn.yinxm.lib.StringUtil;
+import cn.yinxm.lib.utils.LogUtil;
+import cn.yinxm.lib.utils.StringUtil;
 
 /**
 * @Description: 接收播放广播

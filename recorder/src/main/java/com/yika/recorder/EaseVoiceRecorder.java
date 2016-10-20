@@ -1,19 +1,16 @@
-package com.hyphenate.easeui.model;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.Date;
-
-import com.hyphenate.EMError;
-import com.hyphenate.chat.EMClient;
-import com.hyphenate.util.EMLog;
-import com.hyphenate.util.PathUtil;
+package com.yika.recorder;
 
 import android.content.Context;
 import android.media.MediaRecorder;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.text.format.Time;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
+
+import cn.yinxm.lib.utils.LogUtil;
 
 public class EaseVoiceRecorder {
     MediaRecorder recorder;
@@ -35,16 +32,18 @@ public class EaseVoiceRecorder {
     /**
      * start recording to the file
      */
-    public String startRecording(Context appContext) {
+    public String startRecording(Context context) {
         file = null;
         try {
             // need to create recorder every time, otherwise, will got exception
             // from setOutputFile when try to reuse
             if (recorder != null) {
+                LogUtil.d("startRecording recorder="+recorder);
                 recorder.release();
                 recorder = null;
             }
             recorder = new MediaRecorder();
+            LogUtil.d("recorder="+recorder);
             recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
             recorder.setOutputFormat(MediaRecorder.OutputFormat.AMR_NB);
             recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
@@ -56,15 +55,30 @@ public class EaseVoiceRecorder {
             // one easy way is to use temp file
             // file = File.createTempFile(PREFIX + userId, EXTENSION,
             // User.getVoicePath());
-            voiceFileName = getVoiceFileName(EMClient.getInstance().getCurrentUser());
-            voiceFilePath = PathUtil.getInstance().getVoicePath() + "/" + voiceFileName;
-            file = new File(voiceFilePath);
+            voiceFileName = getVoiceFileName("1709721");
+            LogUtil.i("voiceFileName="+voiceFileName);
+
+//            voiceFilePath = PathUtil.getInstance().getVoicePath() + "/" + voiceFileName;
+            //file=/storage/emulated/0/Android/data/com.hyphenate.chatuidemo/easemob-demo#chatdemoui/yinxm/voice/yinxm20161014T204805.amr
+//            file = new File(voiceFilePath);
+//            file = new File(appContext.getFilesDir(), voiceFileName);
+
+//            file = File.createTempFile(voiceFileName, null, context.getCacheDir());
+            file = File.createTempFile("1709721", EXTENSION, context.getFilesDir());
+            voiceFilePath = file.getAbsolutePath();
+            LogUtil.i("voiceFilePath="+voiceFilePath);
+
+            if (!file.exists()) {
+                LogUtil.i("文件路径不存在创建");
+                file.mkdirs();
+                file.createNewFile();
+            }
             recorder.setOutputFile(file.getAbsolutePath());
             recorder.prepare();
             isRecording = true;
             recorder.start();
         } catch (IOException e) {
-            EMLog.e("voice", "prepare() failed");
+            LogUtil.e("prepare() failed",e);
         }
         new Thread(new Runnable() {
             @Override
@@ -80,21 +94,21 @@ public class EaseVoiceRecorder {
                     // from the crash report website, found one NPE crash from
                     // one android 4.0.4 htc phone
                     // maybe handler is null for some reason
-                    EMLog.e("voice", e.toString());
+                    LogUtil.e("录音异常", e);
                 }
             }
         }).start();
         startTime = new Date().getTime();
-        EMLog.d("voice", "start voice recording to file:" + file.getAbsolutePath());
+        LogUtil.d("start voice recording to file:" + file.getAbsolutePath());
         return file == null ? null : file.getAbsolutePath();
     }
 
     /**
      * stop the recoding
+     * 取消录音
      * 
      * @return seconds of the voice recorded
      */
-
     public void discardRecording() {
         if (recorder != null) {
             try {
@@ -111,6 +125,7 @@ public class EaseVoiceRecorder {
     }
 
     public int stopRecoding() {
+        LogUtil.e("stopRecoding recorder="+recorder);
         if(recorder != null){
             isRecording = false;
             recorder.stop();
@@ -118,14 +133,14 @@ public class EaseVoiceRecorder {
             recorder = null;
             
             if(file == null || !file.exists() || !file.isFile()){
-                return EMError.FILE_INVALID;
+                return 1;
             }
             if (file.length() == 0) {
                 file.delete();
-                return EMError.FILE_INVALID;
+                return 1;
             }
             int seconds = (int) (new Date().getTime() - startTime) / 1000;
-            EMLog.d("voice", "voice recording finished. seconds:" + seconds + " file length:" + file.length());
+            LogUtil.d("voice recording finished. seconds:" + seconds + " file length:" + file.length());
             return seconds;
         }
         return 0;

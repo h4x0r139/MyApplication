@@ -6,7 +6,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
-import cn.yinxm.lib.LogUtil;
+import cn.yinxm.lib.utils.LogUtil;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -34,7 +34,7 @@ public class Main2Activity extends AppCompatActivity {
     public boolean dispatchTouchEvent(MotionEvent ev) {
         LogUtil.e("[Main2Activity.dispatchTouchEvent] action=" + ev.getAction() + ", x=" + ev.getX() + ", y=" + ev.getY());
         boolean flag = false;
-        switch (ev.getAction()) {
+       /* switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 startX = ev.getX();
                 startY = ev.getY();
@@ -64,7 +64,7 @@ public class Main2Activity extends AppCompatActivity {
                     //y方向上垂直滑动
                 }
                 break;
-        }
+        }*/
         if (flag) {
             LogUtil.d("[Main2Activity.dispatchTouchEvent]  action=" + ev.getAction()+", true，交给onTouch处理");
             return flag;
@@ -85,6 +85,8 @@ public class Main2Activity extends AppCompatActivity {
 //                break;
 //        }
         boolean flag = super.onTouchEvent(event);
+        LogUtil.d("[Main2Activity.onTouchEvent] flag="+flag);
+        flag = true;
         LogUtil.d("[Main2Activity.onTouchEvent] flag="+flag);
         return flag;
     }

@@ -1,4 +1,4 @@
-package cn.yinxm.lib;
+package cn.yinxm.lib.utils;
 
 
 /**

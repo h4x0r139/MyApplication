@@ -1,24 +1,14 @@
-package com.hyphenate.easeui.widget;
+package com.yika.recorder;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.PowerManager;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.hyphenate.EMError;
-import com.hyphenate.easeui.R;
-import com.hyphenate.easeui.model.EaseVoiceRecorder;
-import com.hyphenate.easeui.utils.EaseCommonUtils;
-import com.hyphenate.easeui.widget.chatrow.EaseChatRowVoicePlayClickListener;
 
 /**
  * 按住说话录制控件
@@ -28,7 +18,7 @@ public class EaseVoiceRecorderView extends RelativeLayout {
     protected Context context;
     protected LayoutInflater inflater;
     protected Drawable[] micImages;
-    protected EaseVoiceRecorder voiceRecorder;
+//    protected EaseVoiceRecorder voiceRecorder;
 
     protected PowerManager.WakeLock wakeLock;
     protected ImageView micImage;
@@ -58,6 +48,9 @@ public class EaseVoiceRecorderView extends RelativeLayout {
     }
 
     private void init(Context context) {
+    }
+
+   /* private void init(Context context) {
         this.context = context;
         LayoutInflater.from(context).inflate(R.layout.ease_widget_voice_recorder, this);
 
@@ -86,12 +79,12 @@ public class EaseVoiceRecorderView extends RelativeLayout {
                 PowerManager.SCREEN_DIM_WAKE_LOCK, "demo");
     }
 
-    /**
+    *//**
      * 长按说话按钮touch事件
      * 
      * @param v
      * @param event
-     */
+     *//*
     public boolean onPressToSpeakBtnTouch(View v, MotionEvent event, EaseVoiceRecorderCallback recorderCallback) {
         switch (event.getAction()) {
         case MotionEvent.ACTION_DOWN:
@@ -142,14 +135,14 @@ public class EaseVoiceRecorderView extends RelativeLayout {
     }
 
     public interface EaseVoiceRecorderCallback {
-        /**
+        *//**
          * 录音完毕
          * 
          * @param voiceFilePath
          *            录音完毕后的文件路径
          * @param voiceTimeLength
          *            录音时长
-         */
+         *//*
         void onVoiceRecordComplete(String voiceFilePath, int voiceTimeLength);
     }
 
@@ -216,6 +209,6 @@ public class EaseVoiceRecorderView extends RelativeLayout {
 
     public boolean isRecording() {
         return voiceRecorder.isRecording();
-    }
+    }*/
 
 }

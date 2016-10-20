@@ -6,7 +6,7 @@ import android.content.ServiceConnection;
 import android.os.Binder;
 import android.os.IBinder;
 
-import cn.yinxm.lib.LogUtil;
+import cn.yinxm.lib.utils.LogUtil;
 
 public class AudioPlayService extends Service {
     public AudioPlayService() {

@@ -18,7 +18,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.yinxm.lib.LogUtil;
+import cn.yinxm.lib.utils.LogUtil;
 
 /**
  * Activity中监听滑动，监听到右滑，返回上一页，左滑不处理

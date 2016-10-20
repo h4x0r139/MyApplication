@@ -1,5 +1,5 @@
 //include ':testmodule', ':actionbartest', ':ActionBar_TabNav', ':loginnavigation', ':s15_sqlite', ':s16_download', ':s18_xml', ':s20_wifi',  ':s2_commonbox', ':appwidget', ':tabhost_test', ':fragmentTabHost', ':aidl_test', ':aidl_test', ':fragment_test', ':webview_test', ':customview', ':drawableres', ':viewpager_splashscreen', ':drawlayout_test', ':toolbar_palette', ':SpeechRecognition', ':serversocket_test',  ':asynctask_test', ':http_test', ':httpclient_test', ':flatui_demo', ':okhttp', ':intent_test', ':myframework', ':flowlayout',  ':drawlayout_navigation', ':toolbar_demo_checkpoint3', ':Lab-Android-DesignLibrary'
-include ':recyclerview', ':listView2', ':surfaceView', ':mylibrary', ':listview', ':notification_test', ':gradletest'
+include ':recyclerview', ':listView2', ':surfaceView', ':mylibrary', ':listview', ':notification_test', ':gradletest', ':webhtml'
 //include ':login'
 //include ':s01_activity', ':s02_calculator', ':s03_activitytask'
 //include ':s04_layout', ':s05_checkbox', ':s06_radio', ':s07_imageview', ':s08_fingerplaylayout', ':s09_ralativelayout', ':s10_login_relativelayout'
@@ -42,3 +42,4 @@ include ':notification_02', ':broadcastreceiver'
 //性能测试
 include ':memoryrecycle'
 include ':touchEvent_slidingFinish'
+include ':mediaRecorder_01',':recorder'
