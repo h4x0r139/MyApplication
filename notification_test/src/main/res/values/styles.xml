@@ -8,14 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="NotificationContent">
+<!--    <style name="NotificationContent">
         <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 
     <style name="NotificationTitle">
         <item name="android:textColor">?android:attr/textColorPrimary</item>
-        <!--<item name="android:textStyle">bold</item>-->
-    </style>
+        &lt;!&ndash;<item name="android:textStyle">bold</item>&ndash;&gt;
+    </style>-->
 
     <style name="btn_custom_style">
 <!--        <item name="android:layout_width">48dip</item>
@@ -24,5 +24,8 @@
         <item name="android:background">?android:listChoiceBackgroundIndicator</item>
     </style>
 
+    <style name="NotificationText" parent="@android:style/TextAppearance.StatusBar.EventContent" />
+
+    <style name="NotificationTitle" parent="@android:style/TextAppearance.StatusBar.EventContent.Title" />
 
 </resources>
