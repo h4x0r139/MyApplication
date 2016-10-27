@@ -8,6 +8,9 @@ import android.content.Intent;
 import android.support.v7.app.NotificationCompat;
 import android.widget.RemoteViews;
 
+import cn.yinxm.lib.utils.LogUtil;
+import cn.yinxm.lib.utils.StringUtil;
+
 /**
  * Created by yinxm on 2016/9/9.
  */
@@ -48,7 +51,14 @@ public class MusicNotification {
         this.context = context;
         this.manager = manager;
         // 初始化操作
-        remoteViews = new RemoteViews(context.getPackageName(),R.layout.layout_play_notifi);
+//        if (ResidentNotificationHelper.isDarkNotifiation(context)) {
+        if (NotificationColorHelper.isDarkNotifiation(context)) {
+            LogUtil.d("isDark");
+            remoteViews = new RemoteViews(context.getPackageName(),R.layout.layout_play_notifi);
+        } else {
+            LogUtil.d("not isDark");
+            remoteViews = new RemoteViews(context.getPackageName(),R.layout.layout_play_notifi_dark);
+        }
         builder = new NotificationCompat.Builder(context);
 
         // 初始化控制的Intent
@@ -107,8 +117,12 @@ public class MusicNotification {
      */
     public void onUpdataMusicNotifi(String title, String artist, String logoUrl, boolean isPlay) {
         // 设置添加内容
-        remoteViews.setTextViewText(R.id.tv_title, title);
-        remoteViews.setTextViewText(R.id.tv_artist, artist);
+        if (StringUtil.isNotBlank(title)) {
+            remoteViews.setTextViewText(R.id.tv_title, title);
+        }
+        if (StringUtil.isNotBlank(artist)) {
+            remoteViews.setTextViewText(R.id.tv_artist, artist);
+        }
 
         //判断是否播放
         if (isPlay) {
