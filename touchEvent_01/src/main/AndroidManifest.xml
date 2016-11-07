@@ -26,6 +26,7 @@
             android:name=".ViewPagerEventActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".Main3Activity"></activity>
     </application>
 
 </manifest>
