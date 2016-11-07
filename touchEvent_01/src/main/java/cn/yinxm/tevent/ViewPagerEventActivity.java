@@ -50,7 +50,29 @@ public class ViewPagerEventActivity extends AppCompatActivity {
                 finish();
             }
         });
+
         viewPager = (ViewPager) findViewById(R.id.viewpager);
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if (position == 0) {
+                    slideRightLayout.setInterceptSlideRightEvent(true);//拦截右滑
+                } else {
+                    slideRightLayout.setInterceptSlideRightEvent(false);//不拦截右滑
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
         //pagerTitleStrip = (PagerTitleStrip) findViewById(R.id.pagertitle);
         pagerTabStrip=(PagerTabStrip) findViewById(R.id.pagertab);
         pagerTabStrip.setTabIndicatorColor(getResources().getColor(R.color.gold));
@@ -88,6 +110,7 @@ public class ViewPagerEventActivity extends AppCompatActivity {
         titleList.add("结婚");
 
         PagerAdapter pagerAdapter = new PagerAdapter() {
+
 
             @Override
             public boolean isViewFromObject(View arg0, Object arg1) {
