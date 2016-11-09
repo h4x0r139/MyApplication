@@ -129,9 +129,9 @@ public class BaseActivity extends AppCompatActivity {
                         @Override
                         public void permissionGranted(String permission) {
 //                            Context context = BaseApplication.getContext();
-//                            LogUtil.d("获取到READ_PHONE_STATE权限，执行软件更新和考拉初始化 deviceId=" + DeviceUtil.getDeviceId(context) + ", EcarxConfig deviceId=" + EcarxManager.getInstance().getEcarxConfig().getDeviceId());
-//                            EcarxManager.getInstance().getEcarxConfig().setDeviceId(DeviceUtil.getDeviceId(context));
-//                            LogUtil.d("EcarxConfig deviceId=" + EcarxManager.getInstance().getEcarxConfig().getDeviceId());
+//                            LogUtil.d("获取到READ_PHONE_STATE权限，执行软件更新和考拉初始化 deviceId=" + DeviceUtil.getDeviceId(context) + ", EcarxConfig deviceId=" + MyAppManager.getInstance().getEcarxConfig().getDeviceId());
+//                            MyAppManager.getInstance().getEcarxConfig().setDeviceId(DeviceUtil.getDeviceId(context));
+//                            LogUtil.d("EcarxConfig deviceId=" + MyAppManager.getInstance().getEcarxConfig().getDeviceId());
 //                            updateVersion();
 //                            KaolaUtil.getOpenid(BaseApplication.getContext());
                         }
@@ -144,7 +144,7 @@ public class BaseActivity extends AppCompatActivity {
                         @Override
                         public void permissionGranted(String permission) {
 //                            Context context = BaseApplication.getContext();
-//                            LogUtil.d("获取到READ_CONTACTS权限，执行上传通讯录EcarxConfig deviceId=" + EcarxManager.getInstance().getEcarxConfig().getDeviceId());
+//                            LogUtil.d("获取到READ_CONTACTS权限，执行上传通讯录EcarxConfig deviceId=" + MyAppManager.getInstance().getEcarxConfig().getDeviceId());
 //                            // 上传通讯录
 //                            new Thread(new Runnable() {
 //                                @Override
