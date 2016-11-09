@@ -3,3 +3,5 @@
 /ndk_jni_01/*.iml
 *.iml
 build
+captures
+local.properties
