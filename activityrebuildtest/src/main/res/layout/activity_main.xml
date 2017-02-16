@@ -12,10 +12,19 @@
         android:id="@+id/tv"
         android:text="MainActivity" />
     <Button
+        android:id="@+id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="打开Main2Activity"
         android:onClick="openMain2"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开别的应用"
+        android:layout_below="@id/btn1"
+        android:layout_alignLeft="@id/btn1"
+        android:onClick="openMainNewApp"
         />
 </RelativeLayout>

@@ -29,8 +29,8 @@ public class EcarxRecorder {
     private long startTime;
     private float totalSeconds = 0.0f;//总共录制时间
     private boolean isRecording = false;// 是否正在录音
+    private Context mContext;
 
-    public AudioStageListener mListener;
     private Handler handler;//声音大小回调
 
     private boolean isUserCancel = false;//由于外部原因，是否需要中途取消录音
@@ -38,13 +38,14 @@ public class EcarxRecorder {
     private ExecutorService executorService;
     private RecordThread recordThread;
 
-    private boolean isUpdateVoiceLevel = true;//是否更新音量级别
+    private boolean isUpdateVoiceLevel = false;//是否更新音量级别
 
     public EcarxRecorder(Context context, String fileDir) {
         this(context, fileDir, null);
     }
 
     public EcarxRecorder(Context context, String fileDir, Handler handler) {
+        mContext=context;
         isRecording = false;
         if (StringUtil.isBlank(fileDir)) {
             fileDir = context.getFilesDir().getAbsolutePath();
@@ -74,63 +75,9 @@ public class EcarxRecorder {
     }
 
     public void startRecord() {
-        LogUtil.d("[EcarxRecorder.startRecord] isRecording="+isRecording);
-        if (isRecording) {//避免重复调用异常
-            LogUtil.e("目前已经正在录音,取消之前的录音");
-            cancelRecord();
-            isRecording = false;
-        }
-        LogUtil.i("startRecord recordFileDir=" + recordFileDir);
-
-        if (StringUtil.isBlank(recordFileDir)) {
-            return;
-        }
-        try {
-            String fileNameString = generalFileName();
-            file = new File(recordFileDir, fileNameString);
-
-            recordFilePath = file.getAbsolutePath();
-            LogUtil.i("startRecord recordFilePath=" + recordFilePath);
-
-            if (mRecorder != null) {
-                LogUtil.d("startRecording mRecorder=" + mRecorder);
-                try {
-                    mRecorder.release();
-                } catch (Exception e) {
-                } finally {
-                    mRecorder = null;
-                    isRecording = false;
-                }
-            }
-//        recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-//        recorder.setOutputFormat(MediaRecorder.OutputFormat.AMR_NB);
-//        recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-//        recorder.setAudioChannels(1); // MONO
-//        recorder.setAudioSamplingRate(8000); // 8000Hz
-//        recorder.setAudioEncodingBitRate(64); // seems if change this to
-            // 128, still got same file
-            // size.
-            // one easy way is to use temp file
-            // file = File.createTempFile(PREFIX + userId, EXTENSION,
-            // User.getVoicePath());
-
-            mRecorder = new MediaRecorder();
-            // 设置meidaRecorder的音频源是麦克风
-            mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-            // 设置文件音频的输出格式为
-            mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);//MediaRecorder.OutputFormat.DEFAULT
-            // 设置音频的编码格式
-            mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
-            // 设置输出文件
-            mRecorder.setOutputFile(file.getAbsolutePath());
-
-            LogUtil.d("recorder prepare");
+        LogUtil.d("[EcarxRecorder.startRecord] isRecording=" + isRecording + ", mRecorder=" + mRecorder);
 //            new Thread(recordThread).start();
-            executorService.submit(recordThread);
-        } catch (Exception e) {
-            LogUtil.e("EcarxRecorder.startRecord录音异常", e);
-        }
-
+        executorService.submit(recordThread);
     }
 
     /**
@@ -139,7 +86,8 @@ public class EcarxRecorder {
      * @return 录音时长
      */
     public float stopRecord() {
-        LogUtil.e("stopRecoding recorder=" + mRecorder + ", isRecording=" + isRecording+", recordFilePath="+recordFilePath);
+        LogUtil.d("[EcarxRecorder.stopRecord] isRecording=" + isRecording + "， mRecorder=" + mRecorder + ", recordFilePath=" + recordFilePath);
+        isUpdateVoiceLevel = false;
         if (mRecorder != null) {
             try {
                 if (isRecording) {
@@ -167,7 +115,7 @@ public class EcarxRecorder {
             }
         }
         resetData();
-        LogUtil.d("结束录音 totalSeconds="+totalSeconds+", recordFilePath="+recordFilePath);
+        LogUtil.d("结束录音 totalSeconds=" + totalSeconds + ", recordFilePath=" + recordFilePath);
         return totalSeconds;
     }
 
@@ -178,6 +126,8 @@ public class EcarxRecorder {
      * @return seconds of the voice recorded
      */
     public void cancelRecord() {
+        LogUtil.d("[EcarxRecorder.cancelRecord] isRecording=" + isRecording + "， mRecorder=" + mRecorder);
+        isUpdateVoiceLevel = false;
         if (mRecorder != null) {
             try {
                 if (isRecording) {
@@ -216,27 +166,13 @@ public class EcarxRecorder {
         return UUID.randomUUID().toString() + ".m4a";
     }
 
-
     public String getRecordFilePath() {
         LogUtil.d("recordFilePath=" + recordFilePath);
         return recordFilePath;
     }
 
-    public void setOnAudioStageListener(AudioStageListener listener) {
-        mListener = listener;
-    }
-
     public boolean isRecording() {
         return isRecording;
-    }
-
-    /**
-     * 回调函数，准备完毕，准备好后，button才会开始显示录音框
-     *
-     * @author nickming
-     */
-    public interface AudioStageListener {
-        void wellPrepared();
     }
 
     /**
@@ -253,7 +189,7 @@ public class EcarxRecorder {
     }
 
     public void resetData() {
-        isUpdateVoiceLevel = true;
+        isUpdateVoiceLevel = false;
         isRecording = false;
         mRecorder = null;
         startTime = 0;
@@ -266,25 +202,85 @@ public class EcarxRecorder {
     public boolean isUpdateVoiceLevel() {
         return isUpdateVoiceLevel;
     }
+
     public void setUpdateVoiceLevel(boolean updateVoiceLevel) {
         isUpdateVoiceLevel = updateVoiceLevel;
     }
 
-    class RecordThread implements Runnable{
+    class RecordThread implements Runnable {
         @Override
         public void run() {
+            LogUtil.i("RecordThread startRecord recordFileDir=" + recordFileDir);
+
+            if (isRecording) {//避免重复调用异常
+                LogUtil.e("目前已经正在录音,取消之前的录音");
+                cancelRecord();
+                isRecording = false;
+            }
+            if (StringUtil.isBlank(recordFileDir)) {
+                return;
+            }
             try {
+                String fileNameString = generalFileName();
+                file = new File(recordFileDir, fileNameString);
+
+                recordFilePath = file.getAbsolutePath();
+                LogUtil.i("startRecord recordFilePath=" + recordFilePath);
+
+                if (mRecorder != null) {
+                    LogUtil.d("startRecording mRecorder=" + mRecorder);
+                    try {
+                        mRecorder.release();
+                    } catch (Exception e) {
+                    } finally {
+                        mRecorder = null;
+                        isRecording = false;
+                    }
+                }
+//        recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+//        recorder.setOutputFormat(MediaRecorder.OutputFormat.AMR_NB);
+//        recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+//        recorder.setAudioChannels(1); // MONO
+//        recorder.setAudioSamplingRate(8000); // 8000Hz
+//        recorder.setAudioEncodingBitRate(64); // seems if change this to
+                // 128, still got same file
+                // size.
+                // one easy way is to use temp file
+                // file = File.createTempFile(PREFIX + userId, EXTENSION,
+                // User.getVoicePath());
+
+                mRecorder = new MediaRecorder();
+                // 设置meidaRecorder的音频源是麦克风
+                mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+                // 设置文件音频的输出格式为
+                mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);//MediaRecorder.OutputFormat.DEFAULT
+                // 设置音频的编码格式
+                mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
+                // 设置输出文件
+                mRecorder.setOutputFile(file.getAbsolutePath());
+
+//                LogUtil.d("sleep start");
+//                if (SpUtil.readBoolean(mContext, SPConstant.FILE_NAME_SET_CONFIG, KEY_SPEAK_WAKE_UP, false)) {
+//                    String phoneBrand = DeviceUtil.getPhoneBrand();
+//                    LogUtil.d("phoneBrand"+phoneBrand);
+//                    if ("OPPO".equals(phoneBrand)){
+//                        Thread.sleep(200);
+//                    }
+//                }
+//                LogUtil.d("sleep end");
+
                 isUserCancel = false;
+                LogUtil.d("EcarxRecorder.RecordThread mRecorder=" + mRecorder);
                 try {
                     mRecorder.prepare();
                 } catch (Exception e) {
-                    LogUtil.e("mRecorder.prepare异常",e);
+                    LogUtil.e("mRecorder.prepare异常", e);
                 }
                 LogUtil.d("recorder prepared");
                 try {
                     mRecorder.start();//部分手机会权限阻塞，导致ANR， 华为p8、Oppo会在此等待系统的授权，最长15s,只有获取到权限才会调用这个，才会真正执行
                 } catch (Exception e) {
-                    LogUtil.e("mRecorder.start异常",e);
+                    LogUtil.e("mRecorder.start异常", e);
                 }
                 LogUtil.d("recorder start");
                 //【重要】 此时应该反过来检查用户是否还在按住按钮，如果没有按住就结束掉本次录音
@@ -298,10 +294,6 @@ public class EcarxRecorder {
                 isUpdateVoiceLevel = true;
                 isRecording = true;
                 startTime = new Date().getTime();
-                // 已经准备好了，可以录制了
-                if (mListener != null) {
-                    mListener.wellPrepared();
-                }
 
                 if (handler != null) {
                     LogUtil.d("开始处理声音音量大小回调");
@@ -309,8 +301,8 @@ public class EcarxRecorder {
                         while (isRecording && mRecorder != null && isUpdateVoiceLevel) {
                             android.os.Message msg = new android.os.Message();
                             int maxAmp = mRecorder.getMaxAmplitude();
-                            LogUtil.d("音量级别maxAmp="+maxAmp);
-                            msg.what =  maxAmp * VOICE_LEVEL / 32768 + 1;//msg.what = mRecorder.getMaxAmplitude() * 13 / 0x7FFF;
+                            LogUtil.d("音量级别maxAmp=" + maxAmp);
+                            msg.what = maxAmp * VOICE_LEVEL / 32768 + 1;//msg.what = mRecorder.getMaxAmplitude() * 13 / 0x7FFF;
 //                            LogUtil.d("音量级别="+msg.what);
                             handler.sendMessage(msg);
                             SystemClock.sleep(100);
@@ -328,5 +320,7 @@ public class EcarxRecorder {
                 LogUtil.e("EcarxRecorder.startRecord 录音异常", e);
             }
         }
-    };
+    }
+
+    ;
 }

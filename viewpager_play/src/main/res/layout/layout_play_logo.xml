@@ -15,7 +15,6 @@
         android:layout_centerInParent="true">
         <com.yika.viewpager_play.RoundImageViewByXfermode
             android:id="@+id/img_audioIcon"
-            android:src="@mipmap/moren"
             android:layout_width="140dp"
             android:layout_height="140dp"
             android:scaleType="centerCrop" />

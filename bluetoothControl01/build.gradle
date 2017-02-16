@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.jph.lc"
+        applicationId "com.yinxm.bt"
         minSdkVersion 14
         targetSdkVersion 23
     }
@@ -20,4 +20,7 @@ android {
 
 dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
+    compile project(':mylibrary')
+    compile 'com.android.support:support-annotations:23.1.1'
+    compile 'com.android.support:design:23.1.1'
 }

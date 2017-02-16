@@ -8,10 +8,11 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.Button;
 
+import cn.yinxm.lib.media.EcarxRecorder;
 import cn.yinxm.lib.utils.LogUtil;
 
 
-public class AudioRecordButton extends Button implements EcarxRecorder.AudioStageListener {
+public class AudioRecordButton extends Button {
 
     private static final int STATE_NORMAL = 1;
     private static final int STATE_RECORDING = 2;
@@ -62,7 +63,7 @@ public class AudioRecordButton extends Button implements EcarxRecorder.AudioStag
         LogUtil.i("dir="+dir);
 
         mAudioManager = new EcarxRecorder(context, dir);
-        mAudioManager.setOnAudioStageListener(this);
+//        mAudioManager.setOnAudioStageListener(this);
     }
 
     /**
@@ -115,7 +116,7 @@ public class AudioRecordButton extends Button implements EcarxRecorder.AudioStag
                     break;
                 case MSG_VOICE_CHANGE:
                     if (mCurrentState == STATE_RECORDING) {
-                        mDialogManager.updateVoiceLevel(mAudioManager.getVoiceLevel(2));
+//                        mDialogManager.updateVoiceLevel(mAudioManager.getVoiceLevel(2));
                     }
 
                     break;
@@ -130,11 +131,11 @@ public class AudioRecordButton extends Button implements EcarxRecorder.AudioStag
     };
 
     // 在这里面发送一个handler的消息
-    @Override
-    public void wellPrepared() {
-        // TODO Auto-generated method stub
-        mhandler.sendEmptyMessage(MSG_AUDIO_PREPARED);
-    }
+//    @Override
+//    public void wellPrepared() {
+//        // TODO Auto-generated method stub
+//        mhandler.sendEmptyMessage(MSG_AUDIO_PREPARED);
+//    }
 
     /**
      * 直接复写这个监听函数

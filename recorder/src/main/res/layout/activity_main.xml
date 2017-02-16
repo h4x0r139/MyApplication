@@ -16,6 +16,36 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_gravity="center"
+        android:text="录音方式："/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/rg"
+            >
+            <RadioButton
+                android:id="@+id/rb_ecarx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EcarxRecorder"/>
+            <RadioButton
+                android:id="@+id/rb_ease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="环信Ease"
+                />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,20 +58,12 @@
             android:text="停止录音"
             android:onClick="recordStop"
             />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="播放录音"
             android:onClick="play"
             />
-
-
     </LinearLayout>
 
     <TextView

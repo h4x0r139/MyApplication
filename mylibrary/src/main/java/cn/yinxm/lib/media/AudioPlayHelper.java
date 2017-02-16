@@ -76,6 +76,15 @@ public class AudioPlayHelper {
                     bufferPercent = percent;
                 }
             });
+            myMedia.setOnErrorListener(new MediaPlayer.OnErrorListener() {
+                @Override
+                public boolean onError(MediaPlayer mp, int what, int extra) {
+//                    Toast.makeText(, "当前歌曲无法播放", Toast.LENGTH_SHORT).show();
+//                       http://image.kaolafm.net/mz/filmchipsmp3_32/201507/9347a567-9df4-49f3-8966-0b975c272ed3.mp3?appid=kfxmv5890&deviceid=100016501&audioid=1000001732372
+                    LogUtil.e("MediaPlayer播放异常mp="+mp+", what="+what+", extra="+extra);
+                    return true;
+                }
+            });
         } catch (Exception e) {
             isMediaPlayerReady = false;
             LogUtil.e("播放器错误", e);

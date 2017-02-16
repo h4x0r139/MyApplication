@@ -2,6 +2,7 @@ package cn.yinxm.ndk;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.TextView;
 
 import static android.R.attr.data;
@@ -22,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView tv=(TextView)findViewById(R.id.tv);
-        tv.setText(getStrFromJni());
+        tv.setText(getStrFromJni()+KeyUtil.getKey());
+        Log.d("yinxm", "key="+KeyUtil.getKey());
     }
 
     public native String getStrFromJni();

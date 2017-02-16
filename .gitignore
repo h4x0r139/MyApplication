@@ -5,3 +5,5 @@
 build
 captures
 local.properties
+androidTest
+test
