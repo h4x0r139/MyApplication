@@ -1,20 +1,21 @@
 package cn.yinxm.data;
 
+import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import org.wangchenlong.contentproviderdemo.R;
-import org.yinxm.data.R;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "DEBUG-WCL: " + MainActivity.class.getSimpleName();
+    private static final String TAG = "yinxm";
 
     private TextView mTvShowBooks; // 显示书籍
     private TextView mTvShowUsers; // 显示用户
@@ -35,7 +36,9 @@ public class MainActivity extends AppCompatActivity {
      * @param view 视图
      */
     public void addBooks(View view) {
+
         Uri bookUri = BookProvider.BOOK_CONTENT_URI;
+        Log.d("yinxm", "uri="+bookUri+", path="+bookUri.getPath()+", getAuthority="+bookUri.getAuthority()+", getScheme="+bookUri.getScheme());
         ContentValues values = new ContentValues();
         values.put("_id", 3);
         values.put("name", "信仰上帝");
@@ -84,6 +87,48 @@ public class MainActivity extends AppCompatActivity {
                 mTvShowUsers.setText(content);
             }
             userCursor.close();
+        }
+    }
+
+    /**
+     * 显示本地通讯录联系人
+     *
+     * @param view 视图
+     */
+    public void showContacts(View view) {
+        String content = "";
+        //得到ContentResolver对象
+        ContentResolver contentResolver = getContentResolver();
+        Uri uri = ContactsContract.Contacts.CONTENT_URI;
+        Cursor cursor = contentResolver.query(uri, null, null, null, null);
+        if (cursor != null) {
+            Log.d(TAG, "count="+cursor.getCount());
+            StringBuilder stringBuilder = new StringBuilder();
+            while (cursor.moveToNext()) {
+
+                //取得联系人名字
+                int nameFieldColumnIndex = cursor.getColumnIndex(ContactsContract.PhoneLookup.DISPLAY_NAME);
+                String contact = cursor.getString(nameFieldColumnIndex);
+                stringBuilder.append(contact).append(":");
+                //取得电话号码
+                String ContactId = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
+                Cursor phone = contentResolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,
+                        ContactsContract.CommonDataKinds.Phone.CONTACT_ID + "=" + ContactId, null, null);
+                while(phone != null && phone.moveToNext())
+                {
+                    String phoneNumber = phone.getString(phone.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+                    if (phoneNumber != null && !phoneNumber.trim().equals(""))
+                    //格式化手机号
+                    phoneNumber = phoneNumber.replace("-","");
+                    phoneNumber = phoneNumber.replace(" ","");
+                    stringBuilder.append(phoneNumber).append(", ");
+                }
+
+            }
+            cursor.close();
+            Log.d(TAG, stringBuilder.toString());
+            mTvShowUsers.setText(stringBuilder.toString());
+
         }
     }
 }

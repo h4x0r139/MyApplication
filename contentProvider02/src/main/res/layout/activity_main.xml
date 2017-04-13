@@ -23,6 +23,12 @@
         android:onClick="showBooks"
         android:text="显示书籍"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showContacts"
+        android:text="显示联系人"/>
+
     <TextView
         android:id="@+id/main_tv_show_books"
         android:layout_width="match_parent"

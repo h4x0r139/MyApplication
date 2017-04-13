@@ -3,12 +3,14 @@ package com.yinxm.img.browse.utils;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.provider.MediaStore.Audio.Albums;
 import android.provider.MediaStore.Images.Media;
 import android.provider.MediaStore.Images.Thumbnails;
 import android.util.Log;
 
+import com.yinxm.img.EcarxMediaStoreConstant;
 import com.yinxm.img.browse.bean.PhotoUpImageBucket;
 import com.yinxm.img.browse.bean.PhotoUpImageItem;
 
@@ -143,50 +145,57 @@ public class PhotoUpAlbumHelper extends AsyncTask<Object, Object, Object>{
 		String columns[] = new String[] { Media._ID, Media.BUCKET_ID,
 				Media.PICASA_ID, Media.DATA, Media.DISPLAY_NAME, Media.TITLE,
 				Media.SIZE, Media.BUCKET_DISPLAY_NAME };
-		// 得到一个游标
-		Cursor cur = cr.query(Media.EXTERNAL_CONTENT_URI, columns, null, null,
-				Media.DATE_MODIFIED+" desc");
-		if (cur.moveToFirst()) {
-			// 获取指定列的索引
-			int photoIDIndex = cur.getColumnIndexOrThrow(Media._ID);
-			int photoPathIndex = cur.getColumnIndexOrThrow(Media.DATA);
-			int bucketDisplayNameIndex = cur.getColumnIndexOrThrow(Media.BUCKET_DISPLAY_NAME);
-			int bucketIdIndex = cur.getColumnIndexOrThrow(Media.BUCKET_ID);
-			/**
-			 * Description:这里增加了一个判断：判断照片的名字是否合法，例如.jpg .png    图片名字是不合法的，直接过滤掉
-			 */
-			do {
-				if (cur.getString(photoPathIndex).substring(
-						cur.getString(photoPathIndex).lastIndexOf("/")+1,
-						cur.getString(photoPathIndex).lastIndexOf("."))
-						.replaceAll(" ", "").length()<=0)
-				{
-					Log.d(TAG, "出现了异常图片的地址：cur.getString(photoPathIndex)="+cur.getString(photoPathIndex));
-					Log.d(TAG, "出现了异常图片的地址：cur.getString(photoPathIndex).substring="+cur.getString(photoPathIndex)
-							.substring(cur.getString(photoPathIndex).lastIndexOf("/")+1,cur.getString(photoPathIndex).lastIndexOf(".")));
-				}else {
-					String _id = cur.getString(photoIDIndex);
-					String path = cur.getString(photoPathIndex);
-					String bucketName = cur.getString(bucketDisplayNameIndex);
-					String bucketId = cur.getString(bucketIdIndex);
-					PhotoUpImageBucket bucket = bucketList.get(bucketId);
-					if (bucket == null) {
-						bucket = new PhotoUpImageBucket();
-						bucketList.put(bucketId, bucket);
-						bucket.imageList = new ArrayList<PhotoUpImageItem>();
-						bucket.bucketName = bucketName;
-					}
-					bucket.count++;
-					PhotoUpImageItem imageItem = new PhotoUpImageItem();
-					imageItem.setImageId(_id);
-					imageItem.setImagePath(path);
+		for (int i=0; i< EcarxMediaStoreConstant.URI_IMAGES.length; i++) {
+			Uri uri = EcarxMediaStoreConstant.URI_IMAGES[i];
+			Log.d("yinxm", "uri=" + uri.toString());
+			// 得到一个游标
+			Cursor cur = cr.query(uri, columns, null, null,
+					Media.DATE_MODIFIED+" desc");
+			if (cur != null && cur.moveToFirst()) {
+				// 获取指定列的索引
+				int photoIDIndex = cur.getColumnIndexOrThrow(Media._ID);
+				int photoPathIndex = cur.getColumnIndexOrThrow(Media.DATA);
+				int bucketDisplayNameIndex = cur.getColumnIndexOrThrow(Media.BUCKET_DISPLAY_NAME);
+				int bucketIdIndex = cur.getColumnIndexOrThrow(Media.BUCKET_ID);
+				/**
+				 * Description:这里增加了一个判断：判断照片的名字是否合法，例如.jpg .png    图片名字是不合法的，直接过滤掉
+				 */
+				do {
+					if (cur.getString(photoPathIndex).substring(
+							cur.getString(photoPathIndex).lastIndexOf("/")+1,
+							cur.getString(photoPathIndex).lastIndexOf("."))
+							.replaceAll(" ", "").length()<=0)
+					{
+						Log.d(TAG, "出现了异常图片的地址：cur.getString(photoPathIndex)="+cur.getString(photoPathIndex));
+						Log.d(TAG, "出现了异常图片的地址：cur.getString(photoPathIndex).substring="+cur.getString(photoPathIndex)
+								.substring(cur.getString(photoPathIndex).lastIndexOf("/")+1,cur.getString(photoPathIndex).lastIndexOf(".")));
+					}else {
+						String _id = cur.getString(photoIDIndex);
+						String path = cur.getString(photoPathIndex);
+						String bucketName = cur.getString(bucketDisplayNameIndex);
+						String bucketId = cur.getString(bucketIdIndex);
+						PhotoUpImageBucket bucket = bucketList.get(bucketId);
+						if (bucket == null) {
+							bucket = new PhotoUpImageBucket();
+							bucketList.put(bucketId, bucket);
+							bucket.imageList = new ArrayList<PhotoUpImageItem>();
+							bucket.bucketName = bucketName;
+						}
+						bucket.count++;
+						PhotoUpImageItem imageItem = new PhotoUpImageItem();
+						imageItem.setImageId(_id);
+						imageItem.setImagePath(path);
 //					imageItem.setThumbnailPath(thumbnailList.get(_id));
-					bucket.imageList.add(imageItem);
-					Log.i(TAG, "PhotoUpAlbumHelper类中 的——》path="+thumbnailList.get(_id));
-				}
-			} while (cur.moveToNext());
+						bucket.imageList.add(imageItem);
+						Log.i(TAG, "PhotoUpAlbumHelper类中 的——》path="+thumbnailList.get(_id));
+					}
+				} while (cur.moveToNext());
+			}
+			if (cur != null) {
+				cur.close();
+			}
 		}
-		cur.close();
+
 		hasBuildImagesBucketList = true;
 	}
 

@@ -11,6 +11,11 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="线程切换测试"
+        android:onClick="testChangeThreadToMain"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="打开新界面"
         android:onClick="nextAct"/>
     <TextView
