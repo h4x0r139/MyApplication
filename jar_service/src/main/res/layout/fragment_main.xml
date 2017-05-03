@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.yinxm.test.ui.fragment.MainFragment">
+
+    <FrameLayout
+        android:id="@+id/fm_main_left"
+        android:background="@drawable/hlsdk0331_left_background"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"></FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fm_main_right"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"></FrameLayout>
+
+    <!--点击切换Fragment测试-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn1"
+            android:text="gotoEcarxMsg"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn2"
+            android:text="gotoMsgList"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -42,7 +42,7 @@ public class DimenAdaptUtil {
                     String start = tempString.substring(0, tempString.indexOf(">") + 1);
                     String end = tempString.substring(tempString.lastIndexOf("<") - 2);
                     int num = Integer.valueOf(tempString.substring(tempString.indexOf(">") + 1, tempString.indexOf("</dimen>") - 2));
-                    String count = decimalFormat.format(num*0.80814);
+                    String count = decimalFormat.format(num*0.5333);
                     System.err.println("num="+num+", count="+count);
 
 /*//                    然后你将values-sw600dp-land的里面的dimens.xml分别乘以0.75来获得：(因为600/800等于0.75)
