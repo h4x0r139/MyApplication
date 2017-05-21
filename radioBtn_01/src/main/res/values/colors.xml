@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+
+
+    <color name="home_left_btn_sel">#2e3036</color>
+    <color name="menutwo_white">#bfc4c8</color>
+    <color name="menutwo_gray">#7a8192</color>
+
+</resources>
