@@ -1,12 +1,16 @@
-//include ':testmodule', ':actionbartest', ':ActionBar_TabNav', ':loginnavigation',  ':s16_download', ':s18_xml', ':s20_wifi',  ':s2_commonbox', ':appwidget', ':tabhost_test', ':fragmentTabHost',  ':fragment_test', ':webview_test', ':customview', ':drawableres', ':viewpager_splashscreen', ':drawlayout_test', ':toolbar_palette', ':SpeechRecognition', ':serversocket_test',  ':asynctask_test', ':http_test', ':httpclient_test', ':flatui_demo', ':okhttp', ':intent_test', ':myframework', ':flowlayout',  ':drawlayout_navigation', ':toolbar_demo_checkpoint3', ':Lab-Android-DesignLibrary'
+//include ':testmodule', ':actionbartest', ':ActionBar_TabNav', ':loginnavigation',  ':s16_download', ':s18_xml', ':s20_wifi',  ':s2_commonbox', ':webview_test', ':customview', ':drawableres', ':viewpager_splashscreen', ':drawlayout_test', ':toolbar_palette', ':SpeechRecognition', ':serversocket_test',  ':asynctask_test', ':http_test', ':httpclient_test', ':flatui_demo', ':okhttp', ':intent_test', ':myframework', ':flowlayout',  ':drawlayout_navigation', ':toolbar_demo_checkpoint3', ':Lab-Android-DesignLibrary'
 //include ':clickevent_01', ':basic_ui', ':mediaplayer_test', ':permission_req'
 //include ':ui_img_reflect'
 //include ':recyclerview', ':listView2', ':surfaceView', ':listview', ':gradletest', ':webhtml'
 //include ':login'
 //include ':s01_activity', ':s02_calculator', ':s03_activitytask'
 
+//系统组件
+//include ':appwidget', ':tabhost_test'
+include ':fragmentTabHost', ':fragment_test', ':customviewdraw'
+
 //控件布局
-//include ':s04_layout', ':s05_checkbox', ':radioBtn_01', ':gridview_test', ':gridLayout_test'
+include ':s04_layout', ':s05_checkbox', ':radioBtn_01', ':gridview_test', ':gridLayout_test'
 include ':tablayout', ':jar_client', ':jar_service'
 // ':s07_imageview', ':s08_fingerplaylayout', ':s09_ralativelayout', ':s10_login_relativelayout'
 //include ':s11_timepicker', ':s12_progressbar', ':s14_handler'
