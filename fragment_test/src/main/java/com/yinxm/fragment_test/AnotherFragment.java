@@ -51,4 +51,11 @@ public class AnotherFragment extends Fragment {
         super.onDestroy();
         System.out.println("AnotherFragment.onDestroy");
     }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        System.out.println("AnotherFragment.setUserVisibleHint isVisibleToUser="+isVisibleToUser);
+
+    }
 }

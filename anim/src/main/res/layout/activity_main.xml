@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="cn.yinxm.anim.MainActivity"
+    android:gravity="center"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="145dp"
+        android:layout_height="145dp">
+        <ImageView
+            android:id="@+id/anim1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/bg_lv_msg"
+            android:gravity="center"
+            />
+        <ImageView
+            android:id="@+id/anim2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/bg_lv_msg"
+            android:gravity="center"
+            />
+        <ImageView
+            android:id="@+id/anim3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/bg_lv_msg"
+            android:gravity="center"
+            />
+        <ImageView
+            android:id="@+id/anim4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/bg_lv_msg"
+            android:gravity="center"
+            />
+        <ImageView
+            android:id="@+id/tv_i_want_leave_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/i_want_leave_msg"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

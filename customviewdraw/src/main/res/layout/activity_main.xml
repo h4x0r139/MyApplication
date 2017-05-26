@@ -1,21 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="cn.yinxm.view.MainActivity">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
 
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Hello World!" app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <cn.com.ecarx.xiaoka.carmode.ui.view.RippleImageView
-        android:id="@+id/quick_stop"
-        android:layout_width="@dimen/dip_280"
-        android:layout_height="@dimen/dip_300"
-        android:layout_centerHorizontal="true"
-        app:show_spacing_time="800"
-        app:imageViewWidth="@dimen/dip_141"
-        app:imageViewHeigth="@dimen/dip_141"
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Draw测试"
         />
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="慧聊2.0车机发送特效"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="波浪效果"
+        />
+
+    <cn.yinxm.view.WaveLineView
+        android:id="@+id/wave1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        />
+
+
+
+
+</LinearLayout>

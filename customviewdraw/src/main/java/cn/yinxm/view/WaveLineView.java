@@ -11,8 +11,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
-import cn.com.ecarx.xiaoka.carmode.R;
-import cn.com.ecarx.xiaoka.util.LogUtil;
+import cn.yinxm.lib.utils.LogUtil;
 
 
 /**
@@ -83,12 +82,13 @@ public class WaveLineView extends View {
         waveFirstPaint.setStrokeWidth(waveLineWidth);
 
         waveSecondPaint = new Paint();
-        waveSecondPaint.setColor(waveSecondColor);
+        waveSecondPaint.setColor(waveFirstColor);
     /*    waveSecondPaint.setStrokeCap(Paint.Cap.ROUND);
         waveSecondPaint.setStrokeJoin(Paint.Join.ROUND);*/
         waveSecondPaint.setStyle(Paint.Style.STROKE);
         waveSecondPaint.setStrokeWidth(waveLineWidth);
         waveSecondPaint.setAntiAlias(true);
+        waveSecondPaint.setAlpha(100);
     }
 
     public void onDraw(Canvas canvas) {
@@ -99,15 +99,17 @@ public class WaveLineView extends View {
         }
     }
 
+    private boolean anim = false;
+
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
         viewHeight = h;
-        viewWidth = w-waveLineWidth ;
+        viewWidth = w - waveLineWidth;
         viewCenterY = viewHeight / 2;
 //        waveAmplifier = (waveAmplifier * 2 > viewHeight) ? (viewHeight / 2) : waveAmplifier;
-        waveAmplifier = viewHeight / 2-waveLineWidth;
-//        LogUtil.d("waveAmplifier" + waveAmplifier);
+        waveAmplifier = viewHeight / 2 - waveLineWidth;
+        LogUtil.d("waveAmplifier" + waveAmplifier);
         waveAnim();
     }
 
@@ -124,20 +126,34 @@ public class WaveLineView extends View {
     }
 
     public void waveAnim() {
-        ValueAnimator valueAnimator = ValueAnimator.ofFloat(0F, 1.F);
-        valueAnimator.setDuration(2000);
-        valueAnimator.setRepeatMode(ValueAnimator.REVERSE);
-        valueAnimator.setRepeatCount(ValueAnimator.INFINITE);
-        valueAnimator.setInterpolator(new DecelerateInterpolator());
-        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                Float aFloat = Float.valueOf(animation.getAnimatedValue().toString());
-                wavePhase = 360.F * aFloat;
-                invalidate();
+        ValueAnimator valueAnimator = null;
+        if (anim) {
+            valueAnimator = ValueAnimator.ofFloat(0F, 1.F);
+            valueAnimator.setDuration(2000);
+            valueAnimator.setRepeatMode(ValueAnimator.REVERSE);
+            valueAnimator.setRepeatCount(ValueAnimator.INFINITE);
+            valueAnimator.setInterpolator(new DecelerateInterpolator());
+            valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                @Override
+                public void onAnimationUpdate(ValueAnimator animation) {
+                    Float aFloat = Float.valueOf(animation.getAnimatedValue().toString());
+                    wavePhase = 360.F * aFloat;
+                    invalidate();
+                }
+            });
+            valueAnimator.start();
+        } else {
+            if (valueAnimator != null) {
+                valueAnimator.cancel();
             }
-        });
-        valueAnimator.start();
+        }
     }
 
+    public void setAnim(boolean anim) {
+        this.anim = anim;
+    }
+
+    public void start() {
+        waveAnim();
+    }
 }

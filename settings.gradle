@@ -7,7 +7,7 @@
 
 //系统组件
 //include ':appwidget', ':tabhost_test'
-include ':fragmentTabHost', ':fragment_test', ':customviewdraw'
+include ':fragmentTabHost', ':fragment_test', ':customviewdraw', ':textviewspan', ':anim'
 
 //控件布局
 include ':s04_layout', ':s05_checkbox', ':radioBtn_01', ':gridview_test', ':gridLayout_test'
@@ -50,7 +50,7 @@ include ':tablayout', ':jar_client', ':jar_service'
 
 //高级
 //include ':process_foreground', ':library_process_foreground'
-//include ':screenadapt'
+include ':screenadapt'
 //高级
 //include ':thread_test', ':threadPool_demo'
 //include ':service_test'

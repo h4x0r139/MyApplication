@@ -46,9 +46,27 @@ public class MainActivityFragment extends Fragment {
         rootView.findViewById(R.id.btnShowTabbedActivity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(),Tabs.class));
+                startActivity(new Intent(getActivity(), Tabs.class));
             }
         });
+
+        rootView.findViewById(R.id.btnBackStack).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), FragmentBackStackActivity.class));
+            }
+        });
+
+        //Fragment add replace 测试
+         rootView.findViewById(R.id.btn_add_replace).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), FragmentAddReplaceActivity.class));
+            }
+        });
+
+
+
         System.out.println("MainActivityFragment.onCreateView");
         return rootView;
     }
@@ -69,5 +87,12 @@ public class MainActivityFragment extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         System.out.println("MainActivityFragment.onDestroy");
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        System.out.println("MainActivityFragment.setUserVisibleHint isVisibleToUser="+isVisibleToUser);
+
     }
 }

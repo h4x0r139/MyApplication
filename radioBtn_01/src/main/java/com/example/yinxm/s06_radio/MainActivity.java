@@ -1,9 +1,11 @@
 package com.example.yinxm.s06_radio;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -22,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.customRb).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CustomRadioButtonActivity.class));
+            }
+        });
 
         nameRadioGroup = (RadioGroup) findViewById(R.id.radioGroupName);
         name1Radio = (RadioButton)findViewById(R.id.name1Id);

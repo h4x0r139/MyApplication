@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="wave_first_line">#6585ee</color>
+    <color name="wave_second_line">#434f79</color>
 </resources>

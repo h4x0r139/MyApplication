@@ -1,11 +1,119 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+<!--    <style name="CarModeTheme" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@mipmap/background</item>
+    </style>-->
+
+    <style name="LoadingDialogStyle" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+<!--    <style name="SplashTheme" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>-->
+    <style name="dialog" >
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <!--聊天界面时间格式-->
+<!--    <style name="style_chat_time_msg">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginBottom">@dimen/dip_20</item>
+        <item name="android:paddingRight">@dimen/dip_20</item>
+        <item name="android:paddingLeft">@dimen/dip_20</item>
+        <item name="android:textSize">@dimen/sp_24</item>
+        <item name="android:background">@drawable/shape_chat_notice_bg</item>
+        <item name="android:paddingBottom">@dimen/dip_8</item>
+        <item name="android:paddingTop">@dimen/dip_8</item>
+    </style>-->
+    <!--聊天室文字消息-->
+   <!-- <style name="style_chat_text_msg">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_chat_msg_left</item>
+        <item name="android:lineSpacingExtra">@dimen/dip_10</item>
+        <item name="android:paddingLeft">@dimen/dip_20</item>
+        <item name="android:paddingRight">@dimen/dip_20</item>
+        <item name="android:paddingTop">@dimen/dip_10</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:textSize">@dimen/sp_30</item>
+        <item name="android:gravity">center_vertical</item>
+
+
+    </style>-->
+
+    <style name="sexdialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="style_wave_line_def">
+        <item name="wave_first_color">@color/wave_first_line</item>
+        <item name="wave_second_color">@color/wave_second_line</item>
+        <item name="wave_line_width">@dimen/dip_4</item>
+        <item name="wave_phase">160</item>
+        <item name="wave_amplifier">60.0</item>
+        <item name="wave_frequency">1.0</item>
+    </style>
+
+    <style name="OutDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="change_text">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="customdialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+<!--    <style name="style_chat_msg_select">
+        <item name="android:layout_width">@dimen/dip_50</item>
+        <item name="android:layout_height">@dimen/dip_50</item>
+        <item name="android:layout_marginLeft">@dimen/dip_40</item>
+        <item name="android:background">@mipmap/msg_select_before</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:focusable">true</item>
+    </style>-->
+
 
 </resources>

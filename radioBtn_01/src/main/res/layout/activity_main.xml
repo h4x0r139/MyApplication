@@ -4,6 +4,13 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RadioButton样式自定义"
+        android:id="@+id/customRb"
+        />
+
    <RadioGroup
        android:id="@+id/radioGroupName"
        android:layout_width="wrap_content"
