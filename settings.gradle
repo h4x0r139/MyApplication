@@ -7,7 +7,7 @@
 
 //系统组件
 //include ':appwidget', ':tabhost_test'
-include ':fragmentTabHost', ':fragment_test', ':customviewdraw', ':textviewspan', ':anim'
+include ':fragmentTabHost', ':fragment_test', ':customviewdraw', ':textviewspan'
 
 //控件布局
 include ':s04_layout', ':s05_checkbox', ':radioBtn_01', ':gridview_test', ':gridLayout_test'
@@ -17,12 +17,8 @@ include ':tablayout', ':jar_client', ':jar_service'
 //include ':wirelessOrder_Client'
 //include ':s2_09_appwidget03'
 //include ':s2_10_appwidget04'
-//include ':s2_11_animations01'
-//include ':s2_12_animations02'
-//include ':s2_14_animations04'
-//include ':s2_15_animations05'
-//include ':s2_16_animations06'
-//include ':s2_17_animations07'
+//动画
+include ':anim', ':s2_11_animations01',':s2_12_animations02' ,':s2_14_animations04' ,':s2_15_animations05' ,':s2_16_animations06' ,':s2_17_animations07'
 //include ':s2_18_json01'
 //include ':s2_19_json02'
 //include ':s2_20_json03'
@@ -55,7 +51,7 @@ include ':screenadapt'
 //include ':thread_test', ':threadPool_demo'
 //include ':service_test'
 //include ':broadcastreceiver'
-//include ':aidl_test'
+include ':aidl_test'
 //include ':sqlite', ':contentProvider_mars', ':contentProvider02'
 //include ':ndk_jni_01'
 //include ':socket_server_01', ':socket_client_01', ':socket_server_ecarxwifi', ':socket_client'
