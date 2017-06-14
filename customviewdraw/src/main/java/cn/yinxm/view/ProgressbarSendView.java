@@ -48,6 +48,7 @@ public class ProgressbarSendView extends View{
     private SweepGradient mSweepGradient;
     private int[] mGradientColors = {Color.GREEN, Color.YELLOW, Color.RED};
 
+
     public ProgressbarSendView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         initPaint();
@@ -91,10 +92,6 @@ public class ProgressbarSendView extends View{
     }
 
     private void initPaint() {
-
-
-
-
         mArcPaint = new Paint();
         mArcPaint.setAntiAlias(antiAlias);
         // 设置画笔的样式，为FILL，FILL_OR_STROKE，或STROKE
@@ -114,10 +111,9 @@ public class ProgressbarSendView extends View{
     }
 
     private void drawArc(Canvas canvas) {
+        LogUtil.d("drawArc maxProgress="+maxProgress+", currentProgress="+currentProgress);
 
-        int roundWidth = 30;
-        float sweepAngle = 360;
-
+        float roundWidth = getPx(3);
 
         /**
          * 画最外层的大圆环
@@ -141,6 +137,10 @@ public class ProgressbarSendView extends View{
         paintHead.setAntiAlias(antiAlias);
         paintHead.setStrokeWidth(roundWidth);
         paintHead.setStyle(Paint.Style.STROKE);
+//        paintHead.setColor(Color.parseColor("#9553fe"));
+        paintHead.setColor(Color.WHITE);
+//        paintHead.setMaskFilter(new BlurMaskFilter(15, BlurMaskFilter.Blur.NORMAL));
+
 
         //中心点需要计算为头部的坐标
 //        RadialGradient radialGradient =  new RadialGradient(300, 30, 20, Color.parseColor("#6685ef"), Color.parseColor("#9553fe"), Shader.TileMode.CLAMP);
@@ -154,18 +154,17 @@ public class ProgressbarSendView extends View{
 //        int[] mGradientColors = {Color.GREEN, Color.YELLOW, Color.RED};//依次是画笔开始-结束颜色
 //        #ffffff   #7728f4   #6685ef
 //        int[] mGradientColors = { Color.parseColor("#7728f4"), Color.parseColor("#6685ef"), Color.parseColor("#ffffff")};
-        int[] mGradientColors = {  Color.parseColor("#6685ef"), Color.parseColor("#7728f4"),};
+        int[] mGradientColors = {  Color.parseColor("#6685ef"), Color.parseColor("#7728f4")};
 //        int[] mGradientColors = {Color.GREEN, Color.YELLOW, Color.RED};
         mSweepGradient = new SweepGradient(centre, centre, mGradientColors, null);
         paint.setShader(mSweepGradient);
-//        paint.setMaskFilter(new BlurMaskFilter(50, BlurMaskFilter.Blur.SOLID));//设置发光
-//        paint.setMaskFilter(new BlurMaskFilter(100, BlurMaskFilter.Blur.OUTER));//设置发光
-//        paint.setStrokeCap(Paint.Cap.ROUND);
 
-//        LinearGradient gradient = new LinearGradient(mWidth /2,0, mWidth /2, mHeight,RATE_COLORS,null, Shader.TileMode.MIRROR);
-//        mPaint.setShader(gradient);
-//        mPaint.setMaskFilter(new BlurMaskFilter(15, BlurMaskFilter.Blur.SOLID));//设置发光
-
+        int[] headGradientColors = {Color.parseColor("#7728f4"), Color.parseColor("#ffffff") };
+        int gradientX = 0;
+        int gradientY = 0;
+//        RadialGradient gradient = new RadialGradient(gradientX,gradientY, 100, );
+//        LinearGradient gradient = new LinearGradient()
+//        paintHead.setShader(mHeadSweepGradient);
 
 //        RectF oval = new RectF(0, 0, 100, 100);
 
@@ -178,7 +177,16 @@ public class ProgressbarSendView extends View{
 //        float currentAngle = mSweepAngle * mPercent;
         canvas.rotate(-90, centerPoint.x, centerPoint.y);//默认从3点钟方向开始绘制，逆时针旋转90度，开始绘制
 
-        canvas.drawArc(oval, 0, 180, false, paint);
+
+
+        float sweepAngle = 0.0f;
+        if (maxProgress > 0) {
+            sweepAngle = currentProgress * 360.0f / maxProgress ;
+        }
+        canvas.drawArc(oval, 0, sweepAngle, false, paint);
+
+
+        canvas.drawArc(oval, sweepAngle-30, 30, false, paintHead);//头部发光弧度
 
 //        Path path = new Path();
 //        path.addArc(oval, 0, 360);
@@ -211,7 +219,25 @@ public class ProgressbarSendView extends View{
         this.maxProgress = maxProgress;
     }
 
+    public void setCurrentProgress(int currentProgress) {
+        if (currentProgress <= maxProgress) {
+            this.currentProgress = currentProgress;
+        }
+        invalidate();
+    }
+
+
+
     public void updateProgress(int progressAdd) {
         currentProgress += progressAdd;
+        invalidate();
+    }
+
+    //读取dimens里面定义好的px
+    public float getPx(int px) {
+        int resId = getResources().getIdentifier("dip_" + px, "dimen", getContext().getPackageName());
+        float dimens = getResources().getDimension(resId);
+        LogUtil.d(px+"="+dimens);
+        return dimens;
     }
 }

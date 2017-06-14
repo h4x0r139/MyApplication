@@ -13,12 +13,25 @@
         android:id="@+id/btn"
         android:text="更新进度"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        />
 
     <cn.yinxm.lib.view.progress.SpringProgressView
         android:id="@+id/springProgressView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
+
+        />
+
+    <cn.yinxm.view.leavemsg.MsgPlayProgressView
+        android:id="@+id/msg_progress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_20"
+        android:layout_marginTop="@dimen/dip_20"
+        android:layout_marginBottom="@dimen/dip_20"
+        android:visibility="gone"
+
         />
 
     <cn.yinxm.view.ProgressbarSendView

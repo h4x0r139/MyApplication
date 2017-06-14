@@ -7,18 +7,23 @@
 
 //系统组件
 //include ':appwidget', ':tabhost_test'
-include ':fragmentTabHost', ':fragment_test', ':customviewdraw', ':textviewspan'
+//include ':fragmentTabHost', ':fragment_test'
+
 
 //控件布局
-include ':s04_layout', ':s05_checkbox', ':radioBtn_01', ':gridview_test', ':gridLayout_test'
-include ':tablayout', ':jar_client', ':jar_service'
+//include ':s04_layout', ':s05_checkbox', ':radioBtn_01', ':gridview_test', ':gridLayout_test'
+//include ':tablayout', ':jar_client', ':jar_service'
 // ':s07_imageview', ':s08_fingerplaylayout', ':s09_ralativelayout', ':s10_login_relativelayout'
 //include ':s11_timepicker', ':s12_progressbar', ':s14_handler'
 //include ':wirelessOrder_Client'
 //include ':s2_09_appwidget03'
 //include ':s2_10_appwidget04'
+
 //动画
 include ':anim', ':s2_11_animations01',':s2_12_animations02' ,':s2_14_animations04' ,':s2_15_animations05' ,':s2_16_animations06' ,':s2_17_animations07'
+
+//自定义UI、动画效果
+include ':customviewdraw', ':textviewspan'
 //include ':s2_18_json01'
 //include ':s2_19_json02'
 //include ':s2_20_json03'
@@ -51,7 +56,7 @@ include ':screenadapt'
 //include ':thread_test', ':threadPool_demo'
 //include ':service_test'
 //include ':broadcastreceiver'
-include ':aidl_test'
+//include ':aidl_test'
 //include ':sqlite', ':contentProvider_mars', ':contentProvider02'
 //include ':ndk_jni_01'
 //include ':socket_server_01', ':socket_client_01', ':socket_server_ecarxwifi', ':socket_client'

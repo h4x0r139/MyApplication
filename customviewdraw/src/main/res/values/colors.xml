@@ -6,4 +6,27 @@
 
     <color name="wave_first_line">#6585ee</color>
     <color name="wave_second_line">#434f79</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="blues">#6585ee</color>
+
+
+    <color name="grey">#757575</color>
+    <color name="transparent">#00000000</color>
+    <color name="text_color_333333">#333333</color>
+    <color name="border_focused">#696969</color>
+    <color name="sl_history_name">#999</color>
+    <color name="transparent10">#10ffffff</color>
+    <color name="get_code">#806585ee</color>
+    <color name="button_blue">#6585ee</color>
+    <color name="edit_back">#999999</color>
+    <color name="left_bg">#191919</color>
+    <color name="sl_text">#FFFFFF</color>
+    <color name="color_record_cancel_bg">#444559</color>
+    <color name="color_record_send_bg">#6585ee</color>
+    <color name="color_sping_nickname">#fff</color>
+
+    <color name="secur_text">#bfc4c8</color>
+
 </resources>

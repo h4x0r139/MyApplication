@@ -17,7 +17,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".DrawTestActivity" />
-        <activity android:name=".ProgressbarSendActivity"></activity>
+        <activity android:name=".ProgressbarSendActivity" />
+        <activity
+            android:name=".leavemsg.MyLeaveMsgActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".leavemsg.MsgPlayProgressViewActivity" />
+        <activity android:name=".activity.RoundLightBarViewActivity"></activity>
     </application>
 
 </manifest>

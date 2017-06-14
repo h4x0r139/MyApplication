@@ -22,4 +22,8 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.+'
+    //    ForRecyclerView
+//    compile 'com.zhy:base-rvadapter:3.0.3'
+//    ForListView
+    compile 'com.zhy:base-adapter:3.0.3'
 }
