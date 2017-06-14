@@ -47,7 +47,7 @@ public class RoundLightBarView extends ImageView {
     public RoundLightBarView(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
-        interval  = ScreenUtil.px2dp(mContext, 50);
+        interval  = ScreenUtil.px2dp(mContext, 100);
         //初始化画笔
         initPaint();
         //初始化bitmap
@@ -148,11 +148,13 @@ public class RoundLightBarView extends ImageView {
         measure.getPosTan(measure.getLength() * 1, pos, tan);
         mMatrix.reset();
         mMatrix.postScale(2,2);
-        mMatrix.postTranslate(pos[0] - mLititleBitmap.getWidth()  , pos[1] - mLititleBitmap.getHeight()  );   // 将图片绘制中心调整到与当前点重合
-        canvas.drawBitmap(mLititleBitmap, mMatrix, mbitmapPaint);//绘制球
+        //进度条头部 不使用图片资源
+//        mMatrix.postTranslate(pos[0] - mLititleBitmap.getWidth()  , pos[1] - mLititleBitmap.getHeight()  );   // 将图片绘制中心调整到与当前点重合
+//        canvas.drawBitmap(mLititleBitmap, mMatrix, mbitmapPaint);//绘制球
         mbitmapPaint.setColor(Color.WHITE);
+        mbitmapPaint.setMaskFilter(new BlurMaskFilter(50, BlurMaskFilter.Blur.OUTER));
         //绘制实心小圆圈
-        canvas.drawCircle(pos[0], pos[1], 5, mbitmapPaint);
+        canvas.drawCircle(pos[0], pos[1], 100, mbitmapPaint);
 
         //启动绘制
         postInvalidateDelayed(10);

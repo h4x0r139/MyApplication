@@ -31,7 +31,7 @@ public class ProgressbarSendActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progressView.updateProgress(2);
+                progressView.setCurrentProgress(progressView.getCurrentProgress()+1);
 
                 springProgressView.setCurrentCount(springProgressView.getCurrentCount()+1);
 
@@ -41,7 +41,7 @@ public class ProgressbarSendActivity extends AppCompatActivity {
         });
 
         progressView.setMaxProgress(100);
-        progressView.setCurrentProgress(10);
+        progressView.setCurrentProgress(0);
 
         springProgressView.setMaxCount(100);
         springProgressView.setCurrentCount(50);

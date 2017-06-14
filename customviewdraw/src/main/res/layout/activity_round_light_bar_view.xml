@@ -11,6 +11,7 @@
     <cn.yinxm.view.RoundLightBarView
         android:layout_height="200dp"
         android:layout_width="200dp"
+        android:background="@android:color/black"
         />
 
 </LinearLayout>
