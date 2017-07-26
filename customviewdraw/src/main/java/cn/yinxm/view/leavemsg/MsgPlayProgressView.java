@@ -92,7 +92,8 @@ public class MsgPlayProgressView extends View {
 
         //先绘制左侧半圆区域
         if (progressWidth < mHeight) {//左侧半圆区域占用 mHeight/2 宽度
-            RectF rectFLeft = new RectF(0,0,mHeight, mHeight);
+            RectF rectFLeft = new RectF(0, 0, mHeight, mHeight);
+//            RectF rectFLeft = new RectF(progressWidth -mHeight, 0, progressWidth, mHeight);
 
             //计算弧线角度
             float centerAngle = 180;
@@ -100,7 +101,13 @@ public class MsgPlayProgressView extends View {
             float angle = progressWidth/round*90;//圆弧上下夹角
 
             canvas.drawArc(rectFLeft, centerAngle-angle, angle*2, false, paint);
-            LogUtil.d("angle="+angle);
+//            LogUtil.d("angle="+angle);
+//            RectF rectFLeft = new RectF(progressWidth -mHeight, 0,mHeight, mHeight);
+//            canvas.drawCircle(progressWidth-mHeight, 0,mHeight, paint);
+
+            //左侧变成全圆，平移过来
+
+
         }else {
             RectF rectF = new RectF(0, 0, progressWidth, mHeight);//绘制进度条区域
 //        canvas.drawRect(rectF, paint);

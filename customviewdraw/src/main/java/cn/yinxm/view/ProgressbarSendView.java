@@ -119,7 +119,7 @@ public class ProgressbarSendView extends View{
 
         //画最外层的大圆环
         int centre = centerPoint.x; //获取圆心的x坐标
-        float radius = (int) (centre - roundWidth/2) - headRoundRadius*2; //圆环的半径
+        float radius = (int) (centre - roundWidth/2) - headRoundRadius; //圆环的半径
         LogUtil.d("centre="+centre+", radius="+radius);
         if (radius <= 0) {
             radius = (int) (centre - roundWidth/2);

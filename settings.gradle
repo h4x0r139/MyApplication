@@ -43,7 +43,7 @@ include ':customviewdraw', ':textviewspan'
 //include ':toolbar_palette' ,':title_statusbar_colorful', ':window_floating'
 //include ':touchEvent_01', ':touchEvent_slidingFinish'
 //include ':bluetoothControl01', ':bluetooth_key'
-//include ':activityrebuildtest', ':lifecycle_activity'
+include ':activityrebuildtest', ':activity_lifecycle'
 //include ':myMusic_demo'
 
 //工具
