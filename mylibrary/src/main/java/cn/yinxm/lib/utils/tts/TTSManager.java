@@ -1,6 +1,7 @@
-package cn.yinxm.lib.vcr;
+package cn.yinxm.lib.utils.tts;
 
 import android.content.Context;
+import android.media.AudioManager;
 import android.os.Build;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
@@ -20,7 +21,8 @@ import cn.yinxm.lib.media.player.media.MediaPlayHelper;
 import cn.yinxm.lib.utils.LogUtil;
 import cn.yinxm.lib.utils.NetworkUtil;
 import cn.yinxm.lib.utils.StringUtil;
-import cn.yinxm.lib.vcr.domain.MessageList;
+import cn.yinxm.lib.utils.tts.domain.MessageList;
+
 
 /**
  * Created by yinxm on 2017/2/14.
@@ -68,6 +70,9 @@ public class TTSManager {
      * 朗读状态
      */
     private int readStatus;
+
+    private AudioManager audioManager;
+
 
     public MessageList.TTSMessage getReadingMessage() {
         return readingMessage;
@@ -219,6 +224,7 @@ public class TTSManager {
                 if (status == TextToSpeech.SUCCESS) {
                     isInitSuccess = true;
                     playHelper = new MediaPlayHelper();
+                    audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
 
                     int result = tts.setLanguage(Locale.CHINA);
                     LogUtil.d("result=" + result);
@@ -381,10 +387,23 @@ public class TTSManager {
                 flag = true;
             }
         }
-
         LogUtil.d("isRuningTTS="+flag);
         return flag;
 
+    }
+
+    public boolean canTTSRead() {
+        boolean flag = false;
+        if (isInitSuccess()) {
+            LogUtil.d("isRuningTTS getReadStatus="+getReadStatus()+", isSpeaking="+tts.isSpeaking()+", getReadingMsgType="+getReadingMsgType());
+            if (getReadStatus() == READ_STATUS_READING && (getReadingMsgType()==MessageList.MsgType.TEXT && tts.isSpeaking() || getReadingMsgType()!=MessageList.MsgType.TEXT)
+                    || getReadStatus() == READ_STATUS_PAUSED) {
+                // 正在朗读并且是文字正在说话或者不是文字，或者已经暂停
+                flag = true;
+            }
+        }
+        LogUtil.d("isRuningTTS="+flag);
+        return flag;
     }
 
     public boolean isPaused() {
@@ -400,12 +419,15 @@ public class TTSManager {
      */
     public void pauseTtsAndClear() {
         LogUtil.d("pauseTtsAndClear getReadStatus="+getReadStatus()+", isPaused="+isPaused());
-        if (getReadStatus() == READ_STATUS_READING) {//正在运行
-             if (getReadingMsgType() == MessageList.MsgType.AUDIO && playHelper != null) {
-                 playHelper.stop();
-             } else if (getReadingMsgType() == MessageList.MsgType.TEXT && tts != null) {
-                 tts.stop();
-             }
+        try {
+            if (getReadStatus() == READ_STATUS_READING) {//正在运行
+                audioManager.abandonAudioFocus(audioFocusChangeListener);
+                if (getReadingMsgType() == MessageList.MsgType.AUDIO && playHelper != null) {
+                    playHelper.stop();
+                } else if (getReadingMsgType() == MessageList.MsgType.TEXT && tts != null) {
+                    tts.stop();//会触发OnError回调
+                }
+            }
             msgQueueToTts.clear();
             //reset data
             isOneFinish = false;
@@ -413,7 +435,10 @@ public class TTSManager {
             readingMsgType = -1;
             //修改状态
             readStatus = READ_STATUS_PAUSED;
+        }catch (Exception e) {
+            LogUtil.e(e);
         }
+        LogUtil.d("pauseTtsAndClear getReadStatus="+getReadStatus()+", isPaused="+isPaused());
     }
 
     public void resumeTts() {
@@ -422,7 +447,11 @@ public class TTSManager {
             //修改状态
             readStatus = READ_STATUS_STOP;
             startTTS();
+        }  else {
+            //修改状态
+            readStatus = READ_STATUS_STOP;
         }
+        LogUtil.d("resumeTts getReadStatus="+getReadStatus()+", isPaused="+isPaused()+", isQueueEmpty="+isQueueEmpty());
     }
 
 
@@ -447,7 +476,7 @@ public class TTSManager {
     private void readMsgQueue() {
         LogUtil.d("readMsgQueue"+", threadId="+Thread.currentThread().getId()+", isOneFinish="+isOneFinish+", getReadStatus="+getReadStatus());
         try {
-            if (!isRuningTTS()|| isOneFinish) {//朗读没有开始，朗读一条结束 && 不是暂停中——》开始下一条朗读
+            if (!isRuningTTS()|| isOneFinish && !isPaused()) {//朗读没有开始，朗读一条结束 && 不是暂停中——》开始下一条朗读
                 isOneFinish = false;
                 MessageList.TTSMessage ttsMessage =   takeNextMsg();
                 if (ttsMessage != null) {
@@ -456,6 +485,7 @@ public class TTSManager {
                     readStatus = READ_STATUS_STOP;
                     readingMessage = null;
                     readingMsgType = -1;
+                    audioManager.abandonAudioFocus(audioFocusChangeListener);
                     LogUtil.e("所有消息朗读完毕");
                 }
             }
@@ -469,26 +499,38 @@ public class TTSManager {
         try {
             if (ttsMessage != null) {
                 LogUtil.d("readOneMsg"+", threadId="+Thread.currentThread().getId()+", ttsMessage="+ttsMessage);
-                readStatus = READ_STATUS_READING;
-                readingMessage = ttsMessage;
-                if ( MessageList.MsgType.TEXT == ttsMessage.getMsgType()) {
-                    readingMsgType = MessageList.MsgType.TEXT;
-                    ttsParam.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, getUtteranceId(ttsMessage));
-                    tts.speak(ttsMessage.getMessage(), TextToSpeech.QUEUE_ADD, ttsParam);
-                } else if (MessageList.MsgType.AUDIO == ttsMessage.getMsgType() && NetworkUtil.isNetworkConnected(context)){
-                    readingMsgType = MessageList.MsgType.AUDIO;
-                    playHelper.play(ttsMessage.getMessage(), audioPlayFinishCallback);
-                } else {
-                    //由于异常，抛弃当前消息，直接进行下一条朗读
-                    LogUtil.e("read next");
-                    readMsgQueue();
+                int result = audioManager.requestAudioFocus(audioFocusChangeListener, AudioManager.STREAM_MUSIC,AudioManager.AUDIOFOCUS_GAIN);
+                LogUtil.d("requestAudioFocus result="+result);
+                if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+                    readStatus = READ_STATUS_READING;
+                    readingMessage = ttsMessage;
+                    if ( MessageList.MsgType.TEXT == ttsMessage.getMsgType()) {
+                        readingMsgType = MessageList.MsgType.TEXT;
+                        ttsParam.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, getUtteranceId(ttsMessage));
+                        tts.speak(ttsMessage.getMessage(), TextToSpeech.QUEUE_ADD, ttsParam);
+                    } else if (MessageList.MsgType.AUDIO == ttsMessage.getMsgType() && NetworkUtil.isNetworkConnected(context)){
+                        readingMsgType = MessageList.MsgType.AUDIO;
+                        playHelper.play(ttsMessage.getMessage(), audioPlayFinishCallback);
+                    } else {
+                        //由于异常，抛弃当前消息，直接进行下一条朗读
+                        LogUtil.e("read next");
+                        readMsgQueue();
+                    }
                 }
+
             }
         }catch (Exception e) {
             LogUtil.e(e);
         }
 
     }
+
+    private AudioManager.OnAudioFocusChangeListener audioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
+        @Override
+        public void onAudioFocusChange(int focusChange) {
+            LogUtil.d("audioManager onAudioFocusChange="+focusChange);
+        }
+    };
 
 
     /**

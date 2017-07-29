@@ -206,7 +206,7 @@ public class MediaPlayHelper implements IPlayHelper {
 
     @Override
     public long getBufferedPosition() {
-        return bufferPercent*getDuration();
+        return bufferPercent*getDuration()/100;
     }
 
     @Override

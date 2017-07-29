@@ -1,4 +1,4 @@
-package cn.yinxm.lib.vcr.domain;
+package cn.yinxm.lib.utils.tts.domain;
 
 import java.io.Serializable;
 import java.util.LinkedList;
@@ -55,6 +55,14 @@ public class MessageList {
         public TTSMessage(){}
         public TTSMessage(String msg){
             this.message = msg;
+        }
+
+        public TTSMessage(String message, String msgId, String msgQueueId, int msgType, String msgQueueName) {
+            this.message = message;
+            this.msgId = msgId;
+            this.msgQueueId = msgQueueId;
+            this.msgType = msgType;
+            this.msgQueueName = msgQueueName;
         }
 
         public String getMessage() {
