@@ -1,6 +1,9 @@
 package cn.yinxm.lib.utils;
 
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * 字符串工具类
  * 
@@ -163,4 +166,45 @@ public final class StringUtil {
             return buf.toString();
         }
     }
+
+    /**
+     * 是否包含中文
+     * 通过正则表达式来判断
+     *
+     * @param str
+     * @return
+     */
+    public static Boolean checkChineseOld(String str) {
+        Pattern pattern = Pattern.compile(".*[\u4e00-\u9fa5]+.*$");
+        Matcher matcher = pattern.matcher(str);
+        return matcher.matches();
+    }
+
+    /**
+     * 是否包含中文
+     * 通过汉字占2个字节的特殊性来判断
+     *
+     * @param str
+     * @return true 包含汉字
+     */
+    public static Boolean checkChinese(String str) {
+        return str.getBytes().length != str.length();
+    }
+
+    /**
+     * 获取纯数字
+     *
+     * @param number
+     * @return
+     */
+    public static String getPureNumbers(String number) {
+        StringBuilder trimBuilder = new StringBuilder();
+        for (int index = 0; index < number.length(); index++) {
+            final char c = number.charAt(index);
+            if (c >= '0' && c <= '9')
+                trimBuilder.append(c);
+        }
+        return trimBuilder.toString();
+    }
+
 }

@@ -55,21 +55,21 @@ import android.util.Log;
  */
 public class BluetoothPbap {
 
-    private static final String TAG = "BluetoothPbap";
+   /* private static final String TAG = "BluetoothPbap";
     private static final boolean DBG = true;
     private static final boolean VDBG = false;
 
-    /** int extra for PBAP_STATE_CHANGED_ACTION */
+    *//** int extra for PBAP_STATE_CHANGED_ACTION *//*
     public static final String PBAP_STATE =
         "android.bluetooth.pbap.intent.PBAP_STATE";
-    /** int extra for PBAP_STATE_CHANGED_ACTION */
+    *//** int extra for PBAP_STATE_CHANGED_ACTION *//*
     public static final String PBAP_PREVIOUS_STATE =
         "android.bluetooth.pbap.intent.PBAP_PREVIOUS_STATE";
 
-    /** Indicates the state of a pbap connection state has changed.
+    *//** Indicates the state of a pbap connection state has changed.
      *  This intent will always contain PBAP_STATE, PBAP_PREVIOUS_STATE and
      *  BluetoothIntent.ADDRESS extras.
-     */
+     *//*
     public static final String PBAP_STATE_CHANGED_ACTION =
         "android.bluetooth.pbap.intent.action.PBAP_STATE_CHANGED";
 
@@ -78,40 +78,40 @@ public class BluetoothPbap {
     private ServiceListener mServiceListener;
     private BluetoothAdapter mAdapter;
 
-    /** There was an error trying to obtain the state */
+    *//** There was an error trying to obtain the state *//*
     public static final int STATE_ERROR        = -1;
-    /** No client currently connected */
+    *//** No client currently connected *//*
     public static final int STATE_DISCONNECTED = 0;
-    /** Connection attempt in progress */
+    *//** Connection attempt in progress *//*
     public static final int STATE_CONNECTING   = 1;
-    /** Client is currently connected */
+    *//** Client is currently connected *//*
     public static final int STATE_CONNECTED    = 2;
 
     public static final int RESULT_FAILURE = 0;
     public static final int RESULT_SUCCESS = 1;
-    /** Connection canceled before completion. */
+    *//** Connection canceled before completion. *//*
     public static final int RESULT_CANCELED = 2;
 
-    /**
+    *//**
      * An interface for notifying Bluetooth PCE IPC clients when they have
      * been connected to the BluetoothPbap service.
-     */
+     *//*
     public interface ServiceListener {
-        /**
+        *//**
          * Called to notify the client when this proxy object has been
          * connected to the BluetoothPbap service. Clients must wait for
          * this callback before making IPC calls on the BluetoothPbap
          * service.
-         */
+         *//*
         public void onServiceConnected(BluetoothPbap proxy);
 
-        /**
+        *//**
          * Called to notify the client that this proxy object has been
          * disconnected from the BluetoothPbap service. Clients must not
          * make IPC calls on the BluetoothPbap service after this callback.
          * This callback will currently only occur if the application hosting
          * the BluetoothPbap service, but may be called more often in future.
-         */
+         *//*
         public void onServiceDisconnected();
     }
 
@@ -144,9 +144,9 @@ public class BluetoothPbap {
                 }
         };
 
-    /**
+    *//**
      * Create a BluetoothPbap proxy object.
-     */
+     *//*
     public BluetoothPbap(Context context, ServiceListener l) {
         mContext = context;
         mServiceListener = l;
@@ -182,12 +182,12 @@ public class BluetoothPbap {
         }
     }
 
-    /**
+    *//**
      * Close the connection to the backing service.
      * Other public functions of BluetoothPbap will return default error
      * results once close() has been called. Multiple invocations of close()
      * are ok.
-     */
+     *//*
     public synchronized void close() {
         IBluetoothManager mgr = mAdapter.getBluetoothManager();
         if (mgr != null) {
@@ -211,11 +211,11 @@ public class BluetoothPbap {
         mServiceListener = null;
     }
 
-    /**
+    *//**
      * Get the current state of the BluetoothPbap service.
      * @return One of the STATE_ return codes, or STATE_ERROR if this proxy
      *         object is currently not connected to the Pbap service.
-     */
+     *//*
     public int getState() {
         if (VDBG) log("getState()");
         if (mService != null) {
@@ -229,12 +229,12 @@ public class BluetoothPbap {
         return BluetoothPbap.STATE_ERROR;
     }
 
-    /**
+    *//**
      * Get the currently connected remote Bluetooth device (PCE).
      * @return The remote Bluetooth device, or null if not in connected or
      *         connecting state, or if this proxy object is not connected to
      *         the Pbap service.
-     */
+     *//*
     public BluetoothDevice getClient() {
         if (VDBG) log("getClient()");
         if (mService != null) {
@@ -248,11 +248,11 @@ public class BluetoothPbap {
         return null;
     }
 
-    /**
+    *//**
      * Returns true if the specified Bluetooth device is connected (does not
      * include connecting). Returns false if not connected, or if this proxy
      * object is not currently connected to the Pbap service.
-     */
+     *//*
     public boolean isConnected(BluetoothDevice device) {
         if (VDBG) log("isConnected(" + device + ")");
         if (mService != null) {
@@ -266,11 +266,11 @@ public class BluetoothPbap {
         return false;
     }
 
-    /**
+    *//**
      * Disconnects the current Pbap client (PCE). Currently this call blocks,
      * it may soon be made asynchronous. Returns false if this proxy object is
      * not currently connected to the Pbap service.
-     */
+     *//*
     public boolean disconnect() {
         if (DBG) log("disconnect()");
         if (mService != null) {
@@ -285,13 +285,13 @@ public class BluetoothPbap {
         return false;
     }
 
-    /**
+    *//**
      * Check class bits for possible PBAP support.
      * This is a simple heuristic that tries to guess if a device with the
      * given class bits might support PBAP. It is not accurate for all
      * devices. It tries to err on the side of false positives.
      * @return True if this device might support PBAP.
-     */
+     *//*
     public static boolean doesClassMatchSink(BluetoothClass btClass) {
         // TODO optimize the rule
         switch (btClass.getDeviceClass()) {
@@ -324,5 +324,5 @@ public class BluetoothPbap {
 
     private static void log(String msg) {
         Log.d(TAG, msg);
-    }
+    }*/
 }

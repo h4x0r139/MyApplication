@@ -18,7 +18,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
-import cn.yinxm.lib.utils.LogUtil;
+import cn.yinxm.lib.utils.log.LogUtil;
+
 
 /**
  * 读取通讯录

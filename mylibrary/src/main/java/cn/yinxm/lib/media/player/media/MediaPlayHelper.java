@@ -7,8 +7,8 @@ import java.util.Map;
 
 import cn.yinxm.lib.media.player.IPlayHelper;
 import cn.yinxm.lib.media.player.OnPlayFinishCallback;
-import cn.yinxm.lib.utils.LogUtil;
 import cn.yinxm.lib.utils.StringUtil;
+import cn.yinxm.lib.utils.log.LogUtil;
 
 
 /**

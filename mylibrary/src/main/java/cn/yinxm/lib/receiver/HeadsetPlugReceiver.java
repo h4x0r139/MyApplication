@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.media.AudioManager;
 
 import cn.yinxm.lib.media.PlayerManager;
-import cn.yinxm.lib.utils.LogUtil;
+import cn.yinxm.lib.utils.log.LogUtil;
 
 /**
 * @Description: 耳机插拔监听

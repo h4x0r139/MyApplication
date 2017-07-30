@@ -11,8 +11,8 @@ import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import cn.yinxm.lib.utils.LogUtil;
 import cn.yinxm.lib.utils.StringUtil;
+import cn.yinxm.lib.utils.log.LogUtil;
 
 
 /**

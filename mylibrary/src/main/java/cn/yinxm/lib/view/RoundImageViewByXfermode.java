@@ -20,8 +20,7 @@ import android.widget.ImageView;
 import java.lang.ref.WeakReference;
 
 import cn.yinxm.lib.R;
-import cn.yinxm.lib.utils.LogUtil;
-
+import cn.yinxm.lib.utils.log.LogUtil;
 
 
 /**

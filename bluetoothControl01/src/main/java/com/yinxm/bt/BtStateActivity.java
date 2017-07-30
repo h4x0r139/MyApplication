@@ -12,7 +12,8 @@ import android.os.Bundle;
 
 import java.util.Set;
 
-import cn.yinxm.lib.utils.LogUtil;
+import cn.yinxm.lib.utils.log.LogUtil;
+
 
 public class BtStateActivity extends Activity {
 

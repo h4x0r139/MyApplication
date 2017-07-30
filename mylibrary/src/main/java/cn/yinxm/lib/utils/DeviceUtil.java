@@ -22,6 +22,8 @@ import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.List;
 
+import cn.yinxm.lib.utils.log.LogUtil;
+
 import static android.os.Build.MODEL;
 
 public class DeviceUtil {

@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import cn.yinxm.lib.utils.LogUtil;
+import cn.yinxm.lib.utils.log.LogUtil;
 
 
 public class NetConnectReceiver extends BroadcastReceiver {
@@ -50,7 +50,7 @@ public class NetConnectReceiver extends BroadcastReceiver {
                 isWifiConnected = false;
             }
 
-//            Activity currentShowingActivity = EcarxActivityManager.getInstance().getCurrentShowingActivity();
+//            Activity currentShowingActivity = AppActivityManager.getInstance().getCurrentShowingActivity();
 //            if (currentShowingActivity instanceof BaseActivity) {
 //                BaseActivity mBaseActivity = (BaseActivity) currentShowingActivity;
 //                mBaseActivity.updateTopBarWifi(isWifiConnected);

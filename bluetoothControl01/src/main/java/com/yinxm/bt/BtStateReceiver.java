@@ -8,7 +8,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import cn.yinxm.lib.utils.LogUtil;
+import cn.yinxm.lib.utils.log.LogUtil;
+
 
 public class BtStateReceiver extends BroadcastReceiver {
     public BtStateReceiver() {

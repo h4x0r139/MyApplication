@@ -6,6 +6,8 @@ import android.media.MediaPlayer;
 
 import java.util.Map;
 
+import cn.yinxm.lib.utils.log.LogUtil;
+
 /**
  * Created by yinxm on 2017/1/11.
  * 功能: 音频播放工具类

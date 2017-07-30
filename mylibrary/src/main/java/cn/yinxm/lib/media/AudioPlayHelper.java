@@ -3,8 +3,8 @@ package cn.yinxm.lib.media;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 
-import cn.yinxm.lib.utils.LogUtil;
 import cn.yinxm.lib.utils.StringUtil;
+import cn.yinxm.lib.utils.log.LogUtil;
 
 /**
  * Created by yinxm on 2016/10/14.

@@ -12,7 +12,7 @@ import android.os.Bundle;
 import java.util.List;
 
 import cn.yinxm.lib.map.iml.DefaultEcarxLocationIml;
-import cn.yinxm.lib.utils.LogUtil;
+import cn.yinxm.lib.utils.log.LogUtil;
 
 
 /**

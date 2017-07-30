@@ -20,10 +20,10 @@
 //include ':s2_10_appwidget04'
 
 //动画
-include ':anim', ':s2_11_animations01',':s2_12_animations02' ,':s2_14_animations04' ,':s2_15_animations05' ,':s2_16_animations06' ,':s2_17_animations07'
+//include ':anim', ':s2_11_animations01',':s2_12_animations02' ,':s2_14_animations04' ,':s2_15_animations05' ,':s2_16_animations06' ,':s2_17_animations07'
 
 //自定义UI、动画效果
-include ':customviewdraw', ':textviewspan'
+//include ':customviewdraw', ':textviewspan'
 //include ':s2_18_json01'
 //include ':s2_19_json02'
 //include ':s2_20_json03'
@@ -42,8 +42,8 @@ include ':customviewdraw', ':textviewspan'
 //include ':dialog_01', ':dialogCallBar', ':popupWindow_01'
 //include ':toolbar_palette' ,':title_statusbar_colorful', ':window_floating'
 //include ':touchEvent_01', ':touchEvent_slidingFinish'
-//include ':bluetoothControl01', ':bluetooth_key'
-include ':activityrebuildtest', ':activity_lifecycle'
+include ':bluetoothControl01', ':bluetooth_key'
+//include ':activityrebuildtest', ':activity_lifecycle'
 //include ':myMusic_demo'
 
 //工具
@@ -51,7 +51,7 @@ include ':activityrebuildtest', ':activity_lifecycle'
 
 //高级
 //include ':process_foreground', ':library_process_foreground'
-include ':screenadapt'
+//include ':screenadapt'
 //高级
 //include ':thread_test', ':threadPool_demo'
 //include ':service_test'

@@ -19,8 +19,8 @@ import cn.yinxm.lib.permission.PermissionCheck;
 import cn.yinxm.lib.permission.PermissionConstant;
 import cn.yinxm.lib.permission.PermissionGrant2Result;
 import cn.yinxm.lib.permission.PermissionGrantResult;
-import cn.yinxm.lib.utils.LogUtil;
 import cn.yinxm.lib.utils.StringUtil;
+import cn.yinxm.lib.utils.log.LogUtil;
 
 public class BaseActivity extends AppCompatActivity {
 

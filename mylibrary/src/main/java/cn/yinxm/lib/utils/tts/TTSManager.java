@@ -18,9 +18,9 @@ import java.util.concurrent.LinkedBlockingQueue;
 import cn.yinxm.lib.media.player.IPlayHelper;
 import cn.yinxm.lib.media.player.OnPlayFinishCallback;
 import cn.yinxm.lib.media.player.media.MediaPlayHelper;
-import cn.yinxm.lib.utils.LogUtil;
 import cn.yinxm.lib.utils.NetworkUtil;
 import cn.yinxm.lib.utils.StringUtil;
+import cn.yinxm.lib.utils.log.LogUtil;
 import cn.yinxm.lib.utils.tts.domain.MessageList;
 
 

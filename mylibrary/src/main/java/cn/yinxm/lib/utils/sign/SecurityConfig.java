@@ -17,8 +17,8 @@
 package cn.yinxm.lib.utils.sign;
 
 
-import cn.yinxm.lib.utils.LogUtil;
 import cn.yinxm.lib.utils.StringUtil;
+import cn.yinxm.lib.utils.log.LogUtil;
 import cn.yinxm.lib.utils.sign.util.DESUtils;
 
 public class SecurityConfig {

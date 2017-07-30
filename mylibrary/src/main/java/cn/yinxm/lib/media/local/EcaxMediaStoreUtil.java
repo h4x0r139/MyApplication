@@ -9,7 +9,7 @@ import android.provider.MediaStore;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.yinxm.lib.utils.LogUtil;
+import cn.yinxm.lib.utils.log.LogUtil;
 
 
 /**

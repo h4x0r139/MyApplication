@@ -12,7 +12,8 @@ import android.view.Display;
 import android.view.View;
 import android.view.Window;
 
-import cn.yinxm.lib.utils.LogUtil;
+import cn.yinxm.lib.utils.log.LogUtil;
+
 
 /**
  * Created by yinxm on 2016/3/24.

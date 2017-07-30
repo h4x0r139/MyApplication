@@ -7,6 +7,7 @@ import android.provider.Settings;
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 
+import cn.yinxm.lib.utils.log.LogUtil;
 import cn.yinxm.lib.utils.sign.util.MD5Util;
 
 /**

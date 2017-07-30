@@ -4,7 +4,7 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.os.Build;
 
-import cn.yinxm.lib.interfaces.MyAppManager;
+import cn.yinxm.lib.interfaces.AppManager;
 
 /**
  * 音乐播放管理类
@@ -53,7 +53,7 @@ public class PlayerManager {
      * 初始化音频管理器
      */
     private void initAudioManager() {
-        Context context = MyAppManager.getInstance().getApplicationContext();
+        Context context = AppManager.getInstance().getApplicationContext();
         audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB){
             audioManager.setMode(AudioManager.MODE_IN_COMMUNICATION);
