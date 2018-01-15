@@ -19,7 +19,7 @@
         android:text="在我上面滑动试试"
         />
 
-    <cn.yinxm.tevent.TouchEventChilds
+    <cn.yinxm.tevent.view.TouchEventChilds
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="100dp"
@@ -27,6 +27,6 @@
         android:id="@+id/touchChild"
         >
 
-    </cn.yinxm.tevent.TouchEventChilds>
+    </cn.yinxm.tevent.view.TouchEventChilds>
 
 </cn.yinxm.tevent.SlideRightRelativeLayout>

@@ -6,7 +6,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
-import cn.yinxm.lib.utils.LogUtil;
+import cn.yinxm.lib.utils.log.LogUtil;
+
 
 public class Main2Activity extends AppCompatActivity {
 

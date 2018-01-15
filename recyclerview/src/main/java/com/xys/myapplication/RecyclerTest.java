@@ -37,6 +37,9 @@ public class RecyclerTest extends Activity {
         // 设置显示动画
         mRcList.setItemAnimator(new DefaultItemAnimator());
 
+        //自定义分割线
+//        mRcList.addItemDecoration(new CustomDecoration(getApplicationContext(), CustomDecoration.HORIZONTAL_LIST, R.drawable.divider_love, 50));
+
         mSpinner = (Spinner) findViewById(R.id.spinner);
         mSpinner.setOnItemSelectedListener(
                 new AdapterView.OnItemSelectedListener() {

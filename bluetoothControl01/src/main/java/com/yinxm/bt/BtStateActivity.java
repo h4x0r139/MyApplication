@@ -9,6 +9,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.Set;
 
@@ -16,34 +19,45 @@ import cn.yinxm.lib.utils.log.LogUtil;
 
 
 public class BtStateActivity extends Activity {
+    Button btnUpdate;
+    TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bt_state);
+        btnUpdate = (Button) findViewById(R.id.btnUpdate);
+        tv = (TextView) findViewById(R.id.tv);
+
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updateBluetoothState();
+            }
+        });
+
         registerReceiver(btReceiver,new IntentFilter(BluetoothAdapter.ACTION_CONNECTION_STATE_CHANGED));//只能通过代码动态注册监听
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
+    private void updateBluetoothState() {
+        StringBuilder stringBuilder = new StringBuilder();
 
         BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (bluetoothAdapter != null) {
-            LogUtil.d("bt state="+bluetoothAdapter.getState());
-            LogUtil.d("bt getName="+bluetoothAdapter.getName());
-            LogUtil.d("bt getAddress="+bluetoothAdapter.getAddress());
-            LogUtil.d("bt getScanMode="+bluetoothAdapter.getScanMode());
+            stringBuilder.append("bt state="+bluetoothAdapter.getState()).append("\n");
+            stringBuilder.append("bt getName="+bluetoothAdapter.getName()).append("\n");
+            stringBuilder.append("bt getAddress="+bluetoothAdapter.getAddress()).append("\n");
+            stringBuilder.append("bt getScanMode="+bluetoothAdapter.getScanMode()).append("\n");
             //获取连接状态
-            LogUtil.d("bt A2DP con="+bluetoothAdapter.getProfileConnectionState(BluetoothProfile.A2DP));
-            LogUtil.d("bt HEADSET con="+bluetoothAdapter.getProfileConnectionState(BluetoothProfile.HEADSET));
-            LogUtil.d("bt HEALTH con="+bluetoothAdapter.getProfileConnectionState(BluetoothProfile.HEALTH));
+            stringBuilder.append("bt A2DP con="+bluetoothAdapter.getProfileConnectionState(BluetoothProfile.A2DP)).append("\n");
+            stringBuilder.append("bt HEADSET con="+bluetoothAdapter.getProfileConnectionState(BluetoothProfile.HEADSET)).append("\n");
+            stringBuilder.append("bt HEALTH con="+bluetoothAdapter.getProfileConnectionState(BluetoothProfile.HEALTH)).append("\n");
 
             //获取已配对列表
             Set<BluetoothDevice> bindDevices =  bluetoothAdapter.getBondedDevices();
 //            LogUtil.d("getBondedDevices="+bindDevices);
             for (BluetoothDevice device : bindDevices) {
-                LogUtil.d("getName="+device.getName()+", getAddress="+device.getAddress()+", getBondState="+device.getBondState());
+                stringBuilder.append("getName="+device.getName()+", getAddress="+device.getAddress()+", getBondState="+device.getBondState()).append("\n");
             }
         }
     }

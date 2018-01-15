@@ -1,10 +1,12 @@
-package cn.yinxm.tevent;
+package cn.yinxm.tevent.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.LinearLayout;
+
+import cn.yinxm.tevent.TouchEventUtil;
 
 public class TouchEventChilds extends LinearLayout {
 
@@ -19,12 +21,13 @@ public class TouchEventChilds extends LinearLayout {
 	public boolean dispatchTouchEvent(MotionEvent ev) {
 		Log.e("yinxm", "TouchEventChilds | dispatchTouchEvent --> " + TouchEventUtil.getTouchAction(ev.getAction()));
 
- 		boolean flag = super.dispatchTouchEvent(ev);
-		Log.d("yinxm", "TouchEventChilds | dispatchTouchEvent --> flag=" + flag);
-		flag = true;
-		Log.d("yinxm", "TouchEventChilds | dispatchTouchEvent --> flag=" + flag);
+// 		boolean flag = super.dispatchTouchEvent(ev);
+//		Log.d("yinxm", "TouchEventChilds | dispatchTouchEvent --> flag=" + flag);
+//		flag = true;
+//		Log.d("yinxm", "TouchEventChilds | dispatchTouchEvent --> flag=" + flag);
 //		return flag;
-		return flag;//默认消费了事件
+//		return flag;//默认消费了事件
+		return super.dispatchTouchEvent(ev);//默认事件传递
 	}
 
 	public boolean onInterceptTouchEvent(MotionEvent ev) {
