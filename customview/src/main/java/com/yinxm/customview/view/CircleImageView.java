@@ -1,4 +1,4 @@
-package com.yinxm.customview;
+package com.yinxm.customview.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;

@@ -1,4 +1,4 @@
-//include ':testmodule', ':actionbartest', ':ActionBar_TabNav', ':loginnavigation',  ':s16_download', ':s18_xml', ':s20_wifi',  ':s2_commonbox', ':webview_test', ':customview', ':drawableres', ':viewpager_splashscreen', ':drawlayout_test', ':toolbar_palette', ':SpeechRecognition', ':serversocket_test',  ':asynctask_test', ':http_test', ':httpclient_test', ':flatui_demo', ':okhttp', ':intent_test', ':myframework', ':flowlayout',  ':drawlayout_navigation', ':toolbar_demo_checkpoint3', ':Lab-Android-DesignLibrary'
+//include ':testmodule', ':actionbartest', ':ActionBar_TabNav', ':loginnavigation',  ':s16_download', ':s18_xml', ':s20_wifi',  ':s2_commonbox', ':webview_test', ':drawableres', ':viewpager_splashscreen', ':drawlayout_test', ':toolbar_palette', ':SpeechRecognition', ':serversocket_test',  ':asynctask_test', ':http_test', ':httpclient_test', ':flatui_demo', ':okhttp', ':intent_test', ':myframework', ':flowlayout',  ':drawlayout_navigation', ':toolbar_demo_checkpoint3', ':Lab-Android-DesignLibrary'
 //include ':clickevent_01', ':basic_ui', ':mediaplayer_test', ':permission_req'
 //include ':ui_img_reflect'
 include ':recyclerview'
@@ -21,9 +21,10 @@ include ':recyclerview'
 //include ':s2_10_appwidget04'
 
 //动画
-include ':anim', ':s2_11_animations01',':s2_12_animations02' ,':s2_14_animations04' ,':s2_15_animations05' ,':s2_16_animations06' ,':s2_17_animations07'
+//include ':anim', ':s2_11_animations01',':s2_12_animations02' ,':s2_14_animations04' ,':s2_15_animations05' ,':s2_16_animations06' ,':s2_17_animations07'
 
 //自定义UI、动画效果
+include ':customview'
 //include ':customviewdraw', ':textviewspan'
 //include ':s2_18_json01'
 //include ':s2_19_json02'
@@ -42,8 +43,9 @@ include ':anim', ':s2_11_animations01',':s2_12_animations02' ,':s2_14_animations
 //include ':dialog_01', ':dialogCallBar', ':popupWindow_01'
 //include ':dialog_01', ':dialogCallBar', ':popupWindow_01'
 //include ':toolbar_palette' ,':title_statusbar_colorful', ':window_floating'
-include ':touchEvent_01', ':touchEvent_slidingFinish'
-include ':bluetoothControl01', ':bluetooth_key'
+include ':touchEvent_01'
+//include ':touchEvent_slidingFinish'
+//include ':bluetoothControl01', ':bluetooth_key'
 //include ':activityrebuildtest', ':activity_lifecycle'
 //include ':myMusic_demo'
 

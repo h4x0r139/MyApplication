@@ -1,58 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent" android:layout_height="match_parent"
-android:orientation="vertical"
-    android:id="@+id/container">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="自定义控件属性（颜色）"
-        android:id="@+id/btnCustomAttr" />
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <Button
+    <LinearLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="自定义控件（皮肤）"
-        android:background="@drawable/button_skin"
-        android:id="@+id/btnCustomSkin" />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="使用绘图API自定义控件（旋转的矩形）"
-        android:id="@+id/btnCustomDrawApi" />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="MyCustomView3"
-        android:id="@+id/btnCustomView3" />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="圆形进度条"
-        android:id="@+id/btnCircleProgress"
-        android:onClick="circleProgessClick"/>
-    <FrameLayout
-        android:layout_width="200dp"
-        android:layout_height="200dp">
-        <com.yinxm.customview.MyCircleImageView1
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnCustomAttr"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义控件属性（颜色）"/>
+
+        <Button
+            android:id="@+id/btnCustomSkin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_skin"
+            android:text="自定义控件（皮肤）"/>
+
+        <Button
+            android:id="@+id/btnCustomDrawApi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="使用绘图API自定义控件（旋转的矩形）"/>
+
+        <Button
+            android:id="@+id/btnCustomView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MyCustomView3"/>
+
+        <Button
+            android:id="@+id/btnMyCircle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我自定义的圆形图片"/>
+
+        <Button
+            android:id="@+id/btnCircleProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="circleProgessClick"
+            android:text="圆形进度条"/>
+
+
+        <FrameLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp">
+
+            <com.yinxm.customview.MyCircleImageView1
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/toutiao"/>
+
+            <com.yinxm.customview.CircleProgress
+                android:id="@+id/cp_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="圆形图片"/>
+
+        <com.yinxm.customview.view.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:src="@drawable/toutiao"/>
-        <com.yinxm.customview.CircleProgress
-            android:id="@+id/cp_view"
+        <com.yinxm.customview.view.PorterDuffXfermodeView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            ></com.yinxm.customview.view.PorterDuffXfermodeView>
+
+        <com.yinxm.customview.view.XfermodeTestView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </FrameLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="圆形图片"/>
-    <com.yinxm.customview.CircleImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/toutiao" />
-
-
-</LinearLayout>
+            android:layout_height="200dp"
+            android:background="@android:color/darker_gray"
+            ></com.yinxm.customview.view.XfermodeTestView>
+    </LinearLayout>
+</ScrollView>

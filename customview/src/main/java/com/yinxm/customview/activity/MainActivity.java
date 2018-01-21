@@ -1,10 +1,16 @@
-package com.yinxm.customview;
+package com.yinxm.customview.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import com.yinxm.customview.CircleProgress;
+import com.yinxm.customview.Fragment_RotatingRect;
+import com.yinxm.customview.MyFragment;
+import com.yinxm.customview.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -23,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btnCustomSkin).setOnClickListener(this);
         findViewById(R.id.btnCustomDrawApi).setOnClickListener(this);
         findViewById(R.id.btnCustomView3).setOnClickListener(this);
+        findViewById(R.id.btnMyCircle).setOnClickListener(this);
         cp_view = (CircleProgress) findViewById(R.id.cp_view);
     }
 
@@ -40,6 +47,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnCustomView3://自定义绘图
 //                getSupportFragmentManager().beginTransaction().replace(R.id.container,new MyCustomView3(this)).commit();
+                break;
+            case R.id.btnMyCircle://我自定义的圆形图片
+                startActivity(new Intent(MainActivity.this, MyCircleActivity.class));
                 break;
         }
     }

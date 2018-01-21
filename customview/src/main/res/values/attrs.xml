@@ -16,4 +16,13 @@
             <enum name="FILL" value="1"></enum>
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="RoundImageViewByXfermode">
+        <attr name="borderRadius" format="dimension"></attr>
+        <attr name="type">
+            <enum name="circle" value="0"/>
+            <enum name="round" value="1"/>
+        </attr>
+    </declare-styleable>
+
 </resources>
