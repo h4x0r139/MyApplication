@@ -5,6 +5,18 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 
+/**
+ * 解决滑动冲突的方法
+ * 方法一：外部拦截法
+ *	重写父控件onInterceptTouchEvent方法返回true
+ *
+ * 方法二：内部拦截法
+ * 1、重写子控件dispatchTouchEvent方法，调用
+ * getParent().requestDisallowInterceptTouchEvent(true);
+ * 告诉父控件不要拦截事件（ViewPager嵌套时，默认事件就被外层的给拦截了）方法返回true，
+ * 2、并且重写子控件onInterceptTouchEvent返回true
+ * 3、重写父控件的onInterceptTouchEvent方法，ActionDown时，不要拦截
+ */
 public class TouchEventActivity extends Activity {
 
 	public void onCreate(Bundle savedInstanceState) {

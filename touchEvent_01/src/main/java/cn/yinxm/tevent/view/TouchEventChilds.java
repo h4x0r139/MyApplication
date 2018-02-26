@@ -27,7 +27,12 @@ public class TouchEventChilds extends LinearLayout {
 //		Log.d("yinxm", "TouchEventChilds | dispatchTouchEvent --> flag=" + flag);
 //		return flag;
 //		return flag;//默认消费了事件
+
+//内部拦截事件2
+//		getParent().requestDisallowInterceptTouchEvent(true);//禁止父控件拦截事件
+
 		return super.dispatchTouchEvent(ev);//默认事件传递
+//		return true;
 	}
 
 	public boolean onInterceptTouchEvent(MotionEvent ev) {
@@ -35,6 +40,7 @@ public class TouchEventChilds extends LinearLayout {
 		boolean flag =  super.onInterceptTouchEvent(ev);
 		Log.i("yinxm", "TouchEventChilds | onInterceptTouchEvent --> flag=" + flag);
 		return flag;
+//		return true; //内部拦截事件3
 	}
 
 	public boolean onTouchEvent(MotionEvent ev) {
@@ -42,6 +48,7 @@ public class TouchEventChilds extends LinearLayout {
 		boolean flag =  super.onTouchEvent(ev);
 		Log.d("yinxm", "TouchEventChilds | onTouchEvent --> flag=" + flag);
 		return flag;
+//		return true; //内部拦截事件4
 	}
 
 }

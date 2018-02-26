@@ -26,6 +26,7 @@ public class MainActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
 //        return inflater.inflate(R.layout.fragment_main, container, false);
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+
         //点击曾宪另一个Fragment
         rootView.findViewById(R.id.btnShowAnotherFragment).setOnClickListener(new View.OnClickListener() {
             @Override

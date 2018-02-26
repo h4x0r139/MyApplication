@@ -36,6 +36,13 @@ public class TouchEventFather extends LinearLayout {
 		return super.onInterceptTouchEvent(ev);
 //		return false;//不拦截事件——》子控件dispatchTouchEvent
 //		return true;//拦截事件——》onTouchEvent， down会到onTouchEvent，如果事件没有消费，会回到父类的onTouchEvent，move和up事件会回到down最终消费的那一级
+
+		//内部拦截事件1
+//		if (ev.getAction() == MotionEvent.ACTION_DOWN) {
+//			return false;
+//		}else {
+//			return true;
+//		}
 	}
 
 	public boolean onTouchEvent(MotionEvent ev) {

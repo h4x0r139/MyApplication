@@ -50,7 +50,7 @@ public class BaseItemDeleteAdapterIml extends BaseItemDeleteAdapter_Add {
 //
 //        return convertView;
 
-//不使用缓存
+//不使用缓存,会有内存泄漏问题
         if(convertView==null){
             convertView=View.inflate(context, R.layout.list_play_item,null);
             //对于listview，注意添加这一行，即可在item上使用高度
