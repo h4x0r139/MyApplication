@@ -1,7 +1,7 @@
 //include ':testmodule', ':actionbartest', ':ActionBar_TabNav', ':loginnavigation',  ':s16_download', ':s18_xml', ':s20_wifi',  ':s2_commonbox', ':webview_test', ':drawableres', ':viewpager_splashscreen', ':drawlayout_test', ':toolbar_palette', ':SpeechRecognition', ':serversocket_test',  ':asynctask_test', ':http_test', ':httpclient_test', ':flatui_demo', ':okhttp', ':intent_test', ':myframework', ':flowlayout',  ':drawlayout_navigation', ':toolbar_demo_checkpoint3', ':Lab-Android-DesignLibrary'
 //include ':clickevent_01', ':basic_ui', ':mediaplayer_test', ':permission_req'
 //include ':ui_img_reflect'
-include ':listView2',  ':listview',  ':recyclerview'
+include ':listView2', ':listview', ':recyclerview'
 //include  ':surfaceView', ':gradletest', ':webhtml'
 //include ':login'
 //include ':s01_activity', ':s02_calculator', ':s03_activitytask'
@@ -9,7 +9,6 @@ include ':listView2',  ':listview',  ':recyclerview'
 //系统组件
 //include ':appwidget', ':tabhost_test'
 include ':fragmentTabHost', ':fragment_test'
-
 
 //控件布局
 //include ':s04_layout', ':s05_checkbox', ':radioBtn_01', ':gridview_test', ':gridLayout_test'
@@ -46,13 +45,14 @@ include ':customview'
 include ':touchEvent_01'
 //include ':touchEvent_slidingFinish'
 //include ':bluetoothControl01', ':bluetooth_key'
-//include ':activityrebuildtest', ':activity_lifecycle'
+include ':activityrebuildtest', ':activity_lifecycle'
 //include ':myMusic_demo'
 
 //工具
 //include ':tts'
 
 //高级
+include ':handler_test'
 //include ':process_foreground', ':library_process_foreground'
 //include ':screenadapt'
 //高级
