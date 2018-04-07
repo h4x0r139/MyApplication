@@ -17,6 +17,8 @@ import android.widget.TextView;
 
 import com.yinxm.aidl_test.IMyAidlInterfaceRemoteBinder;
 
+import cn.yinxm.lib.utils.log.LogUtil;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, ServiceConnection {
 
     private Button startServiceButton = null;
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         stopServiceButton = (Button) findViewById(R.id.stopService);
         stopServiceButton.setOnClickListener(new StopServiceListener());
         tv_service_count = (TextView) findViewById(R.id.tv_service_count);
-        System.out.println("Activity onCreate");
+        LogUtil.d("Activity onCreate");
 
         findViewById(R.id.btnBindService).setOnClickListener(this);
         findViewById(R.id.btnUnbindService).setOnClickListener(this);
@@ -84,6 +86,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btSyncData:
                 String data = etSyncData.getText().toString();
+                LogUtil.d("com.h4x0r.service setData="+data
+                        +",  myPid="+android.os.Process.myPid()
+                        +",  myUid="+android.os.Process.myUid()
+                        +",  threadId="+Thread.currentThread().getId());
                 try {
                     binder.setData(data);
                 } catch (RemoteException e) {
@@ -95,14 +101,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onServiceConnected(ComponentName name, IBinder service) {
-        System.out.println("[onServiceConnected] ComponentName="+name+", IBinder="+service);
+        LogUtil.d("[onServiceConnected] ComponentName="+name+", IBinder="+service);
         binder = IMyAidlInterfaceRemoteBinder.Stub.asInterface(service);
-        System.out.println("binder="+service);
+        LogUtil.d("binder="+service);
     }
 
     @Override
     public void onServiceDisconnected(ComponentName name) {
-        System.out.println("[onServiceDisconnected] ComponentName="+name);
+        LogUtil.d("[onServiceDisconnected] ComponentName="+name);
     }
 
     class StartServiceListener implements View.OnClickListener {
@@ -132,9 +138,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private  class HandlerUpdateUIByService extends Handler {
         @Override
         public void handleMessage(Message msg) {
-            System.out.println("HandlerUpdateUIByService");
+            LogUtil.d("HandlerUpdateUIByService");
             int num = msg.arg1;
-            System.out.println("num="+num);
+            LogUtil.d("num="+num);
             tv_service_count.setText(num);
         }
     }

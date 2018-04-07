@@ -32,7 +32,8 @@ include ':customview'
 //include ':myTaoBao'
 
 //include ':drawlayout_test', ':drawerLayoutUsing', ':drawlayout_navigation', ':drawerlayout_zhy', ':drawerlayout_qq_zhy',  ':accessibilityService_wechat_autoreply', ':viewgroup'
-//include ':ipc_binder'
+
+
 //include ':androidBaseDemo'
 //include ':viewpager_play', ':viewPagerDemo'
 //include ':startapp'
@@ -45,7 +46,7 @@ include ':customview'
 include ':touchEvent_01'
 //include ':touchEvent_slidingFinish'
 //include ':bluetoothControl01', ':bluetooth_key'
-include ':activityrebuildtest', ':activity_lifecycle'
+//include ':activityrebuildtest', ':activity_lifecycle'
 //include ':myMusic_demo'
 
 //工具
@@ -57,9 +58,8 @@ include ':handler_test'
 //include ':screenadapt'
 //高级
 //include ':thread_test', ':threadPool_demo'
-//include ':service_test'
 //include ':broadcastreceiver'
-//include ':aidl_test'
+include ':ipc_binder', ':aidl_test', ':aidl_client_service_test'
 //include ':sqlite', ':contentProvider_mars', ':contentProvider02'
 //include ':ndk_jni_01'
 //include ':socket_server_01', ':socket_client_01', ':socket_server_ecarxwifi', ':socket_client'
