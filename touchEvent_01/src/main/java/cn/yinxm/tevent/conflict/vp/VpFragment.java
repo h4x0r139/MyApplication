@@ -4,19 +4,21 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import cn.yinxm.tevent.R;
 
+
 /**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link VpFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link VpFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * Fragment + RecyclerView
  */
 public class VpFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
@@ -29,6 +31,11 @@ public class VpFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    private TextView tv;
+    private RecyclerView rv;
+    private RVAdapter rvAdapter;
+    private List<String> list = new ArrayList<>();
 
     public VpFragment() {
         // Required empty public constructor
@@ -65,7 +72,27 @@ public class VpFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_vp, container, false);
+        View view=  inflater.inflate(R.layout.fragment_vp, container, false);
+        initView(view);
+        return view;
+    }
+
+    private void initView(View view) {
+        tv = (TextView) view.findViewById(R.id.tv);
+        rv = (RecyclerView) view.findViewById(R.id.rv);
+
+        tv.setText("这是第"+mParam1+"个Fragment");
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+//        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        rv.setLayoutManager(layoutManager);
+
+        for (int i=0; i<200; i++) {
+            list.add("          "+i+"          ");
+        }
+        rvAdapter = new RVAdapter(getContext(), list);
+        rv.setAdapter(rvAdapter);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -105,5 +132,42 @@ public class VpFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+
+    private static class RVAdapter extends RecyclerView.Adapter<RVAdapter.MyViewHolder>{
+        private Context context;
+        private List<String> list;
+
+        public RVAdapter(Context context, List<String> list) {
+            this.context = context;
+            this.list = list;
+        }
+
+        @Override
+        public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            View view =LayoutInflater.from(context).inflate(R.layout.item_vp_frag, null);
+            MyViewHolder viewHolder = new MyViewHolder(view);
+            return viewHolder;
+        }
+
+        @Override
+        public void onBindViewHolder(MyViewHolder holder, int position) {
+            holder.tv.setText(list.get(position));
+        }
+
+        @Override
+        public int getItemCount() {
+            return list == null ? 0 : list.size();
+        }
+
+        public static class MyViewHolder extends RecyclerView.ViewHolder {
+            public TextView tv;
+
+            public MyViewHolder(View itemView) {
+                super(itemView);
+                tv = (TextView) itemView.findViewById(R.id.tv_item);
+            }
+        }
     }
 }
