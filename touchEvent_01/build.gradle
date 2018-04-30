@@ -21,7 +21,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:' + rootProject.ext.supportLib
     compile project(':mylibrary')
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:support-v4:'+project.supportLib
-    compile 'com.android.support:recyclerview-v7:'+project.supportLib
+    compile 'com.android.support:support-v4:' + project.supportLib
+    compile 'com.android.support:recyclerview-v7:' + project.supportLib
 
 }

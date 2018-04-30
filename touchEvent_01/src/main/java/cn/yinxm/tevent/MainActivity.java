@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import cn.yinxm.tevent.conflict.scrollview.ScrollViewConflictActivity;
 import cn.yinxm.tevent.conflict.vp.VpListSlidingConflictActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.listView);
         String[] items = {"测试Activity与ViewPager滑动事件冲突","事件传递","Main2Activity滑动拦截", "Main3Activity空白页面"
             ,"ViewPager+Fragment+RecyclerView滑动冲突"
+                ,"ScrollView嵌套ListView滑动冲突"
         };
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,items);
@@ -43,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 4:
                         startActivity(new Intent(MainActivity.this, VpListSlidingConflictActivity.class));
+                        break;
+                    case 5:
+                        startActivity(new Intent(MainActivity.this, ScrollViewConflictActivity.class));
                         break;
                     default:
                         break;

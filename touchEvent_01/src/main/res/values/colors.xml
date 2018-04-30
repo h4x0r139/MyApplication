@@ -2,5 +2,6 @@
 <resources>
     <color name="gold">#ffd700</color><!--金色 -->
     <color name="azure">#f0ffff</color><!--天蓝色 -->
+    <color name="blue">#0099ee</color><!--蓝色 -->
 
 </resources>

@@ -26,7 +26,8 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".Main3Activity" />
-        <activity android:name=".conflict.vp.VpListSlidingConflictActivity"></activity>
+        <activity android:name=".conflict.vp.VpListSlidingConflictActivity" />
+        <activity android:name=".conflict.scrollview.ScrollViewConflictActivity"></activity>
     </application>
 
 </manifest>
