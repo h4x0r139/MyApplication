@@ -7,3 +7,4 @@ captures
 local.properties
 androidTest
 test
+*/.DS_Store
