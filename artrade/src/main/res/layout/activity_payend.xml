@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/beijing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title" android:layout_width="fill_parent" layout="@layout/back_title_payend" />
+    <View android:id="@id/titless" android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/style" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0sp" android:textColor="@color/black" android:gravity="center" android:id="@id/style1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="第三方支付" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/pay_cft" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:background="@drawable/caifutong" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/text16" android:textColor="@color/black" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="财付通" />
+            </LinearLayout>
+            <LinearLayout android:gravity="right|center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:background="@drawable/breturn2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:scaleType="fitCenter" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="18.0sp" android:textColor="@color/black" android:gravity="center" android:id="@id/style2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="30.0dip" android:layout_marginBottom="10.0dip" android:text="银行支付" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/yinlian" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:background="@drawable/yinlian" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/text16" android:textColor="@color/black" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="银联支付" />
+            </LinearLayout>
+            <LinearLayout android:gravity="right|center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:background="@drawable/breturn2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:scaleType="fitCenter" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

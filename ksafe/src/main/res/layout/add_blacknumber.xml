@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dip"
+    android:layout_height="390dip"
+    android:background="#ff191919"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="290dip"
+        android:layout_height="35dip"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/dialog_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="5dip"
+            android:text="添加方式选择"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+   
+
+        <LinearLayout
+            android:id="@+id/tv_add_blacknumber1"
+            android:layout_width="290dip"
+            android:layout_height="65dip"
+            android:layout_marginTop="10dip"
+            android:background="#D9D9D9"
+            android:orientation="horizontal" >
+
+            <TextView
+               
+                
+                android:layout_width="230dip"
+                android:layout_height="65dip"
+                android:layout_marginLeft="10dip"
+                android:gravity="center_vertical"
+                android:text="从联系人导入"
+                android:textColor="#ff202020"
+                android:textSize="24sp" />
+
+            
+        </LinearLayout>
+
+        <View
+            android:layout_width="290dip"
+            android:layout_height="1dip"
+            android:background="#ff313131" />
+
+        <LinearLayout
+              android:id="@+id/tv_add_blacknumber2"
+            android:layout_width="290dip"
+            android:layout_height="65dip"
+            android:background="#D9D9D9"
+            android:orientation="horizontal" >
+
+            <TextView
+                
+               
+                android:layout_width="230dip"
+                android:layout_height="65dip"
+                android:layout_marginLeft="10dip"
+                android:gravity="center_vertical"
+                android:text="从通话记录导入"
+                android:textColor="#ff202020"
+                android:textSize="24sp" />
+
+           
+        </LinearLayout>
+
+        <View
+            android:layout_width="290dip"
+            android:layout_height="1dip"
+            android:background="#ff313131" />
+
+        <LinearLayout
+             android:id="@+id/tv_add_blacknumber3"
+            android:layout_width="290dip"
+            android:layout_height="65dip"
+            android:background="#D9D9D9"
+            android:orientation="horizontal" >
+
+            <TextView
+               
+               
+                android:layout_width="230dip"
+                android:layout_height="65dip"
+                android:layout_marginLeft="10dip"
+                android:gravity="center_vertical"
+                android:text="从短信记录导入"
+                android:textColor="#ff202020"
+                android:textSize="24sp" />
+
+          
+        </LinearLayout>
+
+        <View
+            android:layout_width="290dip"
+            android:layout_height="1dip"
+            android:background="#ff313131" />
+
+        <LinearLayout
+             android:id="@+id/tv_add_blacknumber4"
+            android:layout_width="290dip"
+            android:layout_height="65dip"
+            android:background="#D9D9D9"
+            android:orientation="horizontal" >
+
+            <TextView
+               
+               
+                android:layout_width="230dip"
+                android:layout_height="65dip"
+                android:layout_marginLeft="10dip"
+                android:gravity="center_vertical"
+                android:text="手动输入"
+                android:textColor="#ff202020"
+                android:textSize="24sp" />
+
+           
+        </LinearLayout>
+
+        <View
+            android:layout_width="290dip"
+            android:layout_height="1dip"
+            android:background="#ff313131" />
+
+        <LinearLayout
+              android:id="@+id/tv_add_blacknumber5"
+            android:layout_width="290dip"
+            android:layout_height="65dip"
+            android:background="#D9D9D9"
+            android:orientation="horizontal" >
+
+            <TextView
+                 
+               
+                android:layout_width="230dip"
+                android:layout_height="65dip"
+                android:layout_marginLeft="10dip"
+                android:gravity="center_vertical"
+                android:text="按号码段拦截"
+                android:textColor="#ff202020"
+                android:textSize="24sp" />
+
+          
+        </LinearLayout>
+
+       
+    
+
+</LinearLayout>

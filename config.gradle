@@ -1,0 +1,33 @@
+
+ext{
+    compileSdkVersion = 27
+    buildToolsVersion = "27.0.3"
+
+    minSdkVersion = 16
+    targetSdkVersion = 22
+
+
+    appcompat_v7 = "27.1.1"
+    support_v4 = appcompat_v7
+    constraint_version = "1.1.2"
+
+    supportLib = appcompat_v7
+    constraintLib = constraint_version
+
+    butterknife = "7.0.1"
+
+    Lib_Android = '0.0.2'
+
+    glide = "3.7.0"
+}
+/*
+
+compileSdkVersion rootProject.ext.compileSdkVersion
+buildToolsVersion rootProject.ext.buildToolsVersion
+
+minSdkVersion rootProject.ext.minSdkVersion
+targetSdkVersion rootProject.ext.targetSdkVersion
+
+implementation 'com.android.support:appcompat-v7:'+rootProject.ext.supportLib
+implementation 'com.android.support:appcompat-v4:'+rootProject.ext.supportLib
+*/

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/pay_dialog_layout" android:background="@color/beijing" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/beijing" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="10.0dip" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <ImageView android:layout_gravity="right" android:id="@id/closesss" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/close" android:scaleType="fitXY" android:layout_weight="1.0" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/item_auction_topay_jg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+                <TextView android:textSize="11.0sp" android:textColor="@color/orange" android:id="@id/close" android:paddingLeft="5.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="\u0009  敬告：您出价行为表明已经认同了嘉德在线的拍卖规则。不论成功与否，你都承担与之相应的法律行为。" />
+                <ImageView android:layout_width="15.0dip" android:layout_height="15.0dip" android:src="@drawable/jg" android:scaleType="fitXY" />
+            </RelativeLayout>
+            <TableLayout android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+                <TableRow android:background="@color/white" android:layout_width="fill_parent">
+                    <TextView android:textColor="@color/white" android:gravity="center_horizontal" android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="起拍价" android:layout_weight="1.0" />
+                    <TextView android:textColor="@color/white" android:gravity="center_horizontal" android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="0.30000007dip" android:layout_marginRight="0.30000007dip" android:text="竞价阶梯" android:layout_weight="1.0" />
+                    <TextView android:textColor="@color/white" android:gravity="center_horizontal" android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="当前价" android:layout_weight="1.0" />
+                </TableRow>
+                <TableRow android:background="@color/gray" android:layout_width="fill_parent">
+                    <TextView android:textColor="@color/gray" android:gravity="center_horizontal" android:id="@id/qipaijias" android:background="@color/white" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="0.30000007dip" android:text="1500员" android:layout_weight="1.0" />
+                    <TextView android:textColor="@color/gray" android:gravity="center_horizontal" android:id="@id/jingjiajietis" android:background="@color/white" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="0.30000007dip" android:text="500元" android:layout_weight="1.0" />
+                    <TextView android:textColor="@color/gray" android:gravity="center_horizontal" android:id="@id/dangqianjias" android:background="@color/white" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="0.30000007dip" android:text="1500元" android:layout_weight="1.0" />
+                </TableRow>
+            </TableLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textColor="@color/black" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="竞买价" />
+                <LinearLayout android:background="@drawable/huibianbaidi" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="10.0dip">
+                    <EditText android:textSize="16.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/pays" android:background="@*android:color/transparent" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:inputType="number" android:textCursorDrawable="@drawable/guangbiao" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingTop="12.0dip" android:layout_width="240.0dip" android:layout_height="wrap_content">
+                <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/cgjm_layout" android:background="@color/jiade_line_red" android:layout_width="100.0dip" android:layout_height="35.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="5.0dip">
+                    <TextView android:textSize="14.0sp" android:textColor="@color/jiade_line_red" android:layout_gravity="center" android:id="@id/cgjm" android:background="@color/white" android:paddingLeft="15.0dip" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="1.0dip" android:text="常规竞买" />
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/dljm_layout" android:background="@color/gray" android:layout_width="100.0dip" android:layout_height="35.0dip" android:layout_marginLeft="5.0dip">
+                    <TextView android:textSize="14.0sp" android:textColor="@color/black" android:layout_gravity="center" android:id="@id/dljm" android:background="@color/white" android:paddingLeft="15.0dip" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="1.0dip" android:text="代理竞买" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:textSize="14.0sp" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@id/FAQ_MSG" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="什么叫常规竞买？什么叫代理竞买？" />
+        </LinearLayout>
+        <LinearLayout android:background="@color/jiade_line_red" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip">
+            <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center_horizontal" android:id="@id/pay" android:background="@color/jiade_line_red" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="7.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="7.0dip" android:text="确认出价" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

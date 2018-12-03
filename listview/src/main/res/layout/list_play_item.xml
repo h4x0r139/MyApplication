@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_bg"
+    >
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll"
+        >
+        <ImageView
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/base_margin_left_right"
+            android:id="@+id/imgs"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:src="@mipmap/moren"
+            />
+        <LinearLayout
+            android:layout_toRightOf="@+id/imgs"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_titles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:textSize="16dp"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:maxLines="1"
+                android:maxEms="10"
+                />
+            <TextView
+                android:textColor="#999999"
+                android:layout_marginTop="8dp"
+                android:id="@+id/tv_contents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="13dp"
+                android:text=""
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxEms="10"
+                />
+            <TextView
+                android:id="@+id/tv_singers"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                android:text=""
+                android:maxLines="1"
+                android:maxEms="10"
+                />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            >
+            <ImageView
+                android:id="@+id/img_playing"
+                android:focusable="false"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+<!--    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/rl_favorites_delete"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <include layout="@layout/item_delete"></include>
+    </RelativeLayout>-->
+
+
+    <ImageView
+        android:layout_marginLeft="75dp"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:src="@drawable/line_bg"
+        android:layout_alignParentBottom="true"
+        ></ImageView>
+</LinearLayout>

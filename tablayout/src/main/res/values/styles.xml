@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyTab1" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">#FF0000</item>
+        <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
+    </style>
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <!--<item name="tabMaxWidth">264dp</item>-->
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
+        <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+    <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <!--<item name="textAllCaps">true</item>-->
+        <!--允许ICON通过SpannableString渲染出来-->
+        <item name="textAllCaps">false</item>
+    </style>
+
+</resources>

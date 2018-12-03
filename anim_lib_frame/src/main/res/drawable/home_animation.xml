@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
+  -->
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item
+        android:drawable="@drawable/animation_bg_0"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_1"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_2"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_3"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_4"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_5"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_6"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_7"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_8"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_9"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_10"
+        android:duration="150" />
+
+    <item
+        android:drawable="@drawable/animation_bg_11"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_12"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_13"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_14"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_15"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_16"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_17"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_18"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_19"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_20"
+        android:duration="150" />
+
+    <item
+        android:drawable="@drawable/animation_bg_21"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_22"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_23"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_24"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_25"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_26"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_27"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_28"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_29"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_30"
+        android:duration="150" />
+
+    <item
+        android:drawable="@drawable/animation_bg_31"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_32"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_33"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_34"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_35"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_36"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_37"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_38"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_39"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_40"
+        android:duration="150" />
+
+    <item
+        android:drawable="@drawable/animation_bg_41"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_42"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_43"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_44"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_45"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_46"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_47"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_48"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_49"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_50"
+        android:duration="150" />
+
+    <item
+        android:drawable="@drawable/animation_bg_51"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_52"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_53"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_54"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/animation_bg_55"
+        android:duration="150" />
+</animation-list>

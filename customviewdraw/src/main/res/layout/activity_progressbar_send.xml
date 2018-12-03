@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context="cn.yinxm.view.ProgressbarSendActivity"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@dimen/dip_10"
+        />
+
+    <Button
+        android:id="@+id/btn"
+        android:text="更新进度"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <cn.yinxm.lib.view.progress.SpringProgressView
+        android:id="@+id/springProgressView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+
+        />
+
+    <cn.yinxm.view.leavemsg.MsgPlayProgressView
+        android:id="@+id/msg_progress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_20"
+        android:layout_marginTop="@dimen/dip_20"
+        android:layout_marginBottom="@dimen/dip_20"
+        android:visibility="gone"
+
+        />
+
+    <cn.yinxm.view.ProgressbarSendView
+        android:id="@+id/progressbar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:padding="10dp"
+        android:background="@android:color/darker_gray"
+        />
+</LinearLayout>

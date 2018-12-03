@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "cn.yinxm.test"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+//    implementation project(':huiliao_vcr_lib')
+    implementation 'com.android.support:appcompat-v7:' + rootProject.ext.appcompat_v7
+    implementation 'com.android.support:design:' + rootProject.ext.appcompat_v7
+    implementation 'com.android.support:support-v4:' + rootProject.ext.support_v4
+    implementation 'com.android.support.constraint:constraint-layout:' + rootProject.ext.constraint_version
+    testImplementation 'junit:junit:4.12'
+}

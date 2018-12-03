@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="@color/home_left_btn_sel"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout_btn1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/btn1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="精选"
+                android:textColor="@drawable/btn_text_selector_tab"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/btn1_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_select_sel" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_btn2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/btn2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="分类"
+                android:textColor="@drawable/btn_text_selector_tab"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/btn2_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_select_sel"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_btn3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/btn3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="广播"
+                android:textColor="@drawable/btn_text_selector_tab"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/btn3_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_select_sel"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </RadioGroup>
+
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent" />
+</LinearLayout>

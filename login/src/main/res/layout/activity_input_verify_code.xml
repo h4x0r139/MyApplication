@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    
+    <LinearLayout
+        android:id="@+id/inputLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/inputVerifyCodeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"/>
+        <Button
+            android:id="@+id/regetVerifyCodeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/regetSmsVerifyCode"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/nextStepBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputLinear"
+        android:text="@string/nextStep"/>
+
+    
+</RelativeLayout>

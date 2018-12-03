@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="30dp"
+    android:paddingRight="20dp" android:paddingLeft="40dp"
+    >
+
+    <TextView
+        android:id="@+id/contryAreaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/countryAndArea"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/phonePrefixText"
+        android:layout_toEndOf="@+id/phonePrefixText" />
+    <TextView
+        android:id="@+id/countryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="@string/china"/>
+    <TextView
+        android:id="@+id/phonePrefixText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phonePrefix"
+        android:layout_alignBaseline="@+id/phoneText"
+        android:layout_alignBottom="@+id/phoneText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:id="@+id/phoneText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contryAreaText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/phonePrefixText"
+        android:layout_toEndOf="@+id/phonePrefixText" />
+
+    <Button
+        android:id="@+id/getSmsVerifyCodeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phoneText"
+        android:text="@string/getSmsVerifyCode"
+        android:layout_alignLeft="@+id/phoneText"
+        android:layout_alignStart="@+id/phoneText" />
+
+</RelativeLayout>

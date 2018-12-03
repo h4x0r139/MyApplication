@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="top" android:background="#ffededed" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/down_pb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="3.0dip" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="?android:attr/progressBarStyleHorizontal" />
+    <TextView android:id="@id/pro_int" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开始下载" android:layout_below="@id/down_pb" android:layout_alignLeft="@id/down_pb" />
+    <Button android:textColor="@*android:color/secondary_text_light" android:id="@id/down_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:text="取消" android:layout_below="@id/pro_int" android:layout_centerHorizontal="true" />
+</RelativeLayout>

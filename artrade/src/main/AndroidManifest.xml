@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="1" android:versionName="1.1.0" package="com.tg.jiadeonline"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <application android:label="@string/app_name" android:icon="@drawable/app" android:screenOrientation="portrait" android:allowBackup="true">
+        <activity android:theme="@style/Theme" android:label="@string/app_name" android:name="com.tg.jiadeonline.Welcome" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.activity.HomeActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_categories" android:name="com.tg.jiadeonline.activity.CategoriesActivity" />
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.activity.CurrentendActivity" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.activity.FavoritesActivity" />
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.activity.PersonalcenterActivity" />
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.CategoriesAllTypeActivity" />
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.CategoriesZtActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_categories_plist" android:name="com.tg.jiadeonline.CategoriesPListActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_categories_type_list" android:name="com.tg.jiadeonline.CategoriesTypeListActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_faq_msg" android:name="com.tg.jiadeonline.FaqMsgActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_message_list" android:name="com.tg.jiadeonline.MessageListActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_auction" android:name="com.tg.jiadeonline.AuctionActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_bond" android:name="com.tg.jiadeonline.CustomerActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_bond" android:name="com.tg.jiadeonline.BondActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_bond" android:name="com.tg.jiadeonline.SearchResultActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_pay" android:name="com.tg.jiadeonline.PayActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_pay_success" android:name="com.tg.jiadeonline.PaySuccessActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_pay_success" android:name="com.tg.jiadeonline.CategoriesDayActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_my_auction" android:name="com.tg.jiadeonline.MyAuctionActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_logistics" android:name="com.tg.jiadeonline.SetUpActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_logistics" android:name="com.tg.jiadeonline.LiuyanActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_logistics" android:name="com.tg.jiadeonline.LogisticsActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_login" android:name="com.tg.jiadeonline.LoginActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_register" android:name="com.tg.jiadeonline.RegisterActivity" />
+        <activity android:theme="@style/Theme" android:label="@string/title_activity_register" android:name="com.tg.jiadeonline.Register1Activity" />
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.QueryReslutActivity" />
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.FAQToPayActivity" />
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.activity.PasswordChangetActivity" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.activity.PeopleInfoActivity" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.activity.AddressNoActivity" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.activity.AddressActivity" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.activity.AddressAddActivity" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.ChosePayActivity" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/Theme" android:label="@string/app_name" android:name="com.unionpay.uppay.PayActivity" android:excludeFromRecents="true" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustResize" />
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.MyFSActivity" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.GuanYuWoMenActivity" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.FangDaActivity" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/Theme" android:name="com.tg.jiadeonline.activity.XiaZaiActivity" android:windowSoftInputMode="stateHidden" />
+    </application>
+</manifest>

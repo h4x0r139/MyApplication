@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="style_wave_line_def">
+        <item name="wave_first_color">@color/wave_first_line</item>
+        <item name="wave_second_color">@color/wave_second_line</item>
+        <item name="wave_line_width">4dp</item>
+        <item name="wave_phase">160</item>
+        <item name="wave_amplifier">60.0</item>
+        <item name="wave_frequency">1.0</item>
+    </style>
+
+</resources>

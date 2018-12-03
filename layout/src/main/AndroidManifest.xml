@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.h4x0r.layout">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.h4x0r.layout.TableLayout"
+            android:label="@string/title_activity_table_layout" />
+        <activity
+            android:name="com.h4x0r.layout.GridLayoutActivity"
+            android:label="@string/title_activity_grid_layout" />
+        <activity
+            android:name="com.h4x0r.layout.GridViewActivity"
+            android:label="@string/title_activity_grid_view" />
+        <activity android:name="com.h4x0r.layout.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.h4x0r.layout.ConstraintLayoutActivity"></activity>
+
+        <activity android:name="com.mcxtzhang.constraintlayoutdemo.Main2Activity" />
+        <activity android:name="com.mcxtzhang.constraintlayoutdemo.MatchActivity" />
+        <activity android:name="com.mcxtzhang.constraintlayoutdemo.RatioActivity" />
+        <activity android:name="com.mcxtzhang.constraintlayoutdemo.ChainActivity" />
+        <activity android:name="com.mcxtzhang.constraintlayoutdemo.DemoActivity" />
+        <activity android:name="com.mcxtzhang.constraintlayoutdemo.MinimumActivity" />
+        <activity android:name="com.mcxtzhang.constraintlayoutdemo.WidgetsDimensionActivity" />
+        <activity android:name="com.mcxtzhang.constraintlayoutdemo.DoubleRatioActivity" />
+        <activity android:name="com.mcxtzhang.constraintlayoutdemo.GuidelineActivity" />
+        <activity android:name="com.mcxtzhang.constraintlayoutdemo.GoodsDetailActivity" />
+        <activity android:name="com.mcxtzhang.constraintlayoutdemo.onedotone.PercentActivity"></activity>
+        <activity android:name="com.mcxtzhang.constraintlayoutdemo.onedotone.GroupActivity" />
+        <activity android:name="com.mcxtzhang.constraintlayoutdemo.onedotone.CircleConstraintActivity" />
+        <activity android:name="com.mcxtzhang.constraintlayoutdemo.TestMatchConstraintBugActivity"/>
+        <activity android:name="com.mcxtzhang.constraintlayoutdemo.TextViewOutOfBoundsActivity"/>
+    </application>
+
+</manifest>

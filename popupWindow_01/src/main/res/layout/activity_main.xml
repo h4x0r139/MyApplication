@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main_view"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="45dp"
+        android:text="从底部滑动弹出选择框"
+        android:onClick="showPopFormBottom"
+        />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="45dp"
+        android:text="弹出等待选择框"
+        android:onClick="showDialog"
+        />
+
+</LinearLayout>

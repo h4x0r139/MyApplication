@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="TextViewStyleTabMainNav">
+        <item name="android:textSize">12dip</item>
+        <item name="android:textColor">@drawable/tab_main_nav_text_selector</item>
+    </style>
+
+</resources>

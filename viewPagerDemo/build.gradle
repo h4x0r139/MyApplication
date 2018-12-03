@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion project.compileSdkVersion
+    buildToolsVersion project.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.example.viewpagerdemo"
+        minSdkVersion project.minSdkVersion
+        targetSdkVersion project.targetSdkVersion
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_5
+            targetCompatibility JavaVersion.VERSION_1_5
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:support-v4:' + rootProject.ext.supportLib
+    implementation 'com.android.support:support-v4:' + rootProject.ext.supportLib
+}

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F0F0F0"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13.0dip"
+        android:layout_marginRight="13.0dip"
+        android:layout_marginTop="8.0dip"
+        android:background="@drawable/app_lock_pwd_bg"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5.0dip"
+        android:paddingLeft="20.0dip"
+        android:paddingRight="20.0dip"
+        android:paddingTop="5.0dip" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/app_lock_logo_password" />
+
+             <ImageView
+                android:id="@+id/app_icon"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_marginTop="68dip"
+               android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="27.0dip"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/app_lock_little_icon" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/app_lock_text_app_name" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10.0dip"
+                android:text="保护隐私"
+                android:textColor="#00A600"
+                android:textSize="23.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/edit_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="42.0dip"
+        android:layout_marginTop="13.0dip"
+        android:paddingLeft="16.0dip"
+        android:paddingRight="16.0dip" >
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/app_lock_bg_input_password"
+            android:hint="请输入密码"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="60.0dip"
+            android:password="true"
+            android:singleLine="true"
+            android:textColor="#ff8f9fa1"
+            android:textSize="18.0sp" />
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:layout_marginBottom="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:layout_marginTop="5.0dip"
+            android:background="@drawable/app_lock_btn_password_normal"
+            android:gravity="center"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="0.5"
+            android:text="确认"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18.0sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="30.0dip"
+        android:src="@drawable/app_lock_pwd_copyright" />
+
+</LinearLayout>

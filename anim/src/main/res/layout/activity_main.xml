@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.yinxm.anim.MainActivity">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="属性动画"
+        android:id="@+id/btn_propertyAnim"
+        />
+    <Button
+        android:id="@+id/btn_cart"
+        android:layout_below="@id/btn_propertyAnim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="购物车动画" />
+    <Button
+        android:id="@+id/btn"
+        android:layout_below="@id/btn_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始动画" />
+
+    <ImageView
+        android:id="@+id/anim1"
+        android:layout_width="145dp"
+        android:layout_height="145dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:src="@drawable/bg_lv_msg" />
+
+    <ImageView
+        android:id="@+id/anim2"
+        android:layout_width="145dp"
+        android:layout_height="145dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:src="@drawable/bg_lv_msg"
+
+        />
+
+    <ImageView
+        android:id="@+id/anim3"
+        android:layout_width="145dp"
+        android:layout_height="145dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:src="@drawable/bg_lv_msg"
+
+        />
+
+    <ImageView
+        android:id="@+id/anim4"
+        android:layout_width="145dp"
+        android:layout_height="145dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:src="@drawable/bg_lv_msg"
+
+        />
+
+    <ImageView
+        android:id="@+id/anim5"
+        android:layout_width="145dp"
+        android:layout_height="145dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:src="@drawable/bg_lv_msg"
+
+        />
+
+    <ImageView
+        android:id="@+id/anim6"
+        android:layout_width="145dp"
+        android:layout_height="145dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:src="@drawable/bg_lv_msg"
+
+        />
+
+    <ImageView
+        android:id="@+id/anim7"
+        android:layout_width="145dp"
+        android:layout_height="145dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:src="@drawable/bg_lv_msg"
+
+        />
+
+    <ImageView
+        android:id="@+id/anim8"
+        android:layout_width="145dp"
+        android:layout_height="145dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:src="@drawable/bg_lv_msg"
+
+        />
+
+    <ImageView
+        android:id="@+id/tv_i_want_leave_msg"
+        android:layout_width="145dp"
+        android:layout_height="145dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:src="@mipmap/i_want_leave_msg" />
+
+
+</RelativeLayout>

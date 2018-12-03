@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:background="@color/gray6" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/back_title" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:layout_width="fill_parent" android:layout_height="10.0px" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.tg.jiadeonline.layout.XListView android:id="@id/xListView" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="200.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

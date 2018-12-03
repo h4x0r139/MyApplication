@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/app_bg"
+    android:visibility="gone"
+    android:id="@+id/layout_item_delete"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_item_cancel"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView4"
+            android:src="@mipmap/delete_cancel"
+            android:layout_marginLeft="99dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:id="@+id/textView6"
+            android:layout_below="@+id/imageView4"
+            android:textColor="#dbdee1"
+            android:layout_marginLeft="98dp"
+            android:layout_marginTop="11dp"
+            android:textSize="@dimen/base_text_size_14sp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_item_delete"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView5"
+            android:src="@mipmap/delete_delete"
+            android:layout_marginRight="99dp"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除"
+            android:id="@+id/textView7"
+            android:layout_below="@+id/imageView5"
+            android:textColor="#dbdee1"
+            android:layout_marginTop="11dp"
+            android:textSize="@dimen/base_text_size_14sp"
+            android:layout_marginRight="98dp"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

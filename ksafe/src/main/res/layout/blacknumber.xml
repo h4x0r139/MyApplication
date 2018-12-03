@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background" >
+
+    <TextView
+        style="@style/title_text_style"
+        android:text="黑名单管理" />
+
+    <Button
+        android:id="@+id/bt_blacknumber"
+        android:layout_width="65dip"
+        android:layout_height="65dip"
+        android:text="添加" />
+
+    <cn.itcast.mobilesafe.uitl.MyListView
+        android:id="@+id/lv_blacknumber"
+        android:layout_below="@id/bt_blacknumber"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+
+</RelativeLayout>

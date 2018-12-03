@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@color/gray6" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/add_new_view50" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/addressnewImg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/addressnew" android:maxWidth="@dimen/add_new_imagew" android:maxHeight="@dimen/add_new_imageh" />
+        <View android:layout_width="fill_parent" android:layout_height="@dimen/add_new_view20" />
+        <Button android:textSize="@dimen/add_new__ts18" android:textColor="@color/white" android:gravity="center" android:id="@id/addressnewButton" android:background="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/addressNewButton" android:width="@dimen/add_new_but" />
+    </LinearLayout>
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/add_new_view100" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/add_new_view5">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/add_new_view5">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/addresshint" android:maxWidth="@dimen/add_new_imagesh" android:maxHeight="@dimen/add_new_imagesw" />
+            <TextView android:text="@string/addressT" style="@style/text_bold_style" />
+        </LinearLayout>
+        <TextView android:id="@id/addressNewTip" android:text="@string/addressTNew" android:layout_marginEnd="0.0dip" style="@style/addresstip_style" />
+        <View android:background="@color/gray6" android:layout_width="fill_parent" android:layout_height="@dimen/add_new_view16" />
+    </LinearLayout>
+    <View android:layout_width="fill_parent" android:layout_height="200.0dip" />
+</LinearLayout>

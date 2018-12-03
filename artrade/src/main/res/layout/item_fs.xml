@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="120.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/fs_choose" android:layout_width="fill_parent" android:layout_height="120.0dip" android:layout_marginBottom="20.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="120.0dip" android:layout_marginTop="10.0dip" android:layout_weight="4.0">
+            <ImageView android:id="@id/item_msg_image" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/mysale" android:scaleType="fitXY" android:layout_toRightOf="@id/del_check" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_weight="1.0">
+            <TextView android:id="@id/fs_cxbh" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_weight="1.0" />
+            <TextView android:id="@id/fs_bh" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_weight="1.0" />
+            <TextView android:background="@drawable/reeee" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginRight="1.0dip" android:layout_below="@id/fs_bh" />
+            <TextView android:id="@id/fs_je" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

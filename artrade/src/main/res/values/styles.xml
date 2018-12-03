@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppBaseTheme" parent="@*android:style/Theme.Light" />
+    <style name="AppTheme" parent="@style/AppBaseTheme" />
+    <style name="Theme" parent="@*android:style/Theme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/noAnimation</item>
+    </style>
+    <style name="noAnimation">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+    </style>
+    <style name="dialog" parent="@*android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="MyCheckBox" parent="@*android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:paddingLeft">100.0dip</item>
+        <item name="android:button">@drawable/checkbox_selector</item>
+        <item name="android:maxHeight">50.0dip</item>
+    </style>
+    <style name="AnimBottomright" parent="@*android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/in_righttoleft</item>
+        <item name="android:windowExitAnimation">@anim/out_lefttoright</item>
+    </style>
+    <style name="text_bold_style">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="text_gray_style">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">#ff666666</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="addresstip_style">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:background">#ffdddddd</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="AnimBottotop" parent="@*android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/in_toptobottom</item>
+        <item name="android:windowExitAnimation">@anim/out_buttomtotop</item>
+    </style>
+</resources>

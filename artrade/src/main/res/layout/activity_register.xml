@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/zhuce_bt1" android:layout_width="fill_parent" android:layout_alignParentTop="true" layout="@layout/back_title" />
+    <View android:id="@id/lineviewsss" android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/zhuce_bt1" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/lineviewsss">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/zhuce_tupian" android:background="@drawable/zc" android:layout_width="fill_parent" android:layout_height="140.0dip" android:scaleType="fitCenter" />
+            <TextView android:textSize="@dimen/denglu_ziti_error" android:textColor="@color/denglu_yanse_zhuce" android:id="@id/zhuce_errmsg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="@dimen/denglu_jianju_1" android:layout_marginRight="15.0dip" android:layout_below="@id/zhuce_tupian" />
+            <LinearLayout android:id="@id/zhuce_lin_shouji" android:background="@color/denglu_yanse_shurukuang" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="15.0dip" android:layout_below="@id/zhuce_errmsg">
+                <EditText android:textSize="@dimen/denglu_ziti_neirong" android:textColor="@color/denglu_yanse_zhuce" android:textColorHint="@color/denglu_yanse_tsxx" android:id="@id/zhuce_phone" android:background="@*android:color/transparent" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_margin="5.0dip" android:hint="请输入手机号" android:singleLine="true" android:textCursorDrawable="@drawable/guangbiao" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/zhuce_lin_1" android:background="@*android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="15.0dip" android:layout_below="@id/zhuce_lin_shouji">
+                <LinearLayout android:id="@id/zhuce_lin_11" android:background="@color/denglu_yanse_shurukuang" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <EditText android:textSize="@dimen/denglu_ziti_neirong" android:textColor="@color/denglu_yanse_zhuce" android:textColorHint="@color/denglu_yanse_tsxx" android:id="@id/zhuce_yanzhengma" android:background="@color/denglu_yanse_shurukuang" android:layout_width="@dimen/denglu_yanzheng" android:layout_height="30.0dip" android:layout_margin="5.0dip" android:hint="请输入验证码" android:singleLine="true" android:digits="0123456789abcdefghjigklmnopqrstuvwxyzQWERTYUIOPLKJHGFDSAZXCVBNM" android:textCursorDrawable="@drawable/guangbiao" />
+                </LinearLayout>
+                <Button android:textSize="@dimen/denglu_ziti_yanzhengma" android:textColor="@color/white" android:gravity="center" android:id="@id/zhuce_huanyizhang" android:background="@color/black" android:paddingLeft="10.0dip" android:layout_width="@dimen/denglu_yanzheng_1" android:layout_height="35.0dip" android:text="获取手机验证码" />
+            </LinearLayout>
+            <Button android:textColor="@color/white" android:id="@id/zhuce_button2" android:background="@color/red" android:layout_width="fill_parent" android:layout_height="@dimen/denglu_jianju_3" android:layout_marginLeft="15.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="15.0dip" android:text="下一步" android:layout_below="@id/zhuce_lin_1" />
+            <Button android:textSize="@dimen/denglu_ziti_zhuce" android:textColor="@color/denglu_yanse_zhuce" android:id="@id/zhuce_button3" android:background="@*android:color/transparent" android:layout_width="wrap_content" android:layout_height="@dimen/denglu_jianju_3" android:layout_marginTop="10.0dip" android:layout_marginRight="15.0dip" android:text="返回登录" android:layout_below="@id/zhuce_button2" android:layout_alignParentRight="true" />
+            <View android:background="@*android:color/transparent" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_below="@id/zhuce_button3" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

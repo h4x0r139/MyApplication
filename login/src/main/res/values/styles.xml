@@ -1,0 +1,14 @@
+<resources>
+    <style name="TitleBarBackground">
+        <item name="android:background">@string/title_background</item>
+    </style>
+    <style name="TitleTheme" parent="android:Theme">
+        <item name="android:windowTitleBackgroundStyle">@style/TitleBarBackground</item>
+        <item name="android:windowTitleSize">50dp</item>
+    </style>
+    <style name="TitleTheme2" parent="android:Theme">
+        <item name="android:windowTitleBackgroundStyle">@style/TitleBarBackground</item>
+        <item name="android:windowTitleSize">20dp</item>
+    </style>
+
+</resources>

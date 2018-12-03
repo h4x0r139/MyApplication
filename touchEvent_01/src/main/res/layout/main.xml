@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.yinxm.tevent.view.TouchEventFather xmlns:android="http://schemas.android.com/apk/res/android"
+                                       android:layout_width="fill_parent"
+                                       android:layout_height="fill_parent"
+                                       android:background="#468AD7"
+                                       android:gravity="center"
+                                       android:orientation="vertical" >
+
+    <cn.yinxm.tevent.view.TouchEventChilds
+        android:id="@+id/childs"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="#E1110D"
+        android:gravity="center"
+        android:text="@string/hello">
+        <cn.yinxm.tevent.view.TouchEventTextView
+            android:id="@+id/custom_tv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/gold"
+            ></cn.yinxm.tevent.view.TouchEventTextView>
+    </cn.yinxm.tevent.view.TouchEventChilds>
+
+</cn.yinxm.tevent.view.TouchEventFather>

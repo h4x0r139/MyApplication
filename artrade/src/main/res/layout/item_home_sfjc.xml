@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="100.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="wrap_content" android:layout_height="@dimen/size12" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/five_ly_1" android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/verywonderfulz" android:scaleType="fitCenter" android:layout_weight="1.0" />
+            <LinearLayout android:gravity="center" android:id="@id/home_sfjc_jishi" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_weight="1.0">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip">
+                    <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/time_hour" android:background="@color/black" android:layout_width="30.0dip" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="0" />
+                    <ImageView android:layout_width="15.0dip" android:layout_height="fill_parent" android:src="@drawable/time1" />
+                    <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/time_min" android:background="@color/black" android:layout_width="30.0dip" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="0" />
+                    <ImageView android:layout_width="15.0dip" android:layout_height="fill_parent" android:src="@drawable/time1" />
+                    <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/time_sec" android:background="@color/black" android:layout_width="30.0dip" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="0" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="0.5dip" android:layout_weight="1.0">
+            <LinearLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/sfjc_iv_1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

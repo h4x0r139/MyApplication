@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, FirstActivity!</string>
+    <string name="app_name">activity05</string>
+    <string name="first_button">启动第二个Activity</string>
+    <string name="second_button">回到第一个Activity</string>
+</resources>

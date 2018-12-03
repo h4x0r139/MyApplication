@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <com.yinxm.customview.view.PorterDuffXfermodeView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            ></com.yinxm.customview.view.PorterDuffXfermodeView>
+
+        <com.yinxm.customview.view.XfermodeTestView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@android:color/darker_gray"
+            ></com.yinxm.customview.view.XfermodeTestView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/img01"
+            />
+
+        <com.yinxm.customview.view.MyCircleImageView
+            android:src="@mipmap/img01"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+        </com.yinxm.customview.view.MyCircleImageView>
+    </LinearLayout>
+</ScrollView>

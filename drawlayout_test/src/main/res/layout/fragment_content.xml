@@ -1,0 +1,18 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.yinxm.drawlayout_test.ContentFragment"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"/>
+    <Button
+        android:id="@+id/openDrawLayoutActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开Main3Activity抽屉布局"/>
+
+</LinearLayout>

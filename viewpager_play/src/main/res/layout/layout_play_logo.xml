@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/play_circle_bg" />
+    <LinearLayout
+        android:id="@+id/icon_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <com.yika.viewpager_play.RoundImageViewByXfermode
+            android:id="@+id/img_audioIcon"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/img_playTriangle"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/play_triangle"
+        android:visibility="invisible" />
+    <com.yika.viewpager_play.RoundProgress
+        android:id="@+id/player_seekbar"
+        android:layout_width="148dp"
+        android:layout_height="148dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android_custom:roundColor="#351C55"
+        android_custom:roundProgressColor="#9A67E0"
+        android_custom:roundWidth="5dp" />
+
+</RelativeLayout>

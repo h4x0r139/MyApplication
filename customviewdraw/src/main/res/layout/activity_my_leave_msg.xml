@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+    <!--<include layout="@layout/base_left_voice"-->
+        <!--android:id="@+id/layout_left"-->
+        <!--/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@mipmap/right_mask"
+        >
+
+        <cn.yinxm.view.leavemsg.MsgPlayProgressView
+            android:id="@+id/progressView"
+            android:layout_marginTop="@dimen/dip_45"
+            android:layout_width="@dimen/dip_370"
+            android:layout_height="@dimen/dip_40"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            />
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dip_45"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_100"
+            >
+
+<!--            <cn.yinxm.view.leavemsg.MsgPlayProgressView
+                android:id="@+id/progressView"
+                android:layout_width="@dimen/dip_370"
+                android:layout_height="@dimen/dip_40"
+                android:gravity="center_vertical"
+                android:background="@mipmap/bg_item_lv_msg"
+                android:layout_centerInParent="true"
+                />-->
+
+            <LinearLayout
+                android:layout_width="@dimen/dip_370"
+                android:layout_height="@dimen/dip_50"
+                android:gravity="center_vertical"
+                android:background="@mipmap/bg_item_lv_msg"
+                android:layout_centerInParent="true"
+                >
+                <ImageView
+                    android:id="@+id/img_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/anim_voice_lv_msg"
+                    android:layout_marginLeft="@dimen/dip_18"/>
+                />
+
+                <TextView
+                    android:id="@+id/tv_msg_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dip_10"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_20"
+                    android:text="00:30"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_my_leave_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我的留言："
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_20"
+            android:layout_marginTop="@dimen/dip_50"
+            android:layout_marginLeft="@dimen/dip_80"
+            />
+
+        <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_370"
+        android:layout_marginTop="@dimen/dip_50"
+        android:layout_marginLeft="@dimen/dip_80"
+        />
+    </LinearLayout>
+
+
+</LinearLayout>

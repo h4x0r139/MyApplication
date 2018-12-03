@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="radius" format="dimension"></attr>
+    <attr name="backgroundColor" format="color"></attr>
+    <attr name="primaryVolumeColor" format="color"></attr>
+    <attr name="volumeColor" format="color"></attr>
+    <attr name="borderWidth" format="dimension"></attr>
+    <attr name="maxVolume" format="integer"></attr>
+
+
+
+    <declare-styleable name="VolumeView">
+        <attr name="radius"></attr>
+        <attr name="backgroundColor"></attr>
+        <attr name="primaryVolumeColor"></attr>
+        <attr name="volumeColor"></attr>
+        <attr name="borderWidth"></attr>
+        <attr name="maxVolume"></attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundImageViewByXfermode">
+        <attr name="borderRadius" format="dimension"></attr>
+        <attr name="type">
+            <enum name="circle" value="0"/>
+            <enum name="round" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

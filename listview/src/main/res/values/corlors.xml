@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_bg">#241d2d</color>
+    <color name="base_bg">#231E2D</color>      <!-- 界面背景底色-->
+    <color name="white">#f5efef</color>
+
+    <color name="lvitem_bg">#0Dffffff</color>
+    <color name="lv_item_en">#33cecece</color>
+
+    <!-- 下划线-->
+    <color name="underscores">#36303c</color>
+
+</resources>

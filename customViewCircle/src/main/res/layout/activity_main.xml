@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back">
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="55dp"
+        android:text="音量+" />
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="55dp"
+        android:layout_toRightOf="@+id/buttonAdd"
+        android:text="音量-" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/buttonDelete"
+       android:id="@+id/btn_play_logo"
+        android:text="PlayLogoView" />
+
+    <com.xjp.customvolumeview.VolumeViewLayout
+        android:id="@+id/volumeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"></com.xjp.customvolumeview.VolumeViewLayout>
+
+</RelativeLayout>

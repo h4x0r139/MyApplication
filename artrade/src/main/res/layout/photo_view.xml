@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="@color/black_fenxiang" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip">
+            <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <LinearLayout android:id="@id/photo_paizhao" android:background="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:text="拍照" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <LinearLayout android:id="@id/photo_shangchuan" android:background="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:text="上传" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

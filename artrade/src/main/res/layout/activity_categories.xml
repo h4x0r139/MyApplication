@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title" layout="@layout/categories_title" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/beijing" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/footbar_layout_ly" android:layout_below="@id/title">
+        <LinearLayout android:orientation="vertical" android:background="@color/categories_left_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="5.0">
+            <TextView android:textSize="14.0sp" android:textColor="@color/black" android:gravity="center" android:id="@id/zhongguohuihua" android:background="@color/beijing" android:paddingLeft="10.0dip" android:paddingTop="15.0dip" android:paddingRight="10.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="中国书画" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/shufazhuanke" android:background="@color/categories_left_bg" android:paddingLeft="10.0dip" android:paddingTop="15.0dip" android:paddingRight="10.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="书法篆刻" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/xihuadiaosu" android:background="@color/categories_left_bg" android:paddingLeft="10.0dip" android:paddingTop="15.0dip" android:paddingRight="10.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="西画雕塑" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/gucizaxiang" android:background="@color/categories_left_bg" android:paddingLeft="10.0dip" android:paddingTop="15.0dip" android:paddingRight="10.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="古瓷杂项" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/dangdaigongye" android:background="@color/categories_left_bg" android:paddingLeft="10.0dip" android:paddingTop="15.0dip" android:paddingRight="10.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="当代工艺" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/yishuping" android:background="@color/categories_left_bg" android:paddingLeft="10.0dip" android:paddingTop="15.0dip" android:paddingRight="10.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="海外艺术品" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="2.0">
+            <ScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+                    <TableLayout android:id="@id/fl_biaoti" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:stretchColumns="*" />
+                    <TextView android:background="@drawable/reeee" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="5.0dip" />
+                    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="专场推荐" />
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/categories_more_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+                            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <TextView android:textSize="12.0sp" android:textColor="@color/gray" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="全部" />
+                            </LinearLayout>
+                            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <ImageView android:layout_width="13.0dip" android:layout_height="13.0dip" android:src="@drawable/hjt" android:scaleType="fitCenter" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <ListView android:id="@id/listView" android:paddingTop="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="@dimen/size12" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+            <TextView android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="100.0dip" android:layout_marginBottom="5.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/footbar_layout_ly" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <View android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <include layout="@layout/home_footbar_layout" />
+    </LinearLayout>
+</RelativeLayout>

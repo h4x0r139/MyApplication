@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/title_text_style"
+        android:text="进程管理" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_progress_count"
+            android:layout_width="150dip"
+            android:layout_height="35dip"
+            android:gravity="center_vertical"
+            android:text="进程总数 " />
+
+        <TextView
+            android:id="@+id/tv_progress_size"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:text="总内存大小" />
+
+    </LinearLayout>
+     <FrameLayout
+          android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <cn.itcast.mobilesafe.uitl.MyListView
+            android:fastScrollEnabled="true"
+            
+            android:id="@+id/lv_app_manager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dip"
+            android:cacheColorHint="@android:color/transparent"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical" 
+            android:visibility="invisible"
+            android:id="@+id/ll_app_manager_loading"
+            >
+
+            <ProgressBar
+                android:layout_width="60dip"
+                android:layout_height="60dip" />
+            <TextView 
+                android:text="正在加载应用程序"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+    </FrameLayout>
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="160dip"
+            android:layout_height="wrap_content"
+            android:onClick="killTask"
+            android:text="一键清理" />
+
+        <Button
+            android:layout_width="160dip"
+            android:layout_height="wrap_content"
+            android:onClick="appSetting"
+            android:text="程序设置" />
+    </LinearLayout>
+</LinearLayout>

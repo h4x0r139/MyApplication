@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.tg.jiadeonline"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:' + rootProject.ext.appcompat_v7
+    implementation files('libs/bayeux-api-2.9.0.jar')
+    implementation files('libs/cometd-java-annotations-2.9.0.jar')
+    implementation files('libs/cometd-java-client-2.9.0.jar')
+    implementation files('libs/cometd-java-common-2.9.0.jar')
+    implementation files('libs/cometd-java-oort-2.9.0.jar')
+    implementation files('libs/cometd-java-server-2.9.0.jar')
+    implementation files('libs/cometd-websocket-jetty-2.9.0.jar')
+    implementation files('libs/jackson-core-asl-1.9.13.jar')
+    implementation files('libs/jackson-mapper-asl-1.9.13.jar')
+    implementation files('libs/javax.inject-1.jar')
+    implementation files('libs/jetty-client-7.6.15.v20140411.jar')
+    implementation files('libs/jetty-continuation-7.6.15.v20140411.jar')
+    implementation files('libs/jetty-http-7.6.15.v20140411.jar')
+    implementation files('libs/jetty-io-7.6.15.v20140411.jar')
+    implementation files('libs/jetty-jmx-7.6.15.v20140411.jar')
+    implementation files('libs/jetty-servlets-7.6.15.v20140411.jar')
+    implementation files('libs/jetty-util-7.6.15.v20140411.jar')
+    implementation files('libs/jetty-websocket-7.6.15.v20140411.jar')
+    implementation files('libs/jsr250-api-1.0.jar')
+    implementation files('libs/log4j-1.2.17.jar')
+    implementation files('libs/slf4j-api-1.7.7.jar')
+    implementation files('libs/slf4j-log4j12-1.7.7.jar')
+}

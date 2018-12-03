@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/firstView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ff0000"
+        android:text="第一个TextView........................................"/>
+    <TextView
+        android:id="@+id/secondView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ff00"
+        android:layout_below="@+id/firstView"
+        android:text="第二个TextView"/>
+
+    <TextView
+        android:id="@+id/thirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0000ff"
+        android:layout_alignRight="@+id/firstView"
+        android:text="第三个TextView"/>
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/beijing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title" layout="@layout/back_title_currentend" />
+    <View android:id="@id/lineviewss" android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/title" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/currentend_paixu" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_below="@id/lineviewss">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/allgoodslayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text14" android:textColor="@color/jiade_line_red" android:gravity="center_vertical" android:id="@id/allgoods" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="全部拍品" />
+            <ImageView android:id="@id/allgoods_image" android:layout_width="14.0dip" android:layout_height="14.0dip" android:src="@drawable/dow" android:scaleType="fitCenter" />
+        </LinearLayout>
+        <TextView android:background="#ffcccccc" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/numberslayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text14" android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/numbers" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="下线时间" />
+            <ImageView android:id="@id/numbers_image" android:layout_width="14.0dip" android:layout_height="14.0dip" android:src="@drawable/allgr" android:scaleType="fitCenter" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/lineview" android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/currentend_paixu" />
+    <com.tg.jiadeonline.layout.XListView android:id="@id/listView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="@dimen/size12" android:layout_above="@id/footbar_layout_ly" android:layout_below="@id/lineview" />
+    <LinearLayout android:orientation="vertical" android:id="@id/footbar_layout_ly" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <View android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <include layout="@layout/home_footbar_layout" />
+    </LinearLayout>
+</RelativeLayout>

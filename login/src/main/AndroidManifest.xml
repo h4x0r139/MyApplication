@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.yinxm.login" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/TitleTheme2">
+                <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ForgetPwdActivity"
+            android:label="@string/title_activity_forget_pwd"
+            android:theme="@style/Base.Theme.AppCompat.Light">
+           <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".InputVerifyCodeActivity"
+            android:label="@string/title_activity_input_verify_code" >
+        </activity>
+        <activity
+            android:name=".NewPwdActivity"
+            android:label="@string/title_activity_new_pwd" >
+        </activity>
+    </application>
+
+</manifest>

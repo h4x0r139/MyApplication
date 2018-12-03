@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="200.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="wrap_content" android:layout_height="@dimen/size12" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/five_ly_1" android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="2.0">
+                <ImageView android:id="@id/home_fiv_p1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:scaleType="fitCenter" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="0.5dip" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:id="@id/five_ly_2" android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="0.5dip" android:layout_weight="1.0">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_weight="6.0">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/black" android:id="@id/home_fiv_t11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+                    <TextView android:textSize="10.0sp" android:textColor="@color/gray" android:id="@id/home_fiv_t12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+                </LinearLayout>
+                <ImageView android:id="@id/home_fiv_p2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip" android:scaleType="fitCenter" android:layout_weight="5.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/five_ly_3" android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_weight="6.0">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/black" android:id="@id/home_fiv_t21" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+                    <TextView android:textSize="10.0sp" android:textColor="@color/gray" android:id="@id/home_fiv_t22" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+                </LinearLayout>
+                <ImageView android:id="@id/home_fiv_p3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip" android:scaleType="fitCenter" android:layout_weight="5.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="0.5dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:id="@id/five_ly_4" android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="0.5dip" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="0.5dip" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="@color/black" android:id="@id/home_fiv_t31" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+                <TextView android:textSize="10.0sp" android:textColor="@color/gray" android:id="@id/home_fiv_t32" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@*android:color/white" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/home_fiv_p4" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:scaleType="fitCenter" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/five_ly_5" android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="0.5dip" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="@color/black" android:id="@id/home_fiv_t41" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+                <TextView android:textSize="10.0sp" android:textColor="@color/gray" android:id="@id/home_fiv_t42" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/home_fiv_p5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:scaleType="fitCenter" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

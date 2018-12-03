@@ -1,0 +1,66 @@
+<resources>
+
+  <!--  &lt;!&ndash; Base application theme. &ndash;&gt;
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+    </style>
+
+    <style name="ActivityTheme1" parent="android:Theme">
+
+    </style>
+
+
+    <style name="MyActionBarTheme" parent="@style/Theme.AppCompat">
+
+        <item name="android:actionBarStyle">@style/ActionBarStyle</item>
+        <item name="android:actionMenuTextColor">#FF0000</item>
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="android:itemBackground">@drawable/action_item_bg_selector</item>
+        <item name="android:actionOverflowButtonStyle">@style/ActionBarOverflowStyle</item>
+        <item name="android:actionBarTabTextStyle">@style/TabTextStyle</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTab</item>
+
+        &lt;!&ndash;Support Library&ndash;&gt;
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
+        <item name="actionMenuTextColor">@color/menu_color</item>
+        <item name="windowActionBarOverlay">false</item>
+        <item name="actionOverflowButtonStyle">@style/ActionBarOverflowStyle</item>
+        <item name="actionBarTabTextStyle">@style/TabTextStyle</item>
+       &lt;!&ndash; <item name="actionOverflowButtonStyle">@style/ActionBarOverflowStyle</item>&ndash;&gt;
+        <item name="actionBarTabStyle">@style/ActionBarTab</item>
+    </style>-->
+<!--
+    <style name="ActionBarStyle" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="android:background">@drawable/action_back</item>
+        <item name="android:titleTextStyle">@style/TitleTextStyle</item>
+        <item name="background">@drawable/action_back</item>
+        <item name="titleTextStyle">@style/TitleTextStyle</item>
+        <item name="backgroundStacked">@drawable/action_back_stack</item>
+        <item name="backgroundSplit">@drawable/action_back_stack</item>
+
+    </style>
+
+    <style name="TitleTextStyle"
+        parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/actionbar_text</item>
+    </style>
+
+
+    <style name="TabTextStyle"
+        parent="@style/Widget.AppCompat.ActionBar.TabText">
+        <item name="android:textColor">@color/actionbar_text</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="ActionBarOverflowStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/more</item>
+
+    </style>
+
+    <style name="ActionBarTab" parent="Widget.AppCompat.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator</item>
+    </style>-->
+
+</resources>

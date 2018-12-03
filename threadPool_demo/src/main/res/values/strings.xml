@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AsyncLoadDemo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+
+    <string name="web_server">192.100.20.53:99</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, SplashActivity!</string>
+    <string name="app_name">金山手机卫士</string>
+    <string name="LostProtectedActivity">手机防盗界面</string>
+    <string name="kn_start_copyright_2">All Rights Reserved.</string>
+    <string name="kn_start_copyright">Copyright© 2010-2012 金山网络</string>
+    <string name="about_update_content2">提升速度：病毒查杀更快</string>
+    <string name="about_update_content4">增强效果：进程清理更干净</string>
+    <string name="about_update_content1">优化性能：内存占用更低</string>
+    <string name="about_update_content5">交互优化：流量监控使用更贴心</string>
+
+</resources>

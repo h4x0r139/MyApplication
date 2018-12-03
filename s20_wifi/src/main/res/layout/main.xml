@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="hello"
+    />
+<Button 
+	android:id="@+id/startWifi"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="启动手机的wifi网卡"
+    />
+<Button 
+	android:id="@+id/stopWifi"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="关闭手机的wifi网卡"
+    />
+<Button 
+	android:id="@+id/checkWifi"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="检查当前wifi网卡状态"
+    />
+</LinearLayout>

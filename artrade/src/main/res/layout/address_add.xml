@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title" layout="@layout/back_title" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0dip">
+            <TextView android:textSize="16.0dip" android:textStyle="bold" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="您的收货地址" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <Spinner android:textSize="16.0sp" android:id="@id/spin_province" android:background="@color/gray6" android:layout_width="fill_parent" android:layout_height="30.0dip" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/activity_horizontal_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <Spinner android:textSize="16.0dip" android:id="@id/spin_city" android:background="@color/gray6" android:layout_width="fill_parent" android:layout_height="30.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="10.0dip" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:background="@color/gray6" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <EditText android:textSize="16.0dip" android:id="@id/addedittext" android:background="@color/gray6" android:paddingLeft="3.0dip" android:layout_width="fill_parent" android:layout_height="30.0dip" android:hint="@string/add_address" android:textCursorDrawable="@drawable/guangbiao" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="10.0dip" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <LinearLayout android:background="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <EditText android:textSize="16.0dip" android:id="@id/addzipcood" android:background="@color/gray6" android:paddingLeft="3.0dip" android:layout_width="wrap_content" android:layout_height="30.0dip" android:hint="@string/add_zipcood" android:textCursorDrawable="@drawable/guangbiao" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/activity_horizontal_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <LinearLayout android:background="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <EditText android:textSize="16.0dip" android:id="@id/addaccname" android:background="@color/gray6" android:paddingLeft="3.0dip" android:layout_width="wrap_content" android:layout_height="30.0dip" android:hint="@string/add_accname" android:textCursorDrawable="@drawable/guangbiao" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="10.0dip" />
+            <LinearLayout android:background="@color/gray6" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:textSize="16.0dip" android:id="@id/addtel" android:background="@color/gray6" android:paddingLeft="3.0dip" android:layout_width="fill_parent" android:layout_height="30.0dip" android:hint="@string/add_tel" android:textCursorDrawable="@drawable/guangbiao" />
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="10.0dip" />
+            <LinearLayout android:background="@color/gray6" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:textSize="16.0dip" android:id="@id/add_email" android:background="@color/gray6" android:paddingLeft="3.0dip" android:layout_width="fill_parent" android:layout_height="30.0dip" android:hint="@string/add_email" android:textCursorDrawable="@drawable/guangbiao" />
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="10.0dip" />
+            <LinearLayout android:background="@color/gray6" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:textSize="16.0dip" android:id="@id/addidcard" android:background="@color/gray6" android:paddingLeft="3.0dip" android:layout_width="fill_parent" android:layout_height="30.0dip" android:hint="@string/add_idcard" android:textCursorDrawable="@drawable/guangbiao" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <View android:layout_width="fill_parent" android:layout_height="10.0dip" />
+            <Button android:textSize="16.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/add_updatebutton" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="35.0dip" android:hint="@string/addressaddbutton" />
+            <View android:layout_width="fill_parent" android:layout_height="10.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

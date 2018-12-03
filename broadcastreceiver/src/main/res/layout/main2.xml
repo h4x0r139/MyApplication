@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="hello" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="绑定监听器" />
+
+    <Button
+        android:id="@+id/unregister"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="解除监听器绑定" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="发送消息给Receiver" />
+
+</LinearLayout>

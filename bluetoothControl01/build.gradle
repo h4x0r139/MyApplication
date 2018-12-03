@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+//    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.yinxm.bt"
+        minSdkVersion 27
+        targetSdkVersion 27
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+
+}
+
+dependencies {
+    // 需要同时修改全局build.gradle
+//    compileOnly fileTree(include: ['*.jar'], dir: 'providelibs')
+    compileOnly files('../hidden_api/android-27.jar')
+    implementation 'com.android.support:appcompat-v7:' + rootProject.ext.appcompat_v7
+    implementation 'com.android.support:support-annotations:'+ rootProject.ext.appcompat_v7
+    implementation 'com.android.support:design:' + rootProject.ext.appcompat_v7
+    implementation files('libs/work-ec-0.0.81.jar')
+    implementation files('libs/pinyin4j-2.5.0.jar')
+
+    implementation 'com.github.h4x0r139:Lib-Android:'+rootProject.ext.Lib_Android
+}
+
+preBuild {
+    doLast {
+        def imlFile = file(project.name + ".iml")
+        println('Change ' + project.name + '.iml order')
+        try {
+            def parsedXml = (new XmlParser()).parse(imlFile)
+            def jdkNode = parsedXml.component[1].orderEntry.find { it.'@type' == 'jdk' }
+            parsedXml.component[1].remove(jdkNode)
+            def sdkString = "Android API " + android.compileSdkVersion.substring("android-".length()) + " Platform"
+            println('sdkString='+sdkString)
+            new groovy.util.Node(parsedXml.component[1], 'orderEntry', ['type': 'jdk', 'jdkName': sdkString, 'jdkType': 'Android SDK'])
+            groovy.xml.XmlUtil.serialize(parsedXml, new FileOutputStream(imlFile))
+        } catch (FileNotFoundException e) {
+            // nop, iml not found
+        }
+    }
+}

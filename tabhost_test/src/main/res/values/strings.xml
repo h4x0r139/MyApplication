@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TabHost_Test</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_main_mshop">MainMShopActivity</string>
+</resources>

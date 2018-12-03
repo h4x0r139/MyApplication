@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="zuzhistyle">
+        <item>请选择客户组织类型</item>
+        <item>政府职能组织</item>
+        <item>事业单位</item>
+        <item>公益组织</item>
+        <item>跨国企业</item>
+        <item>上市民营企业</item>
+        <item>国家控股企业</item>
+        <item>中小民营企业</item>
+    </string-array>
+</resources>

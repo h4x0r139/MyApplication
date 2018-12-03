@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayoutId"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <TextView
+        android:id="@+id/widgetTextId3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="WidgetText3"
+        android:background="#000000"
+        />
+    <ImageView
+        android:id="@+id/imageId3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/xiao"
+        />
+    <Button
+        android:id="@+id/widgetButtonId3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="测试用按钮"
+        />
+</LinearLayout>

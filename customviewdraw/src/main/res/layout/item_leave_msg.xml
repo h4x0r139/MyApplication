@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="@dimen/dip_15"
+    android:layout_marginRight="@dimen/dip_20"
+    >
+    <RelativeLayout
+        android:layout_width="@dimen/dip_370"
+        android:layout_height="@dimen/dip_60">
+        <cn.yinxm.view.leavemsg.MsgPlayProgressView
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_51" />
+        <LinearLayout
+            android:id="@+id/view_lv_msg_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:background="@mipmap/bg_item_lv_msg"
+            >
+            <ImageView
+                android:id="@+id/img_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/anim_voice_lv_msg"
+                android:layout_marginLeft="@dimen/dip_18"/>
+            />
+
+            <TextView
+                android:id="@+id/tv_msg_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dip_10"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_msg_content_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dip_10"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_20"
+        android:visibility="invisible"
+        />
+</LinearLayout>

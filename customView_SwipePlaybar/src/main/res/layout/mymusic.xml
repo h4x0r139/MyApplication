@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center">
+
+        <io.bxbxbai.swipeplaybar.RoundProgressBar
+            android:id="@+id/player_seekbar"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:src="@drawable/tuijian_touxiang6"
+            android_custom:roundColor="#351C55"
+            android_custom:roundProgressColor="#9A67E0"
+            android_custom:roundWidth="10dip" />
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/img_play" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="5dp" android:paddingRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/tv_title_play" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp" android:paddingRight="5dp"
+        android:layout_gravity="center"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="#5F5F61"
+        android:id="@+id/tv_singer_play" />
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn_previous"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/shangsm"
+            android:background="@null"
+            />
+
+
+        <ImageButton
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/nextbig"
+            android:background="@null"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

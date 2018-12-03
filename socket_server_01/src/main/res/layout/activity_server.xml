@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/startListenerTCP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动TCP监听线程"
+        />
+    <Button
+        android:id="@+id/startListenerUDP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动UDP监听线程"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="通信结果："/>
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>

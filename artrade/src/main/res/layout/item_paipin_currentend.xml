@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="150.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/cehua_lin" android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="150.0dip">
+        <RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="2.0">
+            <ImageView android:id="@id/item_currentend_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:scaleType="fitCenter" android:layout_above="@id/paipin_lin" />
+            <LinearLayout android:gravity="center" android:id="@id/paipin_lin" android:background="@drawable/ztjx" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="5.0dip" android:layout_alignParentBottom="true">
+                <TextView android:textSize="@dimen/text12" android:textColor="@color/white" android:gravity="center" android:id="@id/ic1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_marginBottom="3.0dip" android:text="正在进行" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="top" android:orientation="vertical" android:id="@id/item_paipin_currentend_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="0.5dip" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_weight="2.0">
+                <TextView android:textSize="@dimen/text14" android:textColor="@color/black" android:id="@id/item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" />
+            </LinearLayout>
+            <TextView android:background="@drawable/reeee" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="2.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/text12" android:textColor="@color/jiade_line_red" android:id="@id/item_timeEnd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="结束时间:" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/text12" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="起拍价:" />
+                    <TextView android:textSize="@dimen/text12" android:textColor="@color/black" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/item_minimumBid" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/text12" android:textColor="@color/gray" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="当前价:" />
+                    <TextView android:textSize="@dimen/text12" android:textColor="@color/jiade_line_red" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/item_currentBid" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_alignParentBottom="true">
+                    <TextView android:textSize="10.0sp" android:textColor="@color/gray" android:id="@id/item_carePers" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="0人围观" android:drawableLeft="@drawable/weiguan" android:layout_weight="1.0" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/shoucang_lin" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="fill_parent">
+            <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/shoucang_tv" android:background="@color/red" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="取消收藏" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

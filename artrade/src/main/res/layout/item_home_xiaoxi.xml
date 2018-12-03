@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:slidingtext="http://schemas.android.com/apk/res/com.tg.jiadeonline">
+    <TextView android:background="@color/jiade_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="@dimen/activity_home_gg_height">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:src="@drawable/laba" android:scaleType="fitCenter" />
+        <com.tg.jiadeonline.layout.SlidingTextView android:layout_gravity="center" android:id="@id/sliding_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" slidingtext:animationDuration="500" android.orientation="horizontal">
+            <TextView android:textColor="@color/black" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+        </com.tg.jiadeonline.layout.SlidingTextView>
+    </LinearLayout>
+</LinearLayout>

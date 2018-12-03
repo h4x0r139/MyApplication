@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/imagetitle"
+        android:layout_width="fill_parent"
+        android:layout_height="35.0px"
+        android:gravity="center"
+        android:textColor="#ffffffff"
+        android:textSize="16.0px" />
+
+    <ListView
+        android:id="@+id/processList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:background="@color/background"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/ob_line"
+        android:dividerHeight="1.0dip"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0px"
+        android:textColor="#ffffffff"
+        android:textSize="16.0px" />
+
+</LinearLayout>

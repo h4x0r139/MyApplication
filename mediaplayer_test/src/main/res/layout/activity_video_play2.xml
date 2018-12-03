@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:ignore="MergeRootFrame"
+    android:orientation="vertical">
+
+    <AutoCompleteTextView
+        android:id="@+id/url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:completionThreshold="1"
+        android:text="http://daily3gp.com/vids/747.3gp"
+        android:completionHint="选择下载的视频地址"/>
+
+    <SurfaceView
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"/>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="20dp"
+        android:text="状态"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="播放"/>
+
+        <Button
+            android:id="@+id/pause"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="暂停"/>
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="重放"/>
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="停止"/>
+
+    </LinearLayout>
+
+</LinearLayout>

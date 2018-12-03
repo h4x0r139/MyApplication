@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/zhu" android:background="@color/beijing" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title" layout="@layout/home_title" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/footbar_layout_ly" android:layout_below="@id/title">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.tg.jiadeonline.imagescrollview.ScrollImageHomeTop android:id="@id/mAbSlidingPlayView" android:layout_width="fill_parent" android:layout_height="@dimen/activity_home_ScrollImageHomeTop_height" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="@dimen/activity_home_gg_height">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:src="@drawable/ggsd" android:scaleType="fitCenter" />
+                <com.example.marquetextview.MarqueTextView android:ellipsize="marquee" android:id="@id/tv_marque" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="20.0dip" android:text="@string/hello_world" android:singleLine="true" />
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="10.0dip" />
+            <include layout="@layout/item_home_zazhou" />
+            <TextView android:layout_width="wrap_content" android:layout_height="10.0dip" />
+            <include layout="@layout/item_home_huazhou" />
+            <TextView android:layout_width="wrap_content" android:layout_height="10.0dip" />
+            <include layout="@layout/item_home_paimai" />
+            <TextView android:layout_width="wrap_content" android:layout_height="10.0dip" />
+            <include layout="@layout/item_home_ye" />
+            <TextView android:layout_width="wrap_content" android:layout_height="10.0dip" />
+            <include layout="@layout/item_home_jpzcc" />
+            <TextView android:layout_width="wrap_content" android:layout_height="10.0dip" />
+            <HorizontalScrollView android:background="@*android:color/white" android:layout_width="fill_parent" android:layout_height="200.0dip">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <include layout="@layout/item_home_zctj" />
+                    <include layout="@layout/item_home_zctj" />
+                    <include layout="@layout/item_home_zctj" />
+                </LinearLayout>
+            </HorizontalScrollView>
+            <com.tg.jiadeonline.layout.ScrollListView android:id="@id/listView1" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="10.0dip" android:cacheColorHint="#fff4f4f4" android:dividerHeight="0.0dip" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:id="@id/footbar_layout_ly" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include layout="@layout/home_footbar_layout" />
+    </LinearLayout>
+</RelativeLayout>
