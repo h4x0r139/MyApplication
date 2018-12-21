@@ -1,9 +1,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context=".MainActivity">
+    android:layout_height="match_parent" tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    <Button
+        android:id="@+id/btn1"
+        android:text="打开测试网页"
+        android:onClick="openTestWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-    <WebView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/webView" />
 </LinearLayout>
