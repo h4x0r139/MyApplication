@@ -19,7 +19,7 @@
 //include ':wirelessOrder_Client'
 //include ':s2_09_appwidget03'
 //include ':s2_10_appwidget04'
-include ':webview_test'
+include ':webview_test', ':manifest_test'
 
 
 //动画

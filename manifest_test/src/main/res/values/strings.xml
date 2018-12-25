@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">manifest_test</string>
+    <string name="title_activity_test1">Test1Activity</string>
+</resources>

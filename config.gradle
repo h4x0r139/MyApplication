@@ -1,15 +1,15 @@
 
 ext{
-    compileSdkVersion = 27
+    compileSdkVersion = 28
     buildToolsVersion = "27.0.3"
 
     minSdkVersion = 16
     targetSdkVersion = 22
 
 
-    appcompat_v7 = "27.1.1"
+    appcompat_v7 = "28.0.0"
     support_v4 = appcompat_v7
-    constraint_version = "1.1.2"
+    constraint_version = "1.1.3"
 
     supportLib = appcompat_v7
     constraintLib = constraint_version
