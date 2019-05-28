@@ -15,6 +15,8 @@ import android.widget.Spinner;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.yinxm.list.rv.R;
+
 public class RecyclerTest extends Activity {
 
     private RecyclerView mRcList;

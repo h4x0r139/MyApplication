@@ -1,7 +1,7 @@
 //include ':testmodule', ':actionbartest', ':ActionBar_TabNav', ':loginnavigation',  ':s16_download', ':s18_xml', ':s20_wifi',  ':s2_commonbox',  ':drawableres', ':viewpager_splashscreen', ':drawlayout_test', ':toolbar_palette', ':SpeechRecognition', ':serversocket_test',  ':asynctask_test', ':http_test', ':httpclient_test', ':flatui_demo', ':okhttp', ':intent_test', ':myframework', ':flowlayout',  ':drawlayout_navigation', ':toolbar_demo_checkpoint3', ':Lab-Android-DesignLibrary'
 //include ':clickevent_01', ':basic_ui', ':mediaplayer_test', ':permission_req'
 //include ':ui_img_reflect'
-//include ':listView2', ':listview', ':recyclerview', ':dragview_test'
+include ':listView2', ':listview', ':recyclerview', ':dragview_test'
 //include  ':surfaceView', ':gradletest'
 //include ':login'
 //include ':s01_activity', ':s02_calculator', ':s03_activitytask'
@@ -63,7 +63,10 @@ include ':viewpager_play', ':viewPagerDemo'
 //高级
 //include ':thread_test', ':threadPool_demo'
 //include ':broadcastreceiver'
-//include ':ipc_binder', ':aidl_test', ':aidl_client_service_test'
+
+// aidl 详细参考:MyAndroid/my_senior_app/ipc_rpc_module_lib/MyIPCRpc
+include ':ipc_binder', ':aidl_service_test', ':aidl_client_service_test'
+
 //include ':sqlite', ':contentProvider_mars', ':contentProvider02'
 //include ':ndk_jni_01'
 //include ':socket_server_01', ':socket_client_01', ':socket_server_wifi', ':socket_client'
@@ -74,4 +77,5 @@ include ':viewpager_play', ':viewPagerDemo'
 //include ':mylibrary', ':timechangelistene', ':deviceinfo', ':locationgps'
 //include ':myLocalPics', ':cameraPhoto'
 
-//测试
+// 功能
+include ':fe_keep_alive'

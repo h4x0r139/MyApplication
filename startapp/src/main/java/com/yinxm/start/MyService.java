@@ -17,7 +17,7 @@ public class MyService extends Service {
     @Override
     public IBinder onBind(Intent intent) {
         // TODO: Return the communication channel to the service.
-       Log.d("yika", "Not yet implemented");
+       Log.d(TAG, "Not yet implemented");
         return null;
     }
 
@@ -34,7 +34,7 @@ public class MyService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.d("yika", "注册广播接收器homeKeyDownReceiver");
+        Log.d(TAG, "注册广播接收器homeKeyDownReceiver");
         registerReceiver(homeKeyDownReceiver, intentFilterHomeKey);
 
         return super.onStartCommand(intent, flags, startId);

@@ -23,19 +23,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showDialog(View view) {
-        Log.d("yika", "[dialog.showDialog]");
+        Log.d(TAG, "[dialog.showDialog]");
 //       CallStatusBarUtil.showCallStatusBar(this, null);
         CallStatusBarManager.getInstance().updateVisibleCallStatusBar(this);
     }
     public void showDialog2(View view) {
-        Log.d("yika", "[dialog.showDialog2]");
+        Log.d(TAG, "[dialog.showDialog2]");
         Toast.makeText(this, "点击测试", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d("yika", "[dialog.onResume] showDialog="+showDialog);
+        Log.d(TAG, "[dialog.onResume] showDialog="+showDialog);
 //        CallStatusBarUtil.showCallStatusBar(this, null);
 //        callStatusBarDialog.show();
 //        CallStatusBarManager.getInstance().updateVisibleCallStatusBar(this);
@@ -46,13 +46,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("yika", "[dialog.onPause]");
+        Log.d(TAG, "[dialog.onPause]");
     }
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        Log.d("yika", "[dialog.onWindowFocusChanged]");
+        Log.d(TAG, "[dialog.onWindowFocusChanged]");
     }
 
     public void gotoNewActivity(View view) {

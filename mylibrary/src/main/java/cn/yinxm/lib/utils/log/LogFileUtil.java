@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
  */
 
 public class LogFileUtil {
-    public static final String TAG = "yika";
+    public static final String TAG = TAG;
 
     public static void d(String tag, String str) {
         if (tag == null || "".equals(tag)) {

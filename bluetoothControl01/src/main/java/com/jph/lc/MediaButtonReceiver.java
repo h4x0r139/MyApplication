@@ -32,14 +32,14 @@ public class MediaButtonReceiver extends BroadcastReceiver{
 	@Override
 	public void onReceive(Context context, Intent intent) {
 		 String intentAction = intent.getAction() ;
-		Log.i("yika", "com.jph.lc.MediaButtonReceiver.onReceive action="+intentAction);
+		Log.i(TAG, "com.jph.lc.MediaButtonReceiver.onReceive action="+intentAction);
 
 		if(Intent.ACTION_MEDIA_BUTTON.equals(intentAction)){
 	        	KeyEvent keyEvent = (KeyEvent)intent.getParcelableExtra(Intent.EXTRA_KEY_EVENT); //获得KeyEvent对象  
 	        	if(headSetListener != null){
 	        		try {
 	        			if(keyEvent.getAction() == KeyEvent.ACTION_UP){
-							Log.i("yika", "com.jph.lc.MediaButtonReceiver.onReceive KeyEvent.ACTION_UP");
+							Log.i(TAG, "com.jph.lc.MediaButtonReceiver.onReceive KeyEvent.ACTION_UP");
 
 							if (clickCount==0) {//单击
 	        					clickCount++;

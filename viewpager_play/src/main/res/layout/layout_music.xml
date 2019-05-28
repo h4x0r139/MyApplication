@@ -13,7 +13,7 @@
             android:layout_centerInParent="true"
             android:src="@mipmap/play_circle_bg" />
 
-        <com.yika.viewpager_play.RoundImageViewByXfermode
+        <cn.yinxm.ui.vp.RoundImageViewByXfermode
             android:id="@+id/img_audioIcon"
             android:layout_width="140dp"
             android:layout_height="140dp"
@@ -28,7 +28,7 @@
             android:src="@mipmap/play_triangle"
             android:visibility="invisible" />
 
-        <com.yika.viewpager_play.RoundProgress
+        <cn.yinxm.ui.vp.RoundProgress
             android:id="@+id/player_seekbar"
             android:layout_width="148dp"
             android:layout_height="148dp"

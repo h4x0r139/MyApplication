@@ -12,7 +12,7 @@ public class BaseApplication extends Application{
     public void onCreate() {
         super.onCreate();
         startService(new Intent(this, MyService.class));
-        Log.d("yika", "启动服务成功");
+        Log.d(TAG, "启动服务成功");
     }
 
 

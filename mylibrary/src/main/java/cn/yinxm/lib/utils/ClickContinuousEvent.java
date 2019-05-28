@@ -44,7 +44,7 @@ public class ClickContinuousEvent {
             System.arraycopy(clickEventTimeArray, 1, clickEventTimeArray, 0, clickEventTimeArray.length-1);
             clickEventTimeArray[clickEventTimeArray.length - 1] = SystemClock.uptimeMillis();
             long timeInternal = clickEventTimeArray[clickEventTimeArray.length-1] - clickEventTimeArray[0];
-            /*Log.d("yika", "timeInternal="+timeInternal+", "+ Arrays.toString(clickEventTimeArray));*/
+            /*Log.d(TAG, "timeInternal="+timeInternal+", "+ Arrays.toString(clickEventTimeArray));*/
             if (timeInternal > 10 && timeInternal <= eventDurationTimes ) {
                 flag = true;
             }

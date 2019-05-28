@@ -34,7 +34,7 @@ import android.widget.Toast;
  */
 @SuppressLint("InlinedApi")
 public class MusicIntentReceiver extends BroadcastReceiver {
-	private static final String LOG_TAG = "yika";
+	private static final String LOG_TAG = TAG;
 	private Context mContext;
 	private KeyService mKeyService;
 

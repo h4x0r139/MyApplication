@@ -19,20 +19,20 @@ public class HomeKeyDownReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         String action = intent.getAction();
-        Log.i("yika", "[HomeKeyDownReceiver.onReceive] action="+action);
+        Log.i(TAG, "[HomeKeyDownReceiver.onReceive] action="+action);
         if (action.equals(Intent.ACTION_CLOSE_SYSTEM_DIALOGS)) {
             String reason = intent.getStringExtra(SYSTEM_REASON);
-            Log.i("yika", "reason="+reason);
+            Log.i(TAG, "reason="+reason);
             if (reason != null) {
                 if (reason.equals(SYSTEM_HOME_KEY)) {
                     // home key处理点
                     long currentTime = System.currentTimeMillis();
-                    Log.d("yika", "firstTime="+firstTime+", currentTime="+currentTime);
+                    Log.d(TAG, "firstTime="+firstTime+", currentTime="+currentTime);
                     if (currentTime - firstTime > 2000) {//连续按键时间小于2s才有效
                         Toast.makeText(context,"再按一次启动workEc", Toast.LENGTH_SHORT).show();
                         firstTime = currentTime;
                     } else {
-                        Log.d("yika", "启动workEc");
+                        Log.d(TAG, "启动workEc");
                         Toast.makeText(context,"workEc启动中...", Toast.LENGTH_SHORT).show();
 //                        Intent intentActivity = new Intent(context, MainActivity.class);//每次都新创建一个activity
 //                        intentActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

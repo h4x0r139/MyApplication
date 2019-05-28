@@ -15,7 +15,7 @@ public class MusicCallEventReceiver extends BroadcastReceiver{
     @Override
     public void onReceive(Context context, Intent intent) {
         String intentAction = intent.getAction() ;
-        Log.i("yika", "com.jph.lc.MusicCallEventReceiver onReceive action="+intentAction);
+        Log.i(TAG, "com.jph.lc.MusicCallEventReceiver onReceive action="+intentAction);
 
     }
 

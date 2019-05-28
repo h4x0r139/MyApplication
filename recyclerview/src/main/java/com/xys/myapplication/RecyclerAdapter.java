@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import cn.yinxm.list.rv.R;
+
 public class RecyclerAdapter
         extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 

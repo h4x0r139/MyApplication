@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("yika", "[MainActivity.onCreate]");
+        Log.d(TAG, "[MainActivity.onCreate]");
         setContentView(R.layout.activity_main);
 
         //注册网络监听
@@ -28,37 +28,37 @@ public class MainActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d("yika", "[MainActivity.onStart]");
+        Log.d(TAG, "[MainActivity.onStart]");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d("yika", "[MainActivity.onResume]");
+        Log.d(TAG, "[MainActivity.onResume]");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("yika", "[MainActivity.onPause]");
+        Log.d(TAG, "[MainActivity.onPause]");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d("yika", "[MainActivity.onStop]");
+        Log.d(TAG, "[MainActivity.onStop]");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d("yika", "[MainActivity.onRestart]");
+        Log.d(TAG, "[MainActivity.onRestart]");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d("yika", "[MainActivity.onDestroy]");
+        Log.d(TAG, "[MainActivity.onDestroy]");
 
 //        unregisterReceiver(networkStateReceiver);
 //        unregisterReceiver(homeKeyDownReceiver);
